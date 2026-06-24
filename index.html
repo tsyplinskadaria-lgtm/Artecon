@@ -5,14 +5,25 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preload" href="fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="fonts/Unbounded-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+	<!-- fonts preload -->
+	<link rel="preload" href="fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/Unbounded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+	<!-- CDN optimization -->
 	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 	<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260625002439">
-	<link rel="stylesheet" href="./css/style.min.css?_v=20260625002439">
+	<!-- Swiper CSS (non-blocking) -->
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260625004016" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260625004016">
+	</noscript>
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="./css/style.min.css?_v=20260625004016">
 	<title>Main page | ARTECON</title>
 </head>
 
@@ -377,7 +388,7 @@
 						<div class="about__top">
 							<div class="numbering">
 								<div class="numbering__icon">
-									<img src="img/svg/plus.svg" draggable="false" alt="">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
 								</div>
 
 								<span>00/01</span>
@@ -431,15 +442,15 @@
 
 							<div class="about__pictures">
 								<div class="pic">
-									<img src="img/main/about/about-01.webp" draggable="false" alt="">
+									<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
 								</div>
 
 								<div class="pic">
-									<img src="img/main/about/about-02.webp" draggable="false" alt="">
+									<img src="img/main/about/about-02.webp" loading="lazy" draggable="false" alt="">
 								</div>
 
 								<div class="pic">
-									<img src="img/main/about/about-03.webp" draggable="false" alt="">
+									<img src="img/main/about/about-03.webp" loading="lazy" draggable="false" alt="">
 								</div>
 							</div>
 						</div>
@@ -455,10 +466,10 @@
 									</div>
 
 									<!-- твоя картинка-прелоадер -->
-									<img class="video__thumb" src="img/main/video-preloader/video-preloader.webp" draggable="false" alt="">
+									<img class="video__thumb" src="img/main/video-preloader/video-preloader.webp" loading="lazy" draggable="false" alt="">
 
 									<button class="video__play">
-										<img src="img/svg/play.svg" draggable="false" alt="">
+										<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
 									</button>
 
 								</div>
@@ -499,7 +510,7 @@
 						<div class="intro-description">
 							<div class="numbering">
 								<div class="numbering__icon">
-									<img src="img/svg/plus.svg" draggable="false" alt="">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
 								</div>
 
 								<span>00/02</span>
@@ -603,10 +614,10 @@
 											<div class="video__item" data-video="XZTU3tYTkGc">
 												<div class="video__preview">
 
-													<img class="video__thumb" src="img/main/video-preloader/video-preloader.webp" draggable="false" alt="">
+													<img class="video__thumb" src="img/main/video-preloader/video-preloader.webp" loading="lazy" draggable="false" alt="">
 
 													<button class="video__play">
-														<img src="img/svg/play.svg" draggable="false" alt="">
+														<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
 													</button>
 
 												</div>
@@ -685,10 +696,10 @@
 											<div class="video__item" data-video="XZTU3tYTkGc">
 												<div class="video__preview">
 
-													<img class="video__thumb" src="img/main/video-preloader/video-preloader-02.webp" draggable="false" alt="">
+													<img class="video__thumb" src="img/main/video-preloader/video-preloader-02.webp" loading="lazy" draggable="false" alt="">
 
 													<button class="video__play">
-														<img src="img/svg/play.svg" draggable="false" alt="">
+														<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
 													</button>
 
 												</div>
@@ -811,10 +822,10 @@
 											<div class="video__item" data-video="XZTU3tYTkGc">
 												<div class="video__preview">
 
-													<img class="video__thumb" src="img/main/video-preloader/video-preloader-03.webp" draggable="false" alt="">
+													<img class="video__thumb" src="img/main/video-preloader/video-preloader-03.webp" loading="lazy" draggable="false" alt="">
 
 													<button class="video__play">
-														<img src="img/svg/play.svg" draggable="false" alt="">
+														<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
 													</button>
 
 												</div>
@@ -912,10 +923,10 @@
 											<div class="video__item" data-video="XZTU3tYTkGc">
 												<div class="video__preview">
 
-													<img class="video__thumb" src="img/main/video-preloader/video-preloader-04.webp" draggable="false" alt="">
+													<img class="video__thumb" src="img/main/video-preloader/video-preloader-04.webp" loading="lazy" draggable="false" alt="">
 
 													<button class="video__play">
-														<img src="img/svg/play.svg" draggable="false" alt="">
+														<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
 													</button>
 
 												</div>
@@ -938,7 +949,7 @@
 						<div class="intro-description">
 							<div class="numbering">
 								<div class="numbering__icon">
-									<img src="img/svg/plus.svg" draggable="false" alt="">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
 								</div>
 
 								<span>00/03</span>
@@ -969,32 +980,32 @@
 									<div class="swiper-wrapper">
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-01.webp" draggable="false" alt="">
+											<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" draggable="false" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-01.webp" alt="">
+											<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-01.webp" alt="">
+											<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
 										</div>
 
 									</div>
 
 									<div class="items">
 										<div class="item">
-											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/local.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>Estepona</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/clock.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>4 weeks</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/m.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>330 m²</span>
 										</div>
 									</div>
@@ -1019,32 +1030,32 @@
 									<div class="swiper-wrapper">
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-02.webp" alt="">
+											<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-02.webp" alt="">
+											<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-02.webp" alt="">
+											<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
 										</div>
 
 									</div>
 
 									<div class="items">
 										<div class="item">
-											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/local.svg" draggable="false" loading="lazy" alt="Estepona">
 											<span>Estepona</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/clock.svg" draggable="false" loading="lazy" alt="Estepona">
 											<span>4 weeks</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/m.svg" draggable="false" loading="lazy" alt="Estepona">
 											<span>330 m²</span>
 										</div>
 									</div>
@@ -1069,32 +1080,32 @@
 									<div class="swiper-wrapper">
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-03.webp" alt="">
+											<img src="img/main/portfolio/portfolio-03.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-03.webp" alt="">
+											<img src="img/main/portfolio/portfolio-03.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-03.webp" alt="">
+											<img src="img/main/portfolio/portfolio-03.webp" loading="lazy" alt="">
 										</div>
 
 									</div>
 
 									<div class="items">
 										<div class="item">
-											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/local.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>Estepona</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/clock.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>4 weeks</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/m.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>330 m²</span>
 										</div>
 									</div>
@@ -1119,32 +1130,32 @@
 									<div class="swiper-wrapper">
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-04.webp" alt="">
+											<img src="img/main/portfolio/portfolio-04.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-04.webp" alt="">
+											<img src="img/main/portfolio/portfolio-04.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-04.webp" alt="">
+											<img src="img/main/portfolio/portfolio-04.webp" loading="lazy" alt="">
 										</div>
 
 									</div>
 
 									<div class="items">
 										<div class="item">
-											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/local.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>Estepona</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/clock.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>4 weeks</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/m.svg" loading="lazy" draggable="false" alt="Estepona">
 											<span>330 m²</span>
 										</div>
 									</div>
@@ -1169,32 +1180,32 @@
 									<div class="swiper-wrapper">
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-05.webp" alt="">
+											<img src="img/main/portfolio/portfolio-05.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-05.webp" alt="">
+											<img src="img/main/portfolio/portfolio-05.webp" loading="lazy" alt="">
 										</div>
 
 										<div class="swiper-slide">
-											<img src="img/main/portfolio/portfolio-05.webp" alt="">
+											<img src="img/main/portfolio/portfolio-05.webp" loading="lazy" alt="">
 										</div>
 
 									</div>
 
 									<div class="items">
 										<div class="item">
-											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/local.svg" draggable="false" loading="lazy" alt="Estepona">
 											<span>Estepona</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/clock.svg" draggable="false" loading="lazy" alt="Estepona">
 											<span>4 weeks</span>
 										</div>
 
 										<div class="item">
-											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<img src="img/svg/m.svg" draggable="false" loading="lazy" alt="Estepona">
 											<span>330 m²</span>
 										</div>
 									</div>
@@ -1216,7 +1227,7 @@
 
 						<div class="completed-projects">
 							<div class="completed-projects__item">
-								<img src="img/svg/check.svg" draggable="false" alt="">
+								<img src="img/svg/check.svg" loading="lazy" draggable="false" alt="">
 								<p>24 proyectos de construcción completados en 2025</p>
 							</div>
 
@@ -1237,38 +1248,38 @@
 			<section class="consultation">
 
 				<div class="bg">
-					<img src="img/main/consultation-bg.webp" draggable="false" alt="">
+					<img src="img/main/consultation-bg.webp" loading="lazy" draggable="false" alt="">
 				</div>
 
 				<div class="swiper consultation-slider">
 					<div class="swiper-wrapper">
 
 						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" draggable="false" alt="">
+							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" draggable="false" alt="">
 						</div>
 
 						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
 						</div>
 
 						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
 						</div>
 
 						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
 						</div>
 
 						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
 						</div>
 
 						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
 						</div>
 
 						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
 						</div>
 
 					</div>
@@ -1279,7 +1290,7 @@
 						<div class="consultation-form__top">
 							<div class="numbering">
 								<div class="numbering__icon">
-									<img src="img/svg/plus.svg" draggable="false" alt="">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
 								</div>
 
 								<span>( Perspectivas Estratégicas y Consultas Técnicas )</span>
@@ -1325,7 +1336,7 @@
 						<div class="intro-description">
 							<div class="numbering">
 								<div class="numbering__icon">
-									<img src="img/svg/plus.svg" draggable="false" alt="">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
 								</div>
 
 								<span>00/04</span>
@@ -1352,13 +1363,13 @@
 
 						<div class="advantages__wrapper">
 							<div class="advantages__pic">
-								<img src="img/main/advantages/advantages-pic.webp" draggable="false" alt="" class="">
+								<img src="img/main/advantages/advantages-pic.webp" loading="lazy" draggable="false" alt="" class="">
 							</div>
 
 							<div class="advantages__items">
 								<div class="advantages__item">
 									<div class="advandages__icon">
-										<img src="img/main/advantages/01.svg" draggable="false" alt="" class="">
+										<img src="img/main/advantages/01.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
 
@@ -1379,7 +1390,7 @@
 
 								<div class="advantages__item">
 									<div class="advandages__icon">
-										<img src="img/main/advantages/02.svg" draggable="false" alt="" class="">
+										<img src="img/main/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
 
@@ -1400,7 +1411,7 @@
 
 								<div class="advantages__item">
 									<div class="advandages__icon">
-										<img src="img/main/advantages/03.svg" draggable="false" alt="" class="">
+										<img src="img/main/advantages/03.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
 
@@ -1420,7 +1431,7 @@
 
 								<div class="advantages__item">
 									<div class="advandages__icon">
-										<img src="img/main/advantages/04.svg" draggable="false" alt="" class="">
+										<img src="img/main/advantages/04.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
 
@@ -1441,7 +1452,7 @@
 
 								<div class="advantages__item">
 									<div class="advandages__icon">
-										<img src="img/main/advantages/05.svg" draggable="false" alt="" class="">
+										<img src="img/main/advantages/05.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
 
@@ -1461,7 +1472,7 @@
 
 								<div class="advantages__item">
 									<div class="advandages__icon">
-										<img src="img/main/advantages/06.svg" draggable="false" alt="" class="">
+										<img src="img/main/advantages/06.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
 
@@ -1490,8 +1501,8 @@
 
 	</div>
 
-	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260625002439"></script>
-	<script defer src="js/app.min.js?_v=20260625002439"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260625004016"></script>
+	<script defer src="js/app.min.js?_v=20260625004016"></script>
 </body>
 
 </html>

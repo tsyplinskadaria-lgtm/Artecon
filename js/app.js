@@ -75,37 +75,82 @@
         }));
     }));
     window.addEventListener("load", (() => {
-        const languageBlocks = document.querySelectorAll(".languages");
-        if (!languageBlocks.length) return;
-        languageBlocks.forEach((languageBlock => {
-            const currentLanguage = languageBlock.querySelector(".languages__current");
-            const dropdown = languageBlock.querySelector(".languages__dropdown");
-            if (!currentLanguage || !dropdown) return;
-            currentLanguage.addEventListener("click", (e => {
+        const currentButtons = document.querySelectorAll(".languages__current");
+        const allLanguageLinks = document.querySelectorAll(".languages__dropdown a");
+        function setLanguage(lang) {
+            currentButtons.forEach((btn => {
+                btn.textContent = lang;
+                btn.setAttribute("aria-label", lang);
+            }));
+            allLanguageLinks.forEach((link => {
+                link.classList.toggle("active", link.textContent.trim() === lang);
+            }));
+        }
+        document.querySelectorAll(".languages").forEach((block => {
+            const current = block.querySelector(".languages__current");
+            const dropdown = block.querySelector(".languages__dropdown");
+            if (!current || !dropdown) return;
+            current.addEventListener("click", (e => {
                 e.preventDefault();
                 e.stopPropagation();
                 dropdown.classList.toggle("active");
             }));
-            dropdown.addEventListener("click", (e => {
-                const selectedLanguage = e.target.closest("a");
-                if (!selectedLanguage) return;
+        }));
+        allLanguageLinks.forEach((link => {
+            link.addEventListener("click", (e => {
                 e.preventDefault();
-                const currentText = currentLanguage.textContent.trim();
-                const selectedText = selectedLanguage.textContent.trim();
-                currentLanguage.textContent = selectedText;
-                currentLanguage.setAttribute("aria-label", selectedText);
-                selectedLanguage.textContent = currentText;
-                selectedLanguage.setAttribute("aria-label", currentText);
-                dropdown.querySelectorAll("a").forEach((item => {
-                    item.classList.remove("active");
-                }));
-                selectedLanguage.classList.add("active");
-                dropdown.classList.remove("active");
-            }));
-            document.addEventListener("click", (e => {
-                if (!languageBlock.contains(e.target)) dropdown.classList.remove("active");
+                const lang = link.textContent.trim();
+                setLanguage(lang);
+                document.querySelectorAll(".languages__dropdown").forEach((drop => drop.classList.remove("active")));
             }));
         }));
+        document.addEventListener("click", (e => {
+            document.querySelectorAll(".languages").forEach((block => {
+                if (!block.contains(e.target)) block.querySelector(".languages__dropdown")?.classList.remove("active");
+            }));
+        }));
+    }));
+    document.querySelectorAll(".faq-fields__item").forEach((item => {
+        const header = item.querySelector(".faq-fields__top");
+        const content = item.querySelector(".faq-fields__content");
+        header.addEventListener("click", (() => {
+            const isOpen = item.classList.contains("active");
+            if (isOpen) {
+                content.style.height = content.scrollHeight + "px";
+                requestAnimationFrame((() => {
+                    content.style.height = "0px";
+                }));
+                item.classList.remove("active");
+            } else {
+                item.classList.add("active");
+                content.style.height = content.scrollHeight + "px";
+                content.addEventListener("transitionend", (function handler() {
+                    if (item.classList.contains("active")) content.style.height = "auto";
+                    content.removeEventListener("transitionend", handler);
+                }));
+            }
+        }));
+    }));
+    document.querySelectorAll(".card-slider").forEach((slider => {
+        new Swiper(slider, {
+            slidesPerView: 1,
+            speed: 600,
+            effect: "slide",
+            navigation: {
+                nextEl: slider.querySelector(".card-slider__next"),
+                prevEl: slider.querySelector(".card-slider__prev")
+            },
+            grabCursor: true
+        });
+    }));
+    document.querySelectorAll(".consultation-slider").forEach((slider => {
+        new Swiper(slider, {
+            slidesPerView: "auto",
+            speed: 600,
+            effect: "slide",
+            spaceBetween: 12,
+            grabCursor: true
+        });
     }));
     window["FLS"] = true;
 })();

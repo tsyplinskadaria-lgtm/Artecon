@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.min.css?_v=20260624020008">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260624235911" />
+	<link rel="stylesheet" href="./css/style.min.css?_v=20260624235911">
 	<title>Main page | ARTECON</title>
 </head>
 
@@ -96,85 +97,160 @@
 
 					<div class="mobile-menu">
 						<div class="mobile-menu__blocks">
-							<div class="mobile-menu__top">
-								<a href="../../index.html" class="logo" aria-label="Logo">
-									<img src="img/svg/logo-black.svg" draggable="false" alt="Logo">
-								</a>
+							<div class="mobile-menu__wrapper">
+								<div class="mobile-menu__top">
+									<a href="../../index.html" class="logo" aria-label="Logo">
+										<img src="img/svg/logo-black.svg" draggable="false" alt="Logo">
+									</a>
 
-								<div class="details">
-									<div class="details__item languages">
-										<a href="#!" aria-label="Es">
-											Es
-										</a>
-									</div>
+									<div class="details">
+										<div class="details__item languages">
+											<a href="#!" class="languages__current" aria-label="Es">
+												Es
+											</a>
+										</div>
 
-									<div class="details__item">
-										<a href="#!" aria-label="Es">
-											<svg class="icon">
-												<use xlink:href="img/icons/icons.svg#phone"></use>
-											</svg>
-										</a>
-									</div>
+										<div class="details__item">
+											<a href="#!" aria-label="Es">
+												<svg class="icon">
+													<use xlink:href="img/icons/icons.svg#phone"></use>
+												</svg>
+											</a>
+										</div>
 
-									<div class="details__item close-menu">
-										<a href="#!" aria-label="Es">
-											<svg class="icon">
-												<use xlink:href="img/icons/icons.svg#close-icon"></use>
-											</svg>
-										</a>
+										<div class="details__item close-menu">
+											<a href="#!" aria-label="Es">
+												<svg class="icon">
+													<use xlink:href="img/icons/icons.svg#close-icon"></use>
+												</svg>
+											</a>
+										</div>
 									</div>
+								</div>
+
+								<nav class="menu-mobile">
+									<div class="menu-mobile__slider">
+
+										<!-- Головне меню -->
+										<div class="menu-mobile__page">
+											<ul class="menu-mobile__list">
+												<li><a href="#!">Home page</a></li>
+												<li><a href="#!">About Artecon</a></li>
+												<li><a href="#!">Partners & Investors</a></li>
+												<li><a href="#!">Construcción</a></li>
+												<li><a href="#!">Gestión de Proyectos</a></li>
+
+												<li>
+													<a href="#!">Servicios y Oficios</a>
+
+													<button class="submenu-open" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+												</li>
+
+												<li><a href="#!">Reformas y Rehabilitaciones</a></li>
+												<li><a href="#!">Contacts</a></li>
+											</ul>
+										</div>
+
+										<!-- Підменю -->
+										<div class="menu-mobile__page">
+											<ul class="menu-mobile__list">
+												<li class="submenu-back">
+													<button class="submenu-close" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+
+													<span>Servicios y Oficios</span>
+												</li>
+
+												<li><a href="#!">Demolición</a></li>
+												<li><a href="#!">Estructuras</a></li>
+												<li><a href="#!">Albañilería</a></li>
+												<li><a href="#!">Cubiertas</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+							</div>
+
+							<div class="below-info show-mob">
+								<div class="social">
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
 								</div>
 							</div>
 
-							<nav class="menu-mobile">
-								<div class="menu-mobile__slider">
+							<div class="btns">
+								<button class="btn btn-red" aria-label="Explorar Soluciones">Explorar
+									Soluciones</button>
 
-									<!-- Головне меню -->
-									<div class="menu-mobile__page">
-										<ul class="menu-mobile__list">
-											<li><a href="#!">Home page</a></li>
-											<li><a href="#!">About Artecon</a></li>
-											<li><a href="#!">Partners & Investors</a></li>
-											<li><a href="#!">Construcción</a></li>
-											<li><a href="#!">Gestión de Proyectos</a></li>
+								<button class="btn btn-white" aria-label="Solicitar Consultoría">Solicitar
+									Consultoría</button>
+							</div>
 
-											<li>
-												<a href="#!">Servicios y Oficios</a>
+							<div class="below-info">
+								<div class="social hide-mob">
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
 
-												<button class="submenu-open" type="button">
-													<svg class="icon">
-														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
-													</svg>
-												</button>
-											</li>
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
 
-											<li><a href="#!">Reformas y Rehabilitaciones</a></li>
-											<li><a href="#!">Contacts</a></li>
-										</ul>
-									</div>
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
 
-									<!-- Підменю -->
-									<div class="menu-mobile__page">
-										<ul class="menu-mobile__list">
-											<li class="submenu-back">
-												<button class="submenu-close" type="button">
-													<svg class="icon">
-														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
-													</svg>
-												</button>
-
-												<span>Servicios y Oficios</span>
-											</li>
-
-											<li><a href="#!">Demolición</a></li>
-											<li><a href="#!">Estructuras</a></li>
-											<li><a href="#!">Albañilería</a></li>
-											<li><a href="#!">Cubiertas</a></li>
-										</ul>
-									</div>
-
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
 								</div>
-							</nav>
+
+								<div class="languages mobile-languages">
+									<div class="languages__dropdown">
+										<a href="#!" class="active" aria-label="ES">ES</a>
+										<a href="#!" aria-label="EN">EN</a>
+										<a href="#!" aria-label="RU">RU</a>
+									</div>
+								</div>
+
+							</div>
 						</div>
 					</div>
 				</div>
@@ -369,7 +445,7 @@
 									</div>
 
 									<!-- твоя картинка-прелоадер -->
-									<img class="video__thumb" src="img/main/about/video-preloader.webp" draggable="false" alt="">
+									<img class="video__thumb" src="img/main/video-preloader/video-preloader.webp" draggable="false" alt="">
 
 									<button class="video__play">
 										<img src="img/svg/play.svg" draggable="false" alt="">
@@ -391,7 +467,7 @@
 									reformas integrales en la Costa del Sol.
 								</p>
 
-								<a href="#!" class="about-us-btn" aria-label="Acerca de la empresa">
+								<a href="#!" aria-label="Acerca de la empresa">
 									Acerca de la empresa
 
 									<svg class="icon">
@@ -458,17 +534,158 @@
 
 
 									<div class="control-panel-btn">
-										<svg class="icon">
+										<svg class="icon icon-plus">
 											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
 										</svg>
 									</div>
 								</div>
 
 								<div class="faq-fields__content">
 									<div class="faq-fields__inner">
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure fugiat, molestias
-										tempore ipsum, esse assumenda accusamus dolorem aut inventore hic vero nulla
-										impedit voluptatem et. Dolor labore unde possimus veniam.
+										<div class="faq-fields__info">
+											<div class="title hide-mob">
+												Gestión integral de la construcción y diseño técnico en Marbella /
+												Contratista general
+											</div>
+
+											<div class="items">
+												<div class="items__item">
+													Сonstrucción de villas de lujo
+												</div>
+
+												<div class="items__item">
+													Edificación Residencial
+												</div>
+
+												<div class="items__item">
+													Construcción Industrial
+												</div>
+											</div>
+
+											<p>
+												Como empresa constructora en Marbella líder, ofrecemos una gestión
+												integral de contratos para la construcción de villas de lujo y proyectos
+												industriales complejos. Nuestro enfoque de contratista general garantiza
+												el cumplimiento de los más altos estándares técnicos y plazos de
+												entrega, proporcionando una solución llave en mano que abarca desde la
+												cimentación hasta los acabados más exigentes.
+											</p>
+
+											<div class="btns">
+												<button class="btn btn-red" aria-label="Explorar Especialidad">Explorar
+													Especialidad</button>
+
+												<button class="btn btn-white" aria-label="Solicitar Información">Solicitar Información</button>
+											</div>
+										</div>
+
+										<div class="faq-fields__mob-show">
+
+											<div class="title show-mob">
+												Gestión integral de la construcción y diseño técnico en Marbella /
+												Contratista general
+											</div>
+
+											<div class="video__item" data-video="XZTU3tYTkGc">
+												<div class="video__preview">
+
+													<img class="video__thumb" src="img/main/video-preloader/video-preloader.webp" draggable="false" alt="">
+
+													<button class="video__play">
+														<img src="img/svg/play.svg" draggable="false" alt="">
+													</button>
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#hashtag"></use>
+											</svg>
+
+											<span>02</span>
+										</div>
+
+										<div class="title">Gestión de Proyectos</div>
+									</div>
+
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<div class="faq-fields__info">
+											<div class="title hide-mob">
+												Supervisión y Consultoría. Gestión Técnica y Control Operativo
+												Estratégico
+											</div>
+
+											<p>
+												Ofrecemos un ecosistema de gestión versátil adaptado tanto para
+												propietarios privados como para entidades comerciales, adaptable a
+												cualquier etapa, desde la planificación inicial hasta la estabilización
+												a mitad de construcción. Nuestro modelo armoniza la consultoría
+												estratégica con la supervisión activa en el lugar para resolver
+												complejidades técnicas y optimizar la calidad de ejecución. Con una
+												profunda experiencia a lo largo de todo el ciclo de vida del edificio,
+												garantizamos la continuidad del proyecto; nuestra capacidad para
+												intervenir directamente en las operaciones nos permite neutralizar
+												retrasos y mantener la integridad estructural hasta una entrega exitosa.
+											</p>
+
+											<div class="btns">
+												<button class="btn btn-red" aria-label="Explorar Especialidad">Explorar
+													Especialidad</button>
+
+												<button class="btn btn-white" aria-label="Solicitar Información">Solicitar
+													Información</button>
+											</div>
+										</div>
+
+										<div class="faq-fields__mob-show">
+
+											<div class="title show-mob">
+												Supervisión y Consultoría. Gestión Técnica y Control Operativo
+												Estratégico
+											</div>
+
+											<div class="video__item" data-video="XZTU3tYTkGc">
+												<div class="video__preview">
+
+													<img class="video__thumb" src="img/main/video-preloader/video-preloader-02.webp" draggable="false" alt="">
+
+													<button class="video__play">
+														<img src="img/svg/play.svg" draggable="false" alt="">
+													</button>
+
+												</div>
+											</div>
+										</div>
+
+
 									</div>
 								</div>
 							</div>
@@ -481,29 +698,224 @@
 												<use xlink:href="img/icons/icons.svg#hashtag"></use>
 											</svg>
 
-											<span>01</span>
+											<span>03</span>
 										</div>
 
-										<div class="title">Construcción Llave en Mano</div>
+										<div class="title">Servicios y Oficios</div>
 									</div>
 
 
 									<div class="control-panel-btn">
-										<svg class="icon">
+										<svg class="icon icon-plus">
 											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
 										</svg>
 									</div>
 								</div>
 
 								<div class="faq-fields__content">
 									<div class="faq-fields__inner">
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure fugiat, molestias
-										tempore ipsum, esse assumenda accusamus dolorem aut inventore hic vero nulla
-										impedit voluptatem et. Dolor labore unde possimus veniam.
+										<div class="faq-fields__info">
+											<div class="title hide-mob">
+												Soluciones técnicas de subcontratación: estructuras de hormigón,
+												fontanería, electricidad y domótica. Ejecución de alta precisión con
+												equipo técnico propio.
+											</div>
+
+
+											<div class="items">
+												<div class="items__item">
+													Demolición
+												</div>
+
+												<div class="items__item">
+													Estructuras
+												</div>
+
+												<div class="items__item">
+													Albañilería
+												</div>
+
+												<div class="items__item">
+													Cubiertas
+												</div>
+
+												<div class="items__item">
+													Yeso y Revoque
+												</div>
+
+												<div class="items__item">
+													Pintura
+												</div>
+
+												<div class="items__item">
+													Electricidad
+												</div>
+
+												<div class="items__item">
+													Fontanería
+												</div>
+
+												<div class="items__item">
+													Climatización
+												</div>
+
+												<div class="items__item">
+													Impermeabilización
+												</div>
+
+												<div class="items__item">
+													Domótica
+												</div>
+
+											</div>
+
+											<p>
+												Ofrecemos servicios de construcción en la Costa del Sol con un equipo
+												técnico altamente cualificado. Nuestra capacidad operativa incluye la
+												ejecución de estructuras de hormigón, instalaciones avanzadas de
+												fontanería y electricidad, así como sistemas de climatización y domótica
+												de vanguardia. Somos el socio técnico ideal para arquitectos y
+												promotores que exigen rigor en la ejecución.
+											</p>
+
+											<div class="btns">
+												<button class="btn btn-red" aria-label="Explorar Especialidad">Explorar
+													Especialidad</button>
+
+												<button class="btn btn-white" aria-label="Solicitar Información">Solicitar
+													Información</button>
+											</div>
+										</div>
+										<div class="faq-fields__mob-show">
+
+											<div class="title show-mob">
+												Soluciones técnicas de subcontratación: estructuras de hormigón,
+												fontanería, electricidad y domótica. Ejecución de alta precisión con
+												equipo técnico propio.
+											</div>
+
+											<div class="video__item" data-video="XZTU3tYTkGc">
+												<div class="video__preview">
+
+													<img class="video__thumb" src="img/main/video-preloader/video-preloader-03.webp" draggable="false" alt="">
+
+													<button class="video__play">
+														<img src="img/svg/play.svg" draggable="false" alt="">
+													</button>
+
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#hashtag"></use>
+											</svg>
+
+											<span>04</span>
+										</div>
+
+										<div class="title">Reformas y Rehabilitaciones</div>
+									</div>
+
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<div class="faq-fields__info">
+											<div class="title hide-mob">
+												Renovación de alto standing para villas, cocinas y baños. Transformación
+												de espacios con materiales premium y optimización de la eficiencia del
+												hogar.
+											</div>
+
+
+											<div class="items">
+												<div class="items__item">
+													Reforma de villas
+												</div>
+
+												<div class="items__item">
+													Reforma de apartamentos
+												</div>
+
+												<div class="items__item">
+													Reforma de locales
+												</div>
+
+												<div class="items__item">
+													Reformas de Cocinas
+												</div>
+
+												<div class="items__item">
+													Reformas de Baños
+												</div>
+											</div>
+
+											<p>
+												Especialistas en reformas integrales en Marbella para propiedades de
+												alto standing. Desde la reforma de cocinas de diseño hasta la reforma de
+												baños y la modernización energética de villas, aplicamos materiales de
+												máxima calidad. Transformamos viviendas existentes en residencias
+												contemporáneas, optimizando tanto su valor de mercado como su confort y
+												eficiencia técnica.
+											</p>
+
+											<div class="btns">
+												<button class="btn btn-red" aria-label="Explorar Especialidad">Explorar
+													Especialidad</button>
+
+												<button class="btn btn-white" aria-label="Solicitar Información">Solicitar
+													Información</button>
+											</div>
+										</div>
+
+										<div class="faq-fields__mob-show">
+											<div class="title show-mob">
+												Renovación de alto standing para villas, cocinas y baños. Transformación
+												de espacios con materiales premium y optimización de la eficiencia del
+												hogar.
+											</div>
+
+											<div class="video__item" data-video="XZTU3tYTkGc">
+												<div class="video__preview">
+
+													<img class="video__thumb" src="img/main/video-preloader/video-preloader-04.webp" draggable="false" alt="">
+
+													<button class="video__play">
+														<img src="img/svg/play.svg" draggable="false" alt="">
+													</button>
+
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</section>
@@ -526,9 +938,9 @@
 								<div class="intro-description__general">
 									<span>( Portfolio )</span>
 
-									<h3>
+									<h4>
 										Proyectos de construcción y arquitectura <strong>de lujo en Marbella</strong>
-									</h3>
+									</h4>
 								</div>
 
 
@@ -539,6 +951,526 @@
 							</div>
 						</div>
 
+						<div class="cards-grid">
+
+							<!-- Card -->
+							<article class="cards-grid__item">
+								<div class="swiper card-slider">
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-01.webp" draggable="false" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-01.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-01.webp" alt="">
+										</div>
+
+									</div>
+
+									<div class="items">
+										<div class="item">
+											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<span>Estepona</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<span>4 weeks</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<span>330 m²</span>
+										</div>
+									</div>
+
+									<button class="card-slider__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<button class="card-slider__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</article>
+
+							<!-- Card -->
+							<article class="cards-grid__item">
+								<div class="swiper card-slider">
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-02.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-02.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-02.webp" alt="">
+										</div>
+
+									</div>
+
+									<div class="items">
+										<div class="item">
+											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<span>Estepona</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<span>4 weeks</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<span>330 m²</span>
+										</div>
+									</div>
+
+									<button class="card-slider__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<button class="card-slider__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</article>
+
+							<!-- Card -->
+							<article class="cards-grid__item">
+								<div class="swiper card-slider">
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-03.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-03.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-03.webp" alt="">
+										</div>
+
+									</div>
+
+									<div class="items">
+										<div class="item">
+											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<span>Estepona</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<span>4 weeks</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<span>330 m²</span>
+										</div>
+									</div>
+
+									<button class="card-slider__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<button class="card-slider__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</article>
+
+							<!-- Card -->
+							<article class="cards-grid__item">
+								<div class="swiper card-slider">
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-04.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-04.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-04.webp" alt="">
+										</div>
+
+									</div>
+
+									<div class="items">
+										<div class="item">
+											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<span>Estepona</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<span>4 weeks</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<span>330 m²</span>
+										</div>
+									</div>
+
+									<button class="card-slider__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<button class="card-slider__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</article>
+
+							<!-- Card -->
+							<article class="cards-grid__item">
+								<div class="swiper card-slider">
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-05.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-05.webp" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/main/portfolio/portfolio-05.webp" alt="">
+										</div>
+
+									</div>
+
+									<div class="items">
+										<div class="item">
+											<img src="img/svg/local.svg" draggable="false" alt="Estepona">
+											<span>Estepona</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/clock.svg" draggable="false" alt="Estepona">
+											<span>4 weeks</span>
+										</div>
+
+										<div class="item">
+											<img src="img/svg/m.svg" draggable="false" alt="Estepona">
+											<span>330 m²</span>
+										</div>
+									</div>
+
+									<button class="card-slider__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<button class="card-slider__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</article>
+						</div>
+
+						<div class="completed-projects">
+							<div class="completed-projects__item">
+								<img src="img/svg/check.svg" draggable="false" alt="">
+								<p>24 proyectos de construcción completados en 2025</p>
+							</div>
+
+							<a href="#!" aria-label="Más proyectos">
+								Más proyectos
+
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Consultation -->
+
+			<section class="consultation">
+
+				<div class="bg">
+					<img src="img/main/consultation-bg.webp" draggable="false" alt="">
+				</div>
+
+				<div class="swiper consultation-slider">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<img src="img/main/portfolio/portfolio-01.webp" draggable="false" alt="">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="img/main/portfolio/portfolio-01.webp" alt="">
+						</div>
+
+					</div>
+				</div>
+
+				<div class="consultation-form">
+					<div class="consultation-form__blocks">
+						<div class="consultation-form__top">
+							<div class="numbering">
+								<div class="numbering__icon">
+									<img src="img/svg/plus.svg" draggable="false" alt="">
+								</div>
+
+								<span>( Perspectivas Estratégicas y Consultas Técnicas )</span>
+							</div>
+
+							<div class="title">
+								Claridad Estratégica. <br>
+								Definiendo el Control Total.
+							</div>
+
+							<p>
+								Damos respuesta a las inquietudes clave de los inversores internacionales, aportando
+								total transparencia sobre cómo nuestra supervisión profesional protege su capital y
+								garantiza el cumplimiento técnico y normativo en la Costa del Sol.
+							</p>
+						</div>
+
+						<form class="form">
+							<div class="form__group">
+								<label for="name">Nombre Completo*</label>
+								<input type="text" placeholder="Introduce tu nombre completo" id="name" name="name" required>
+							</div>
+
+							<div class="form__group">
+								<label for="phone">Teléfono de contacto*</label>
+								<input type="tel" placeholder="+34 (000) 000-000" id="phone" name="phone" required>
+							</div>
+
+							<button type="submit" class="consultation-form-btn btn btn-red">
+								Hablar con un experto
+							</button>
+						</form>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- Advantages -->
+
+			<section class="advantages" style="background-color:#f2f2f7">
+				<div class="advantages__container">
+					<div class="advantages__blocks">
+						<div class="intro-description">
+							<div class="numbering">
+								<div class="numbering__icon">
+									<img src="img/svg/plus.svg" draggable="false" alt="">
+								</div>
+
+								<span>00/04</span>
+							</div>
+
+							<div class="intro-description__content">
+								<div class="intro-description__general">
+									<span>( Excelencia Operativa y Valor Estratégico )</span>
+
+									<h5>
+										Ventajas competitivas: Por qué confiar su proyecto a nuestra constructora en
+										Marbella
+									</h5>
+								</div>
+
+
+								<div class="intro-description__descript">
+									Optimizamos cada fase de su inversión inmobiliaria a través de una metodología
+									integral que fusiona la arquitectura técnica con un control rigurosa de la obra en
+									toda la Costa del Sol.
+								</div>
+							</div>
+						</div>
+
+						<div class="advantages__wrapper">
+							<div class="advantages__pic">
+								<img src="img/main/advantages/advantages-pic.webp" draggable="false" alt="" class="">
+							</div>
+
+							<div class="advantages__items">
+								<div class="advantages__item">
+									<div class="advandages__icon">
+										<img src="img/main/advantages/01.svg" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Gestión Integral <br>
+											Llave en Mano
+										</div>
+
+										<p>
+											Asumimos la responsabilidad total del proyecto, integrando diseño,
+											ingeniería y ejecución para eliminar la fragmentación de riesgos y asegurar
+											la coherencia técnica.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advandages__icon">
+										<img src="img/main/advantages/02.svg" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Revalorización <br>
+											Real del Activo
+										</div>
+
+										<p>
+											Implementamos estrategias de construcción y materiales de alta gama
+											orientados a maximizar el valor de mercado y el retorno de inversión de su
+											propiedad.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advandages__icon">
+										<img src="img/main/advantages/03.svg" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Experiencia en <br>
+											Normativa Local
+										</div>
+
+										<p>
+											Gestión experta de licencias de obra y cumplimiento estricto de los códigos
+											urbanísticos en Marbella, Estepona y Benahavís para evitar retrasos legales.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advandages__icon">
+										<img src="img/main/advantages/04.svg" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Transparencia <br>
+											Financiera Total
+										</div>
+
+										<p>
+											Control de costes riguroso y reportes de auditoría periódicos que garantizan
+											que su capital se gestione con absoluta claridad y sin desviaciones
+											presupuestarias.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advandages__icon">
+										<img src="img/main/advantages/05.svg" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Excelencia Técnica y <br>
+											Materiales Premium
+										</div>
+
+										<p>
+											Fusión de artesanía tradicional con innovación tecnológica y materiales
+											sostenibles para crear estructuras duraderas con acabados de "quiet luxury".
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advandages__icon">
+										<img src="img/main/advantages/06.svg" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Cumplimiento de <br>
+											Plazos Garantizado
+										</div>
+
+										<p>
+											Planificación estratégica y supervisión in-situ constante para asegurar la
+											entrega de su vivienda en el tiempo acordado, manteniendo los más altos
+											estándares.
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
 
 					</div>
 				</div>
@@ -548,7 +1480,8 @@
 
 	</div>
 
-	<script src="js/app.min.js?_v=20260624020008"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260624235911"></script>
+	<script src="js/app.min.js?_v=20260624235911"></script>
 </body>
 
 </html>

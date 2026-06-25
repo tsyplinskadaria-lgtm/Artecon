@@ -16,14 +16,14 @@
 	<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 
 	<!-- Swiper CSS (non-blocking) -->
-	<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260625012455" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260626010620" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 	<noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260625012455">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260626010620">
 	</noscript>
 
 	<!-- Main CSS -->
-	<link rel="stylesheet" href="./css/style.min.css?_v=20260625012455">
+	<link rel="stylesheet" href="./css/style.min.css?_v=20260626010620">
 	<title>Main page | ARTECON</title>
 </head>
 
@@ -154,7 +154,16 @@
 												<li><a href="#!">Home page</a></li>
 												<li><a href="#!">About Artecon</a></li>
 												<li><a href="#!">Partners & Investors</a></li>
-												<li><a href="#!">Construcción</a></li>
+												<li>
+													<a href="#!">Construcción</a>
+
+													<button class="submenu-open" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+												</li>
+
 												<li><a href="#!">Gestión de Proyectos</a></li>
 
 												<li>
@@ -167,7 +176,16 @@
 													</button>
 												</li>
 
-												<li><a href="#!">Reformas y Rehabilitaciones</a></li>
+												<li>
+													<a href="#!">Reformas y Rehabilitaciones</a>
+
+													<button class="submenu-open" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+												</li>
+
 												<li><a href="#!">Contacts</a></li>
 											</ul>
 										</div>
@@ -182,7 +200,16 @@
 														</svg>
 													</button>
 
-													<span>Servicios y Oficios</span>
+													<a href="#!" class="submenu-back-next">
+														<span>Servicios y Oficios</span>
+
+
+														<button class="submenu-open" type="button">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+															</svg>
+														</button>
+													</a>
 												</li>
 
 												<li><a href="#!">Demolición</a></li>
@@ -1010,13 +1037,13 @@
 										</div>
 									</div>
 
-									<button class="card-slider__prev">
+									<button class="navigation-btn navigation-btn__prev">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
 									</button>
 
-									<button class="card-slider__next">
+									<button class="navigation-btn navigation-btn__next">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
@@ -1060,13 +1087,13 @@
 										</div>
 									</div>
 
-									<button class="card-slider__prev">
+									<button class="navigation-btn navigation-btn__prev">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
 									</button>
 
-									<button class="card-slider__next">
+									<button class="navigation-btn navigation-btn__next">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
@@ -1110,13 +1137,13 @@
 										</div>
 									</div>
 
-									<button class="card-slider__prev">
+									<button class="navigation-btn navigation-btn__prev">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
 									</button>
 
-									<button class="card-slider__next">
+									<button class="navigation-btn navigation-btn__next">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
@@ -1160,13 +1187,13 @@
 										</div>
 									</div>
 
-									<button class="card-slider__prev">
+									<button class="navigation-btn navigation-btn__prev">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
 									</button>
 
-									<button class="card-slider__next">
+									<button class="navigation-btn navigation-btn__next">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
@@ -1210,13 +1237,13 @@
 										</div>
 									</div>
 
-									<button class="card-slider__prev">
+									<button class="navigation-btn navigation-btn__prev">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
 									</button>
 
-									<button class="card-slider__next">
+									<button class="navigation-btn navigation-btn__next">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 										</svg>
@@ -1251,37 +1278,26 @@
 					<img src="img/main/consultation-bg.webp" loading="lazy" draggable="false" alt="">
 				</div>
 
-				<div class="swiper consultation-slider">
-					<div class="swiper-wrapper">
+				<div class="consultation-track">
+					<div class="consultation-list">
+						<div class="item"><img src="img/main/01.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/02.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/03.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/04.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/05.webp" alt="" loading="lazy" draggable="false" /></div>
 
-						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" draggable="false" alt="">
-						</div>
+						<!-- duplicate -->
+						<div class="item"><img src="img/main/01.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/02.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/03.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/04.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/05.webp" alt="" loading="lazy" draggable="false" /></div>
 
-						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
-						</div>
-
-						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
-						</div>
-
-						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
-						</div>
-
-						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
-						</div>
-
-						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
-						</div>
-
-						<div class="swiper-slide">
-							<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
-						</div>
-
+						<div class="item"><img src="img/main/01.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/02.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/03.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/04.webp" alt="" loading="lazy" draggable="false" /></div>
+						<div class="item"><img src="img/main/05.webp" alt="" loading="lazy" draggable="false" /></div>
 					</div>
 				</div>
 
@@ -1368,7 +1384,7 @@
 
 							<div class="advantages__items">
 								<div class="advantages__item">
-									<div class="advandages__icon">
+									<div class="advantages__icon">
 										<img src="img/main/advantages/01.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
@@ -1389,7 +1405,7 @@
 								</div>
 
 								<div class="advantages__item">
-									<div class="advandages__icon">
+									<div class="advantages__icon">
 										<img src="img/main/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
@@ -1410,7 +1426,7 @@
 								</div>
 
 								<div class="advantages__item">
-									<div class="advandages__icon">
+									<div class="advantages__icon">
 										<img src="img/main/advantages/03.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
@@ -1430,7 +1446,7 @@
 								</div>
 
 								<div class="advantages__item">
-									<div class="advandages__icon">
+									<div class="advantages__icon">
 										<img src="img/main/advantages/04.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
@@ -1451,7 +1467,7 @@
 								</div>
 
 								<div class="advantages__item">
-									<div class="advandages__icon">
+									<div class="advantages__icon">
 										<img src="img/main/advantages/05.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
@@ -1471,7 +1487,7 @@
 								</div>
 
 								<div class="advantages__item">
-									<div class="advandages__icon">
+									<div class="advantages__icon">
 										<img src="img/main/advantages/06.svg" loading="lazy" draggable="false" alt="" class="">
 									</div>
 
@@ -1491,8 +1507,1341 @@
 
 								</div>
 							</div>
+
+							<!--  -->
+
+							<div class="advantages-slider swiper">
+								<div class="swiper-wrapper">
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/main/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+
+											<div class="advantages__info">
+												<div class="title">
+													Revalorización <br>
+													Real del Activo
+												</div>
+
+												<p>
+													Implementamos estrategias de construcción y materiales de alta gama
+													orientados a maximizar el valor de mercado y el retorno de inversión
+													de
+													su
+													propiedad.
+												</p>
+											</div>
+
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/main/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+
+											<div class="advantages__info">
+												<div class="title">
+													Revalorización <br>
+													Real del Activo
+												</div>
+
+												<p>
+													Implementamos estrategias de construcción y materiales de alta gama
+													orientados a maximizar el valor de mercado y el retorno de inversión
+													de
+													su
+													propiedad.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/main/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+
+											<div class="advantages__info">
+												<div class="title">
+													Revalorización <br>
+													Real del Activo
+												</div>
+
+												<p>
+													Implementamos estrategias de construcción y materiales de alta gama
+													orientados a maximizar el valor de mercado y el retorno de inversión
+													de
+													su
+													propiedad.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 
+					</div>
+				</div>
+			</section>
+
+			<!-- Video slider -->
+
+			<section class="video-slider" style="background-color:#f2f2f7">
+				<div class="video-slider__container">
+					<div class="video-slider__blocks">
+						<div class="intro-description">
+							<div class="numbering">
+								<div class="numbering__icon">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+								</div>
+
+								<span>00/05</span>
+							</div>
+
+							<div class="intro-description__content">
+								<div class="intro-description__general">
+									<span>( Evidencia en tiempo real )</span>
+
+									<h6>
+										Perspectivas de Obra y Control Visual.
+									</h6>
+								</div>
+
+
+								<div class="intro-description__descript">
+									Una mirada exclusiva al rigor técnico y la ejecución estratégica en la Costa del
+									Sol. Vea cómo transformamos la complejidad en resultados tangibles a través de
+									nuestra supervisión diaria.
+								</div>
+							</div>
+						</div>
+
+						<div class="reviews-slider swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide reviews-slide">
+									<div class="video__item" data-video="XZTU3tYTkGc">
+										<div class="video__preview">
+
+											<img class="video__thumb" src="img/main/review-pic.webp" loading="lazy" draggable="false" alt="">
+
+											<button class="video__play">
+												<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+											</button>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide reviews-slide">
+									<div class="video__item" data-video="XZTU3tYTkGc">
+										<div class="video__preview">
+
+											<img class="video__thumb" src="img/main/review-pic.webp" loading="lazy" draggable="false" alt="">
+
+											<button class="video__play">
+												<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+											</button>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide reviews-slide">
+									<div class="video__item" data-video="XZTU3tYTkGc">
+										<div class="video__preview">
+
+											<img class="video__thumb" src="img/main/review-pic.webp" loading="lazy" draggable="false" alt="">
+
+											<button class="video__play">
+												<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+											</button>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide reviews-slide">
+									<div class="video__item" data-video="XZTU3tYTkGc">
+										<div class="video__preview">
+
+											<img class="video__thumb" src="img/main/review-pic.webp" loading="lazy" draggable="false" alt="">
+
+											<button class="video__play">
+												<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+											</button>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide reviews-slide">
+									<div class="video__item" data-video="XZTU3tYTkGc">
+										<div class="video__preview">
+
+											<img class="video__thumb" src="img/main/review-pic.webp" loading="lazy" draggable="false" alt="">
+
+											<button class="video__play">
+												<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+											</button>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide reviews-slide">
+									<div class="video__item" data-video="XZTU3tYTkGc">
+										<div class="video__preview">
+
+											<img class="video__thumb" src="img/main/review-pic.webp" loading="lazy" draggable="false" alt="">
+
+											<button class="video__play">
+												<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+											</button>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide reviews-slide">
+									<div class="video__item" data-video="XZTU3tYTkGc">
+										<div class="video__preview">
+
+											<img class="video__thumb" src="img/main/review-pic.webp" loading="lazy" draggable="false" alt="">
+
+											<button class="video__play">
+												<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+											</button>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide reviews-slide">
+									<div class="video__item" data-video="XZTU3tYTkGc">
+										<div class="video__preview">
+
+											<img class="video__thumb" src="img/main/review-pic.webp" loading="lazy" draggable="false" alt="">
+
+											<button class="video__play">
+												<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+											</button>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="video-slider__navigation">
+								<button class="navigation-btn navigation-btn__prev">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+									</svg>
+								</button>
+
+								<div class="pagination2"></div>
+
+								<button class="navigation-btn navigation-btn__next">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Відгуки -->
+
+			<section class="response">
+				<div class="response__container">
+					<div class="response__blocks">
+						<div class="response__info">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>02/06</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( Testimonios de excelencia y reputación en el sector )</span>
+
+										<div class="title">
+											La voz de nuestros clientes: Confianza <strong>y resultados en
+												Marbella</strong>
+										</div>
+									</div>
+
+
+									<div class="intro-description__descript">
+										Como referentes entre las empresas constructoras de Marbella, priorizamos la
+										transparencia y el rigor técnico. Recopilamos las opiniones de propietarios de
+										villas de lujo e inversores que avalan nuestra gestión eficiente en toda la
+										Costa del Sol.
+									</div>
+								</div>
+							</div>
+
+							<div class="response-slider swiper show-mob">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide review-card">
+
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Buscábamos una constructora que entendiera el concepto de lujo moderno.
+											El
+											equipo de Artecon no solo cumplió con el diseño, sino que aportó
+											soluciones
+											técnicas que mejoraron la eficiencia energética de la villa. Muy
+											recomendables.
+										</p>
+
+									</div>
+
+									<div class="swiper-slide review-card">
+
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Buscábamos una constructora que entendiera el concepto de lujo moderno.
+											El
+											equipo de Artecon no solo cumplió con el diseño, sino que aportó
+											soluciones
+											técnicas que mejoraron la eficiencia energética de la villa. Muy
+											recomendables.
+										</p>
+
+									</div>
+								</div>
+
+								<div class="video-slider__navigation">
+									<button class="navigation-btn navigation-btn__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<div class="pagination2"></div>
+
+									<button class="navigation-btn navigation-btn__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<div class="google-rating">
+								<img src="img/main/photos.webp" draggable="false" alt="">
+
+								<div class="google-rating__block">
+									<img src="img/svg/google.svg" draggable="false" alt="">
+									<span>5.0 Valoración en Google</span>
+								</div>
+
+								<p>
+									Valoraciones positivas de gestores de activos y propietarios sobre el ROI y la
+									eficiencia técnica.
+								</p>
+							</div>
+						</div>
+
+						<div class="response__reviews hide-mob">
+
+							<div class="response__column">
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Construir una casa en Marbella desde el extranjero es estresante, pero con ellos
+										fue diferente. Transparencia total en los costes y reportes semanales. Hubo un
+										pequeño retraso con la licencia municipal, pero supieron gestionarlo sin que
+										afectara al presupuesto final.
+									</p>
+								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Buscábamos una constructora que entendiera el concepto de lujo moderno. El
+										equipo de Artecon no solo cumplió con el diseño, sino que aportó soluciones
+										técnicas que mejoraron la eficiencia energética de la villa. Muy recomendables.
+									</p>
+								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Después de una mala experiencia con otra empresa, ellos retomaron la obra de mi
+										casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro es
+										que siempre cumplen con su palabra.
+									</p>
+								</div>
+							</div>
+
+							<div class="response__column">
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Después de una mala experiencia con otra empresa, ellos retomaron la obra de mi
+										casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro es
+										que siempre cumplen con su palabra.
+									</p>
+								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Buscábamos una constructora que entendiera el concepto de lujo moderno. El
+										equipo de Artecon no solo cumplió con el diseño, sino que aportó soluciones
+										técnicas que mejoraron la eficiencia energética de la villa. Muy recomendables.
+									</p>
+								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Construcción sólida y equipo muy cualificado. Se nota que conocen la normativa
+										técnica de la Costa del Sol a la perfección. No dejan nada al azar.
+									</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+
+			<section class="faq" style="background-color:#f2f2f7">
+				<div class="faq__container">
+					<div class="faq__blocks">
+						<div class="faq__info">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>02/06</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( Perspectivas Estratégicas y Preguntas Comunes )</span>
+
+										<div class="title">
+											Preguntas frecuentes sobre la gestión de proyectos
+										</div>
+									</div>
+
+
+									<div class="intro-description__descript">
+										Abordamos las preocupaciones críticas de los inversores internacionales,
+										proporcionando claridad absoluta sobre cómo la supervisión profesional protege
+										su capital y asegura el cumplimiento técnico.
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields show-mob">
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 01</span>
+											</div>
+
+											<div class="title">¿Por qué Artecon es considerada la mejor empresa
+												constructora
+												en la Costa del Sol?</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												Nuestra empresa constructora en Marbella destaca por combinar décadas de
+												experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+												diferencia de otras empresas constructoras en Marbella, garantizamos un
+												diseño y ejecución impecables, actuando como su socio de confianza en
+												cada
+												etapa del proyecto.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 02</span>
+											</div>
+
+											<div class="title">¿Realizan la construcción de villas en Marbella bajo el
+												concepto "llave en mano"?</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												Nuestra empresa constructora en Marbella destaca por combinar décadas de
+												experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+												diferencia de otras empresas constructoras en Marbella, garantizamos un
+												diseño y ejecución impecables, actuando como su socio de confianza en
+												cada
+												etapa del proyecto.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 03</span>
+											</div>
+
+											<div class="title">¿Qué diferencia a su empresa de construcción y reformas
+												de la
+												competencia local?</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												Nuestra empresa constructora en Marbella destaca por combinar décadas de
+												experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+												diferencia de otras empresas constructoras en Marbella, garantizamos un
+												diseño y ejecución impecables, actuando como su socio de confianza en
+												cada
+												etapa del proyecto.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 04</span>
+											</div>
+
+											<div class="title">¿Cuánto cuesta construir una casa en Marbella y cómo se
+												define el presupuesto?</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												Nuestra empresa constructora en Marbella destaca por combinar décadas de
+												experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+												diferencia de otras empresas constructoras en Marbella, garantizamos un
+												diseño y ejecución impecables, actuando como su socio de confianza en
+												cada
+												etapa del proyecto.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 05</span>
+											</div>
+
+											<div class="title">¿Ofrece su constructora Marbella gestión completa de obra
+												y
+												trámites legales?</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												Nuestra empresa constructora en Marbella destaca por combinar décadas de
+												experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+												diferencia de otras empresas constructoras en Marbella, garantizamos un
+												diseño y ejecución impecables, actuando como su socio de confianza en
+												cada
+												etapa del proyecto.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 07</span>
+											</div>
+
+											<div class="title">¿En qué zonas operan sus empresas constructoras Marbella?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												Nuestra empresa constructora en Marbella destaca por combinar décadas de
+												experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+												diferencia de otras empresas constructoras en Marbella, garantizamos un
+												diseño y ejecución impecables, actuando como su socio de confianza en
+												cada
+												etapa del proyecto.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 08</span>
+											</div>
+
+											<div class="title">¿Cómo garantizan que los proyectos de construcción
+												cumplan
+												con los estándares de lujo?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												Nuestra empresa constructora en Marbella destaca por combinar décadas de
+												experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+												diferencia de otras empresas constructoras en Marbella, garantizamos un
+												diseño y ejecución impecables, actuando como su socio de confianza en
+												cada
+												etapa del proyecto.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="support-message">
+								<p>
+									¿No encontró su pregunta? Contáctenos vía WhatsApp o mediante el formulario.
+								</p>
+
+								<div class="btns">
+									<a href="#!" class="btn btn-red" aria-label="Hacer una pregunta">Hacer una
+										pregunta</a>
+
+									<a href="#!" class="btn btn-white" aria-label="WhatsApp">WhatsApp</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq-fields hide-mob">
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<span>/ 01</span>
+										</div>
+
+										<div class="title">¿Por qué Artecon es considerada la mejor empresa constructora
+											en la Costa del Sol?</div>
+									</div>
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<p>
+											Nuestra empresa constructora en Marbella destaca por combinar décadas de
+											experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+											diferencia de otras empresas constructoras en Marbella, garantizamos un
+											diseño y ejecución impecables, actuando como su socio de confianza en cada
+											etapa del proyecto.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<span>/ 02</span>
+										</div>
+
+										<div class="title">¿Realizan la construcción de villas en Marbella bajo el
+											concepto "llave en mano"?</div>
+									</div>
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<p>
+											Nuestra empresa constructora en Marbella destaca por combinar décadas de
+											experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+											diferencia de otras empresas constructoras en Marbella, garantizamos un
+											diseño y ejecución impecables, actuando como su socio de confianza en
+											cada
+											etapa del proyecto.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<span>/ 03</span>
+										</div>
+
+										<div class="title">¿Qué diferencia a su empresa de construcción y reformas de la
+											competencia local?</div>
+									</div>
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<p>
+											Nuestra empresa constructora en Marbella destaca por combinar décadas de
+											experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+											diferencia de otras empresas constructoras en Marbella, garantizamos un
+											diseño y ejecución impecables, actuando como su socio de confianza en
+											cada
+											etapa del proyecto.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<span>/ 04</span>
+										</div>
+
+										<div class="title">¿Cuánto cuesta construir una casa en Marbella y cómo se
+											define el presupuesto?</div>
+									</div>
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<p>
+											Nuestra empresa constructora en Marbella destaca por combinar décadas de
+											experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+											diferencia de otras empresas constructoras en Marbella, garantizamos un
+											diseño y ejecución impecables, actuando como su socio de confianza en
+											cada
+											etapa del proyecto.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<span>/ 05</span>
+										</div>
+
+										<div class="title">¿Ofrece su constructora Marbella gestión completa de obra y
+											trámites legales?</div>
+									</div>
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<p>
+											Nuestra empresa constructora en Marbella destaca por combinar décadas de
+											experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+											diferencia de otras empresas constructoras en Marbella, garantizamos un
+											diseño y ejecución impecables, actuando como su socio de confianza en
+											cada
+											etapa del proyecto.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<span>/ 07</span>
+										</div>
+
+										<div class="title">¿En qué zonas operan sus empresas constructoras Marbella?
+										</div>
+									</div>
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<p>
+											Nuestra empresa constructora en Marbella destaca por combinar décadas de
+											experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+											diferencia de otras empresas constructoras en Marbella, garantizamos un
+											diseño y ejecución impecables, actuando como su socio de confianza en
+											cada
+											etapa del proyecto.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields__item">
+								<div class="faq-fields__top">
+									<div class="faq-fields__top-left">
+										<div class="number">
+											<span>/ 08</span>
+										</div>
+
+										<div class="title">¿Cómo garantizan que los proyectos de construcción cumplan
+											con los estándares de lujo?
+										</div>
+									</div>
+
+									<div class="control-panel-btn">
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+
+										<svg class="icon icon-minus">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+								</div>
+
+								<div class="faq-fields__content">
+									<div class="faq-fields__inner">
+										<p>
+											Nuestra empresa constructora en Marbella destaca por combinar décadas de
+											experiencia en el sector con un enfoque de gestión de obra fiduciario. A
+											diferencia de otras empresas constructoras en Marbella, garantizamos un
+											diseño y ejecución impecables, actuando como su socio de confianza en
+											cada
+											etapa del proyecto.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Blog -->
+
+			<section class="blog" style="background-color:#f2f2f7">
+				<div class="blog__container">
+					<div class="blog__blocks">
+						<div class="intro-description">
+							<div class="numbering">
+								<div class="numbering__icon">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+								</div>
+
+								<span>00/08</span>
+							</div>
+
+							<div class="intro-description__content">
+								<div class="intro-description__general">
+									<span>( Blog )</span>
+
+									<div class="title">
+										Actualidad y Tendencias en Construcción de Lujo en Marbella
+									</div>
+								</div>
+
+
+								<div class="intro-description__descript">
+									Perspectivas expertas sobre arquitectura técnica, reformas integrales y el mercado
+									inmobiliario en la Costa del Sol.
+								</div>
+							</div>
+						</div>
+
+						<div class="blog__slider swiper">
+							<div class="swiper-wrapper">
+								<div class="blog-slide swiper-slide">
+									<div class="blog-slide__pic">
+										<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<div class="blog-slide__content">
+										<div class="title">
+											Construcción Llave en Mano: Cómo asegurar la revalorización de su
+											propiedad en Marbella
+										</div>
+
+										<p>
+											Descubra las ventajas de contar con un único punto de responsabilidad en
+											su proyecto. Analizamos cómo la gestión integral de obra elimina riesgos
+											y maximiza el valor de su inversión en la Costa del Sol.
+										</p>
+
+										<a href="#!" class="read-blog" aria-label="Leer más">
+											Leer más
+
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+
+								<div class="blog-slide swiper-slide">
+									<div class="blog-slide__pic">
+										<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<div class="blog-slide__content">
+										<div class="title">
+											Construcción Llave en Mano: Cómo asegurar la revalorización de su
+											propiedad en Marbella
+										</div>
+
+										<p>
+											Descubra las ventajas de contar con un único punto de responsabilidad en
+											su proyecto. Analizamos cómo la gestión integral de obra elimina riesgos
+											y maximiza el valor de su inversión en la Costa del Sol.
+										</p>
+
+										<a href="#!" class="read-blog" aria-label="Leer más">
+											Leer más
+
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+
+								<div class="blog-slide swiper-slide">
+									<div class="blog-slide__pic">
+										<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<div class="blog-slide__content">
+										<div class="title">
+											Construcción Llave en Mano: Cómo asegurar la revalorización de su
+											propiedad en Marbella
+										</div>
+
+										<p>
+											Descubra las ventajas de contar con un único punto de responsabilidad en
+											su proyecto. Analizamos cómo la gestión integral de obra elimina riesgos
+											y maximiza el valor de su inversión en la Costa del Sol.
+										</p>
+
+										<a href="#!" class="read-blog" aria-label="Leer más">
+											Leer más
+
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+
+								<div class="blog-slide swiper-slide">
+									<div class="blog-slide__pic">
+										<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<div class="blog-slide__content">
+										<div class="title">
+											Construcción Llave en Mano: Cómo asegurar la revalorización de su
+											propiedad en Marbella
+										</div>
+
+										<p>
+											Descubra las ventajas de contar con un único punto de responsabilidad en
+											su proyecto. Analizamos cómo la gestión integral de obra elimina riesgos
+											y maximiza el valor de su inversión en la Costa del Sol.
+										</p>
+
+										<a href="#!" class="read-blog" aria-label="Leer más">
+											Leer más
+
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="blog__addition">
+								<div class="blog__navigation">
+									<button class="navigation-btn navigation-btn__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<div class="pagination2"></div>
+
+									<button class="navigation-btn navigation-btn__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+
+								<a href="#!" class="read-blogs" aria-label="Leer más">
+									Más artículos
+
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -1501,8 +2850,8 @@
 
 	</div>
 
-	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260625012455"></script>
-	<script defer src="js/app.min.js?_v=20260625012455"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260626010620"></script>
+	<script defer src="js/app.min.js?_v=20260626010620"></script>
 </body>
 
 </html>

@@ -135,10 +135,11 @@
         new Swiper(slider, {
             slidesPerView: 1,
             speed: 600,
+            spaceBetween: 7,
             effect: "slide",
             navigation: {
-                nextEl: slider.querySelector(".card-slider__next"),
-                prevEl: slider.querySelector(".card-slider__prev")
+                nextEl: slider.querySelector(".navigation-btn__next"),
+                prevEl: slider.querySelector(".navigation-btn__prev")
             },
             grabCursor: true
         });
@@ -146,11 +147,204 @@
     document.querySelectorAll(".consultation-slider").forEach((slider => {
         new Swiper(slider, {
             slidesPerView: "auto",
-            speed: 600,
-            effect: "slide",
             spaceBetween: 12,
-            grabCursor: true
+            speed: 600,
+            loop: true,
+            grabCursor: true,
+            freeMode: {
+                enabled: true,
+                momentum: true
+            },
+            loopedSlides: 10
         });
+    }));
+    window.addEventListener("load", (() => {
+        new Swiper(".advantages-slider", {
+            slidesPerView: 1,
+            spaceBetween: 7,
+            speed: 600,
+            on: {
+                init(swiper) {
+                    initControls(swiper);
+                    updateActive(swiper);
+                },
+                slideChange(swiper) {
+                    updateActive(swiper);
+                }
+            }
+        });
+        function initControls(swiper) {
+            swiper.slides.forEach((slide => {
+                const prevBtn = slide.querySelector(".navigation-btn--prev");
+                const nextBtn = slide.querySelector(".navigation-btn--next");
+                const pagination = slide.querySelector(".pagination");
+                if (!prevBtn || !nextBtn || !pagination) return;
+                prevBtn.onclick = () => swiper.slidePrev();
+                nextBtn.onclick = () => swiper.slideNext();
+                if (pagination.dataset.init === "true") return;
+                pagination.dataset.init = "true";
+                swiper.slides.forEach(((_, i) => {
+                    const dot = document.createElement("span");
+                    dot.classList.add("dot");
+                    dot.onclick = () => swiper.slideTo(i);
+                    pagination.appendChild(dot);
+                }));
+            }));
+        }
+        function updateActive(swiper) {
+            swiper.slides.forEach((slide => {
+                const pagination = slide.querySelector(".pagination");
+                if (!pagination) return;
+                const dots = pagination.querySelectorAll(".dot");
+                dots.forEach(((dot, i) => {
+                    dot.classList.toggle("active", i === swiper.activeIndex);
+                }));
+            }));
+        }
+    }));
+    document.querySelectorAll(".reviews-slider").forEach((slider => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 5,
+            spaceBetween: 11,
+            speed: 600,
+            grabCursor: true,
+            navigation: {
+                nextEl: slider.querySelector(".navigation-btn__next"),
+                prevEl: slider.querySelector(".navigation-btn__prev")
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 5
+                },
+                1024: {
+                    slidesPerView: 4
+                },
+                768: {
+                    slidesPerView: 3
+                },
+                720: {
+                    slidesPerView: 3
+                },
+                576: {
+                    slidesPerView: 2
+                },
+                0: {
+                    slidesPerView: 1.8
+                }
+            },
+            on: {
+                init(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                },
+                slideChange(swiper) {
+                    updatePagination(swiper);
+                }
+            }
+        });
+        function createPagination(swiper) {
+            const pagination = slider.querySelector(".pagination2");
+            if (!pagination) return;
+            pagination.innerHTML = "";
+            const maxDots = window.innerWidth <= 576 ? 6 : 10;
+            const dotsCount = Math.min(swiper.slides.length, maxDots);
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", (() => {
+                    swiper.slideTo(i);
+                }));
+                pagination.appendChild(dot);
+            }
+        }
+        function updatePagination(swiper) {
+            const dots = slider.querySelectorAll(".pagination2 .dot");
+            if (!dots.length) return;
+            const activeDot = swiper.activeIndex % dots.length;
+            dots.forEach(((dot, index) => {
+                dot.classList.toggle("active", index === activeDot);
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            createPagination(swiper);
+            updatePagination(swiper);
+        }));
+    }));
+    document.querySelectorAll(".response__column").forEach((column => {
+        let isDragging = false;
+        let startY = 0;
+        let startScrollTop = 0;
+        column.addEventListener("mousedown", (e => {
+            isDragging = true;
+            startY = e.clientY;
+            startScrollTop = column.scrollTop;
+            column.classList.add("dragging");
+        }));
+        document.addEventListener("mousemove", (e => {
+            if (!isDragging) return;
+            const delta = e.clientY - startY;
+            column.scrollTop = startScrollTop - delta;
+        }));
+        document.addEventListener("mouseup", (() => {
+            isDragging = false;
+            column.classList.remove("dragging");
+        }));
+    }));
+    document.querySelectorAll(".blog__slider").forEach((slider => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 12,
+            speed: 600,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3
+                },
+                576: {
+                    slidesPerView: 2
+                },
+                0: {
+                    slidesPerView: 1
+                }
+            },
+            navigation: {
+                nextEl: slider.querySelector(".navigation-btn__next"),
+                prevEl: slider.querySelector(".navigation-btn__prev")
+            },
+            on: {
+                init(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                },
+                slideChange(swiper) {
+                    updatePagination(swiper);
+                }
+            }
+        });
+        function createPagination(swiper) {
+            const pagination = slider.querySelector(".pagination2");
+            if (!pagination) return;
+            pagination.innerHTML = "";
+            const maxDots = window.innerWidth <= 576 ? 6 : 10;
+            const dotsCount = Math.min(swiper.slides.length, maxDots);
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", (() => swiper.slideTo(i)));
+                pagination.appendChild(dot);
+            }
+        }
+        function updatePagination(swiper) {
+            const dots = slider.querySelectorAll(".pagination2 .dot");
+            if (!dots.length) return;
+            const activeDot = swiper.activeIndex % dots.length;
+            dots.forEach(((dot, index) => {
+                dot.classList.toggle("active", index === activeDot);
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            createPagination(swiper);
+            updatePagination(swiper);
+        }));
     }));
     window["FLS"] = true;
 })();

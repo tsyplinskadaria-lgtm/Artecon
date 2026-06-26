@@ -772,6 +772,13 @@ html::selection {
   color: var(--white-color);
   line-height: 20px
 }
+.footer .gr {
+  background: rgba(255,255,255,.1019607843);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  width: 112px;
+  margin-top: 40px
+}
 .footer-contacts {
   display: flex;
   flex-direction: column;
@@ -3201,6 +3208,9 @@ html::selection {
     width: 100%
   }
   .footer__left-top .description {
+    display: none
+  }
+  .footer .gr {
     display: none
   }
   .footer-contacts .contacts-info .title {

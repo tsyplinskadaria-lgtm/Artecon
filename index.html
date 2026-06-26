@@ -16,14 +16,14 @@
 	<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 
 	<!-- Swiper CSS (non-blocking) -->
-	<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260626010620" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260627021700" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 	<noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260626010620">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260627021700">
 	</noscript>
 
 	<!-- Main CSS -->
-	<link rel="stylesheet" href="./css/style.min.css?_v=20260626010620">
+	<link rel="stylesheet" href="./css/style.min.css?_v=20260627021700">
 	<title>Main page | ARTECON</title>
 </head>
 
@@ -151,13 +151,13 @@
 										<!-- Головне меню -->
 										<div class="menu-mobile__page">
 											<ul class="menu-mobile__list">
-												<li><a href="#!">Home page</a></li>
+												<li><a href="#!">Homepage</a></li>
 												<li><a href="#!">About Artecon</a></li>
 												<li><a href="#!">Partners & Investors</a></li>
 												<li>
 													<a href="#!">Construcción</a>
 
-													<button class="submenu-open" type="button">
+													<button class="submenu-open" data-menu="construction" type="button">
 														<svg class="icon">
 															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 														</svg>
@@ -169,7 +169,7 @@
 												<li>
 													<a href="#!">Servicios y Oficios</a>
 
-													<button class="submenu-open" type="button">
+													<button class="submenu-open" data-menu="servicios" type="button">
 														<svg class="icon">
 															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 														</svg>
@@ -179,7 +179,7 @@
 												<li>
 													<a href="#!">Reformas y Rehabilitaciones</a>
 
-													<button class="submenu-open" type="button">
+													<button class="submenu-open" data-menu="reformas" type="button">
 														<svg class="icon">
 															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
 														</svg>
@@ -191,7 +191,60 @@
 										</div>
 
 										<!-- Підменю -->
-										<div class="menu-mobile__page">
+										<div class="menu-mobile__page menu-mobile__submenu" data-submenu="reformas">
+											<ul class="menu-mobile__list">
+												<li class="submenu-back">
+													<button class="submenu-close" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+
+													<a href="#!" class="submenu-back-next">
+														<span>Servicios y Oficios</span>
+
+
+														<button class="submenu-open" type="button">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+															</svg>
+														</button>
+													</a>
+												</li>
+
+												<li><a href="#!">reformas123</a></li>
+											</ul>
+										</div>
+
+										<!-- Підменю -->
+										<div class="menu-mobile__page menu-mobile__submenu" data-submenu="construction">
+											<ul class="menu-mobile__list">
+												<li class="submenu-back">
+													<button class="submenu-close" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+
+													<a href="#!" class="submenu-back-next">
+														<span>Servicios y Oficios</span>
+
+
+														<button class="submenu-open" type="button">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+															</svg>
+														</button>
+													</a>
+												</li>
+
+												<li><a href="#!">Demolición1</a></li>
+												<li><a href="#!">Estructuras2</a></li>
+												<li><a href="#!">Albañilería3</a></li>
+											</ul>
+										</div>
+
+										<div class="menu-mobile__page menu-mobile__submenu" data-submenu="servicios">
 											<ul class="menu-mobile__list">
 												<li class="submenu-back">
 													<button class="submenu-close" type="button">
@@ -216,6 +269,13 @@
 												<li><a href="#!">Estructuras</a></li>
 												<li><a href="#!">Albañilería</a></li>
 												<li><a href="#!">Cubiertas</a></li>
+												<li><a href="#!">Yeso y Revoque</a></li>
+												<li><a href="#!">Pintura</a></li>
+												<li><a href="#!">Electricidad</a></li>
+												<li><a href="#!">Fontanería</a></li>
+												<li><a href="#!">Climatización</a></li>
+												<li><a href="#!">Impermeabilización</a></li>
+												<li><a href="#!">Domótica</a></li>
 											</ul>
 										</div>
 
@@ -231,21 +291,21 @@
 										</svg>
 									</a>
 
-									<a href="#!" aria-label="Instagram">
+									<a href="#!" aria-label="facebook">
 										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#instagram"></use>
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
 										</svg>
 									</a>
 
-									<a href="#!" aria-label="Instagram">
+									<a href="#!" aria-label="In">
 										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#instagram"></use>
+											<use xlink:href="img/icons/icons.svg#in"></use>
 										</svg>
 									</a>
 
-									<a href="#!" aria-label="Instagram">
+									<a href="#!" aria-label="Telegram">
 										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#instagram"></use>
+											<use xlink:href="img/icons/icons.svg#telegram"></use>
 										</svg>
 									</a>
 								</div>
@@ -267,21 +327,21 @@
 										</svg>
 									</a>
 
-									<a href="#!" aria-label="Instagram">
+									<a href="#!" aria-label="facebook">
 										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#instagram"></use>
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
 										</svg>
 									</a>
 
-									<a href="#!" aria-label="Instagram">
+									<a href="#!" aria-label="In">
 										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#instagram"></use>
+											<use xlink:href="img/icons/icons.svg#in"></use>
 										</svg>
 									</a>
 
-									<a href="#!" aria-label="Instagram">
+									<a href="#!" aria-label="Telegram">
 										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#instagram"></use>
+											<use xlink:href="img/icons/icons.svg#telegram"></use>
 										</svg>
 									</a>
 								</div>
@@ -582,12 +642,12 @@
 
 
 									<div class="control-panel-btn">
-										<svg class="icon icon-plus">
-											<use xlink:href="img/icons/icons.svg#plus"></use>
-										</svg>
-
 										<svg class="icon icon-minus">
 											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+
+										<svg class="icon icon-plus">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
 										</svg>
 									</div>
 								</div>
@@ -1252,6 +1312,377 @@
 							</article>
 						</div>
 
+						<div class="cards-slider-mob cards-slider-mob__slider swiper">
+							<div class="swiper-wrapper">
+
+								<!-- Card -->
+								<article class="cards-grid__item swiper-slide">
+									<div class="swiper card-slider">
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
+											</div>
+
+										</div>
+
+										<div class="items">
+											<div class="item">
+												<img src="img/svg/local.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>Estepona</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/clock.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>4 weeks</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/m.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>330 m²</span>
+											</div>
+										</div>
+
+										<button class="navigation-btn navigation-btn__prev">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+
+										<button class="navigation-btn navigation-btn__next">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</article>
+
+								<!-- Card -->
+								<article class="cards-grid__item swiper-slide">
+									<div class="swiper card-slider">
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
+											</div>
+
+										</div>
+
+										<div class="items">
+											<div class="item">
+												<img src="img/svg/local.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>Estepona</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/clock.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>4 weeks</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/m.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>330 m²</span>
+											</div>
+										</div>
+
+										<button class="navigation-btn navigation-btn__prev">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+
+										<button class="navigation-btn navigation-btn__next">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</article>
+
+								<!-- Card -->
+								<article class="cards-grid__item swiper-slide">
+									<div class="swiper card-slider">
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-03.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-03.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-03.webp" loading="lazy" alt="">
+											</div>
+
+										</div>
+
+										<div class="items">
+											<div class="item">
+												<img src="img/svg/local.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>Estepona</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/clock.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>4 weeks</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/m.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>330 m²</span>
+											</div>
+										</div>
+
+										<button class="navigation-btn navigation-btn__prev">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+
+										<button class="navigation-btn navigation-btn__next">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</article>
+
+								<!-- Card -->
+								<article class="cards-grid__item swiper-slide">
+									<div class="swiper card-slider">
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-04.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-04.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-04.webp" loading="lazy" alt="">
+											</div>
+
+										</div>
+
+										<div class="items">
+											<div class="item">
+												<img src="img/svg/local.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>Estepona</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/clock.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>4 weeks</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/m.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>330 m²</span>
+											</div>
+										</div>
+
+										<button class="navigation-btn navigation-btn__prev">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+
+										<button class="navigation-btn navigation-btn__next">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</article>
+
+								<!-- Card -->
+								<article class="cards-grid__item swiper-slide">
+									<div class="swiper card-slider">
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-05.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-05.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-05.webp" loading="lazy" alt="">
+											</div>
+
+										</div>
+
+										<div class="items">
+											<div class="item">
+												<img src="img/svg/local.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>Estepona</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/clock.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>4 weeks</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/m.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>330 m²</span>
+											</div>
+										</div>
+
+										<button class="navigation-btn navigation-btn__prev">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+
+										<button class="navigation-btn navigation-btn__next">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</article>
+
+								<!-- Card -->
+								<article class="cards-grid__item swiper-slide">
+									<div class="swiper card-slider">
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-01.webp" loading="lazy" alt="">
+											</div>
+
+										</div>
+
+										<div class="items">
+											<div class="item">
+												<img src="img/svg/local.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>Estepona</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/clock.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>4 weeks</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/m.svg" loading="lazy" draggable="false" alt="Estepona">
+												<span>330 m²</span>
+											</div>
+										</div>
+
+										<button class="navigation-btn navigation-btn__prev">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+
+										<button class="navigation-btn navigation-btn__next">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</article>
+
+								<!-- Card -->
+								<article class="cards-grid__item swiper-slide">
+									<div class="swiper card-slider">
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" alt="">
+											</div>
+
+										</div>
+
+										<div class="items">
+											<div class="item">
+												<img src="img/svg/local.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>Estepona</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/clock.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>4 weeks</span>
+											</div>
+
+											<div class="item">
+												<img src="img/svg/m.svg" draggable="false" loading="lazy" alt="Estepona">
+												<span>330 m²</span>
+											</div>
+										</div>
+
+										<button class="navigation-btn navigation-btn__prev">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+
+										<button class="navigation-btn navigation-btn__next">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</article>
+							</div>
+
+							<div class="cards-slider__navigation">
+								<button class="navigation-btn cards-slider-btn__prev">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+									</svg>
+								</button>
+
+								<div class="pagination2"></div>
+
+								<button class="navigation-btn cards-slider-btn__next">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+
 						<div class="completed-projects">
 							<div class="completed-projects__item">
 								<img src="img/svg/check.svg" loading="lazy" draggable="false" alt="">
@@ -1910,9 +2341,71 @@
 										</p>
 
 									</div>
+
+									<div class="swiper-slide review-card">
+
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Buscábamos una constructora que entendiera el concepto de lujo moderno.
+											El
+											equipo de Artecon no solo cumplió con el diseño, sino que aportó
+											soluciones
+											técnicas que mejoraron la eficiencia energética de la villa. Muy
+											recomendables.
+										</p>
+
+									</div>
+
+									<div class="swiper-slide review-card">
+
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Buscábamos una constructora que entendiera el concepto de lujo moderno.
+											El
+											equipo de Artecon no solo cumplió con el diseño, sino que aportó
+											soluciones
+											técnicas que mejoraron la eficiencia energética de la villa. Muy
+											recomendables.
+										</p>
+
+									</div>
 								</div>
 
-								<div class="video-slider__navigation">
+								<div class="response__navigation">
 									<button class="navigation-btn navigation-btn__prev">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
@@ -2025,6 +2518,58 @@
 										que siempre cumplen con su palabra.
 									</p>
 								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Después de una mala experiencia con otra empresa, ellos retomaron la obra de mi
+										casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro es
+										que siempre cumplen con su palabra.
+									</p>
+								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Después de una mala experiencia con otra empresa, ellos retomaron la obra de mi
+										casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro es
+										que siempre cumplen con su palabra.
+									</p>
+								</div>
 							</div>
 
 							<div class="response__column">
@@ -2102,6 +2647,84 @@
 									<p>
 										Construcción sólida y equipo muy cualificado. Se nota que conocen la normativa
 										técnica de la Costa del Sol a la perfección. No dejan nada al azar.
+									</p>
+								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Después de una mala experiencia con otra empresa, ellos retomaron la obra de mi
+										casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro es
+										que siempre cumplen con su palabra.
+									</p>
+								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Después de una mala experiencia con otra empresa, ellos retomaron la obra de mi
+										casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro es
+										que siempre cumplen con su palabra.
+									</p>
+								</div>
+
+								<div class="review-card">
+									<div class="user-info">
+										<div class="avatar">
+											<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<div class="user-info__name">
+											<p>Robert Harrison</p>
+
+											<div class="stars">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+												<img src="img/svg/star.svg" draggable="false" alt="Star">
+											</div>
+										</div>
+									</div>
+
+									<p>
+										Después de una mala experiencia con otra empresa, ellos retomaron la obra de mi
+										casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro es
+										que siempre cumplen con su palabra.
 									</p>
 								</div>
 							</div>
@@ -2418,7 +3041,7 @@
 						</div>
 
 						<div class="faq-fields hide-mob">
-							<div class="faq-fields__item">
+							<div class="faq-fields__item active">
 								<div class="faq-fields__top">
 									<div class="faq-fields__top-left">
 										<div class="number">
@@ -2440,7 +3063,7 @@
 									</div>
 								</div>
 
-								<div class="faq-fields__content">
+								<div class="faq-fields__content" style="height: auto;">
 									<div class="faq-fields__inner">
 										<p>
 											Nuestra empresa constructora en Marbella destaca por combinar décadas de
@@ -2709,7 +3332,7 @@
 							<div class="swiper-wrapper">
 								<div class="blog-slide swiper-slide">
 									<div class="blog-slide__pic">
-										<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
+										<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" draggable="false" alt="">
 									</div>
 
 									<div class="blog-slide__content">
@@ -2736,7 +3359,7 @@
 
 								<div class="blog-slide swiper-slide">
 									<div class="blog-slide__pic">
-										<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
+										<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" draggable="false" alt="">
 									</div>
 
 									<div class="blog-slide__content">
@@ -2763,7 +3386,7 @@
 
 								<div class="blog-slide swiper-slide">
 									<div class="blog-slide__pic">
-										<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
+										<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" draggable="false" alt="">
 									</div>
 
 									<div class="blog-slide__content">
@@ -2790,7 +3413,7 @@
 
 								<div class="blog-slide swiper-slide">
 									<div class="blog-slide__pic">
-										<img src="img/main/about/about-01.webp" loading="lazy" draggable="false" alt="">
+										<img src="img/main/portfolio/portfolio-02.webp" loading="lazy" draggable="false" alt="">
 									</div>
 
 									<div class="blog-slide__content">
@@ -2845,13 +3468,676 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- Форма -->
+
+			<section class="consultation2">
+
+				<div class="bg">
+					<img src="img/main/consultation-f.webp" draggable="false" loading="Lazy" alt="">
+				</div>
+
+				<div class="consultation2__container">
+					<div class="consultation2__blocks">
+						<div class="consultation2__info">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>02/09</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( INICIALIZAR CONSULTA ESTRATÉGICA )</span>
+
+										<div class="title">
+											Inicie su proyecto con nuestra constructora en Marbella.</strong>
+										</div>
+									</div>
+
+
+									<div class="intro-description__descript">
+										Ya sea que planee la construcción de villas en Marbella o busque una empresa de
+										reformas integrales en Marbella, nuestro equipo técnico está listo para
+										intervenir. Solicite hoy su presupuesto personalizado y asegure la gestión de
+										obra profesional que su inversión en la Costa del Sol merece.
+									</div>
+								</div>
+							</div>
+
+							<div class="social">
+								<div class="social-item">
+									<div class="social-item__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+
+									</div>
+
+									<a href="#!">+34 611 272 420</a>
+								</div>
+
+								<div class="social-item">
+									<div class="social-item__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#email"></use>
+										</svg>
+
+									</div>
+
+									<a href="mailto:info@artecon.es">info@artecon.es</a>
+								</div>
+							</div>
+						</div>
+
+						<form class="consultation2-form">
+
+							<input type="hidden" id="interest">
+							<input type="hidden" id="contactMethod">
+
+							<div class="consultation2-form__blocks">
+								<div class="consultation2-form__fields">
+									<div class="consultation2-form__block">
+										<div class="consultation2-form__group">
+											<label for="full-name">Nombre Completo*</label>
+											<input type="text" id="full-name" name="full_name" placeholder="Introduce tu nombre completo" required>
+										</div>
+
+										<div class="consultation2-form__group">
+											<label for="email">Correo Electrónico*</label>
+											<input type="email" id="email" name="email" placeholder="nombre@empresa.com" required>
+										</div>
+									</div>
+
+									<div class="consultation2-form__block">
+										<div class="consultation2-form__group">
+											<label for="industry">Industria / Sector Empresarial</label>
+											<input type="text" id="industry" name="industry" placeholder="Introduce tu industria o sector">
+										</div>
+
+										<div class="consultation2-form__group">
+											<label for="phone">Número de teléfono*</label>
+											<input type="tel" id="phone" name="phone" placeholder="+34 (000) 000-000" required>
+										</div>
+									</div>
+								</div>
+
+								<!--  -->
+
+								<div class="dropdown-interest__groups">
+									<div class="dropdown-interest__group">
+										<label>Estoy interesado en</label>
+
+										<div class="dropdown-interest">
+											<div class="dropdown-interest__top">
+												<span>Seleccionar categoría</span>
+
+												<svg class="icon">
+													<use xlink:href="img/icons/icons.svg#arrow"></use>
+												</svg>
+											</div>
+
+											<div class="consultation2-form__interest">
+												<button type="button" class="interest" data-value="Gestión de Proyectos">Gestión
+													de Proyectos</button>
+												<button type="button" class="interest" data-value="Construcción">Construcción</button>
+												<button type="button" class="interest" data-value="Servicios y Oficios">Servicios y Oficios</button>
+												<button type="button" class="interest" data-value="Reformas y Rehabilitaciones">Reformas y
+													Rehabilitaciones</button>
+												<button type="button" class="interest" data-value="Otro">Otro</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="dropdown-interest__group hide-mobile">
+										<label>Método de Contacto Preferido:</label>
+
+										<div class="dropdown-interest">
+											<div class="dropdown-interest__top">
+												<span>Seleccionar categoría</span>
+
+												<svg class="icon">
+													<use xlink:href="img/icons/icons.svg#arrow"></use>
+												</svg>
+											</div>
+
+											<div class="consultation2-form__interest">
+												<button type="button" class="method-btn" data-value="Llamar">Llamar</button>
+												<button type="button" class="method-btn" data-value="WhatsApp">WhatsApp</button>
+												<button type="button" class="method-btn" data-value="Correo Electrónico">Correo Electrónico</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="consultation2-form__methods-wrap">
+									<label>Estoy interesado en</label>
+									<div class="consultation2-form__interest">
+										<button type="button" class="interest" data-value="Gestión de Proyectos">Gestión
+											de Proyectos</button>
+										<button type="button" class="interest" data-value="Construcción">Construcción</button>
+										<button type="button" class="interest" data-value="Servicios y Oficios">Servicios y Oficios</button>
+										<button type="button" class="interest" data-value="Reformas y Rehabilitaciones">Reformas y
+											Rehabilitaciones</button>
+										<button type="button" class="interest" data-value="Otro">Otro</button>
+									</div>
+								</div>
+
+								<div class="consultation2-form__group full">
+									<label for="name">Mensaje</label>
+									<textarea placeholder="Cuéntanos sobre tu proyecto o requisitos específicos..."></textarea>
+								</div>
+
+								<div class="dropdown-interest__group show-mobile">
+									<label>Método de Contacto Preferido:</label>
+
+									<div class="dropdown-interest">
+										<div class="dropdown-interest__top">
+											<span>Seleccionar categoría</span>
+
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+										</div>
+
+										<div class="consultation2-form__interest">
+											<button type="button" class="method-btn" data-value="Llamar">Llamar</button>
+											<button type="button" class="method-btn" data-value="WhatsApp">WhatsApp</button>
+											<button type="button" class="method-btn" data-value="Correo Electrónico">Correo Electrónico</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="consultation2-form__methods-wrap">
+									<label>Método de Contacto Preferido:</label>
+									<div class="consultation2-form__methods">
+										<button type="button" class="method-btn" data-value="Llamar">Llamar</button>
+										<button type="button" class="method-btn" data-value="WhatsApp">WhatsApp</button>
+										<button type="button" class="method-btn" data-value="Correo Electrónico">Correo
+											Electrónico</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="consultation2-form__btns">
+								<button type="button" class="consultation-form-btn btn btn-white">
+									Subir archivo
+
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#archive"></use>
+									</svg>
+								</button>
+
+								<button type="submit" class="consultation-form-btn btn btn-red">
+									Enviar Consulta
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<!-- Final -->
+
+			<section class="final-cta">
+				<div class="final-cta__container">
+					<div class="final-cta__blocks">
+						<div class="title">
+							Artecon: Empresa Constructora de Confianza en Marbella y la Costa del Sol
+						</div>
+
+						<p>
+							Artecon se posiciona como la empresa constructora en Marbella de referencia para inversores
+							internacionales que buscan seguridad, gestión de obra profesional и calidad de materiales.
+							Como constructora Marbella con amplia experiencia en el sector, lideramos proyectos de
+							construcción de alta complejidad, abarcando desde la arquitectura y construcción inicial
+							hasta el diseño y ejecución de villas modernas.
+						</p>
+
+						<a href="#!" aria-label="Leer más">
+							Leer más
+
+							<svg class="icon">
+								<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</section>
+
 		</div>
 
+		<footer class="footer">
 
+			<div class="bg">
+				<img src="img/main/consultation-f.webp" draggable="false" loading="Lazy" alt="">
+			</div>
+
+			<div class="footer__container">
+				<div class="footer__blocks">
+					<div class="footer__left">
+						<div class="footer__left-top">
+							<a href="#!" class="logo" aria-label="Logo">
+								<img src="img/svg/logo.svg" draggable="false" loading="lazy" alt="Logo">
+							</a>
+
+							<p class="description">
+								Su empresa constructora en Marbella de confianza: expertos en servicios de construcción de
+								casas,
+								villas de lujo и reformas integrales en la Costa del Sol.
+							</p>
+						</div>
+
+						<div class="footer-menu-wrap show-mob">
+							<p class="title">Navigation</p>
+
+
+							<!-- Планше + телефон -->
+
+							<nav class="footer-menu-mob">
+								<ul>
+
+									<li class="open-dropwdown">
+										<a href="#!" aria-label="Homepage">
+											Homepage
+										</a>
+									</li>
+
+									<li class="open-dropwdown">
+										<a href="#!" aria-label="About Artecon">
+											About Artecon
+										</a>
+									</li>
+
+									<li class="open-dropwdown">
+										<a href="#!" aria-label="Partners & Investors">
+											Partners & Investors
+										</a>
+									</li>
+
+									<li class="open-dropwdown">
+										<a href="#!" aria-label="About us">
+											Homepage
+										</a>
+									</li>
+
+									<li class="open-dropwdown active">
+										<div class="open-dropwdown__top">
+											<a href="#!" aria-label="About us">
+												About us
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+												</svg>
+											</a>
+
+											<div class="arrow-open">
+												<img src="img/svg/arrow.svg" draggable="false" alt="">
+											</div>
+										</div>
+
+										<ul class="dropwdown">
+											<li>
+												<a href="#!">Our Story</a>
+											</li>
+
+											<li>
+												<a href="#!">Team</a>
+											</li>
+
+											<li>
+												<a href="#!">Careers</a>
+											</li>
+
+											<li>
+												<a href="#!">Contact</a>
+											</li>
+										</ul>
+
+									</li>
+
+									<li class="open-dropwdown">
+										<div class="open-dropwdown__top">
+											<a href="#!" aria-label="About us">
+												About us
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+												</svg>
+											</a>
+
+											<div class="arrow-open">
+												<img src="img/svg/arrow.svg" draggable="false" alt="">
+											</div>
+										</div>
+
+										<ul class="dropwdown">
+											<li>
+												<a href="#!">Our Story</a>
+											</li>
+
+											<li>
+												<a href="#!">Team</a>
+											</li>
+
+											<li>
+												<a href="#!">Careers</a>
+											</li>
+
+											<li>
+												<a href="#!">Contact</a>
+											</li>
+										</ul>
+
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="footer-contacts show-mob">
+							<div class="contacts-info">
+								<p class="title">Contacts</p>
+
+								<div class="social">
+									<div class="social-item">
+										<div class="social-item__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#local"></use>
+											</svg>
+
+										</div>
+
+										<p>Richlands, Brisbane, Queensland Australia</p>
+									</div>
+
+
+									<div class="social-item">
+										<div class="social-item__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#phone"></use>
+											</svg>
+
+										</div>
+
+										<a href="#!">+34 611 272 420</a>
+									</div>
+
+									<div class="social-item">
+										<div class="social-item__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#email"></use>
+											</svg>
+
+										</div>
+
+										<a href="mailto:info@artecon.es">info@artecon.es</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="contacts-social">
+								<p class="title">Social media</p>
+
+								<div class="social">
+									<a href="#!" aria-label="X">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#x"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Facebook">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Youtube">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#youtube"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="In">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#in"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer-menu-wrap hide-mob">
+						<p class="title">Navigation</p>
+
+						<nav class="footer-menu">
+							<ul>
+								<li class="active">
+									<a href="#!" aria-label="Home">Home</a>
+								</li>
+
+								<li>
+									<a href="#!" aria-label="About us">
+										About us
+										<svg class="icon" aria-hidden="true">
+											<use xlink:href="img/icons/icons.svg#arrow"></use>
+										</svg>
+									</a>
+								</li>
+
+								<li>
+									<a href="#!" aria-label="Blog">Blog</a>
+								</li>
+
+								<li>
+									<a href="#!" aria-label="FAQ">FAQ</a>
+								</li>
+
+								<li>
+									<a href="#!" aria-label="Contacts">Contacts</a>
+								</li>
+							</ul>
+						</nav>
+
+						<!-- Планше + телефон -->
+
+						<nav class="footer-menu-mob">
+							<ul>
+
+								<li class="open-dropwdown">
+									<a href="#!" aria-label="Homepage">
+										Homepage
+									</a>
+								</li>
+
+								<li class="open-dropwdown">
+									<a href="#!" aria-label="About Artecon">
+										About Artecon
+									</a>
+								</li>
+
+								<li class="open-dropwdown">
+									<a href="#!" aria-label="Partners & Investors">
+										Partners & Investors
+									</a>
+								</li>
+
+								<li class="open-dropwdown">
+									<a href="#!" aria-label="About us">
+										Homepage
+									</a>
+								</li>
+
+								<li class="open-dropwdown active">
+									<div class="open-dropwdown__top">
+										<a href="#!" aria-label="About us">
+											About us
+											<svg class="icon" aria-hidden="true">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</a>
+
+										<div class="arrow-open">
+											<img src="img/svg/arrow.svg" draggable="false" alt="">
+										</div>
+									</div>
+
+									<ul class="dropwdown">
+										<li>
+											<a href="#!">Our Story</a>
+										</li>
+
+										<li>
+											<a href="#!">Team</a>
+										</li>
+
+										<li>
+											<a href="#!">Careers</a>
+										</li>
+
+										<li>
+											<a href="#!">Contact</a>
+										</li>
+									</ul>
+
+								</li>
+
+								<li class="open-dropwdown">
+									<div class="open-dropwdown__top">
+										<a href="#!" aria-label="About us">
+											About us
+											<svg class="icon" aria-hidden="true">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</a>
+
+										<div class="arrow-open">
+											<img src="img/svg/arrow.svg" draggable="false" alt="">
+										</div>
+									</div>
+
+									<ul class="dropwdown">
+										<li>
+											<a href="#!">Our Story</a>
+										</li>
+
+										<li>
+											<a href="#!">Team</a>
+										</li>
+
+										<li>
+											<a href="#!">Careers</a>
+										</li>
+
+										<li>
+											<a href="#!">Contact</a>
+										</li>
+									</ul>
+
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="footer-contacts hide-mob">
+						<div class="contacts-info">
+							<p class="title">Contacts</p>
+
+							<div class="social">
+								<div class="social-item">
+									<div class="social-item__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#local"></use>
+										</svg>
+
+									</div>
+
+									<p>Richlands, Brisbane, Queensland Australia</p>
+								</div>
+
+
+								<div class="social-item">
+									<div class="social-item__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+
+									</div>
+
+									<a href="#!">+34 611 272 420</a>
+								</div>
+
+								<div class="social-item">
+									<div class="social-item__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#email"></use>
+										</svg>
+
+									</div>
+
+									<a href="mailto:info@artecon.es">info@artecon.es</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="contacts-social">
+							<p class="title">Social media</p>
+
+							<div class="social">
+								<a href="#!" aria-label="X">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#x"></use>
+									</svg>
+								</a>
+
+								<a href="#!" aria-label="Facebook">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#facebook"></use>
+									</svg>
+								</a>
+
+								<a href="#!" aria-label="Youtube">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#youtube"></use>
+									</svg>
+								</a>
+
+								<a href="#!" aria-label="In">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#in"></use>
+									</svg>
+								</a>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--  -->
+
+				<div class="footer-below">
+					<div class="footer-below__links">
+						<a href="#!" aria-label="Privacy Policy">Privacy Policy</a>
+						<a href="#!" aria-label="Cookie Policy">Cookie Policy</a>
+						<a href="#!" aria-label="Disclaimer">Disclaimer</a>
+					</div>
+
+					<p class="description">
+						Su empresa constructora en Marbella de confianza: expertos en servicios de construcción de
+						casas,
+						villas de lujo и reformas integrales en la Costa del Sol.
+					</p>
+
+					<span>Artecon 2026 ©</span>
+				</div>
+			</div>
+		</footer>
 	</div>
 
-	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260626010620"></script>
-	<script defer src="js/app.min.js?_v=20260626010620"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260627021700"></script>
+	<script defer src="js/app.min.js?_v=20260627021700"></script>
 </body>
 
 </html>

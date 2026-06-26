@@ -39,11 +39,21 @@
         observer.observe(section);
     }));
     document.addEventListener("DOMContentLoaded", (() => {
-        const slider = document.querySelector(".menu-mobile__slider");
-        if (!slider) return;
+        const submenus = document.querySelectorAll(".menu-mobile__submenu");
         document.addEventListener("click", (e => {
-            if (e.target.closest(".submenu-open")) slider.style.transform = "translateX(-50%)";
-            if (e.target.closest(".submenu-close")) slider.style.transform = "translateX(0)";
+            const openBtn = e.target.closest(".submenu-open");
+            if (openBtn) {
+                const menu = openBtn.dataset.menu;
+                submenus.forEach((item => item.classList.remove("active")));
+                const current = document.querySelector(`[data-submenu="${menu}"]`);
+                if (current) {
+                    const title = openBtn.parentElement.querySelector("a").textContent.trim();
+                    const span = current.querySelector(".submenu-back-next span");
+                    if (span) span.textContent = title;
+                    current.classList.add("active");
+                }
+            }
+            if (e.target.closest(".submenu-close")) submenus.forEach((item => item.classList.remove("active")));
         }));
     }));
     document.addEventListener("DOMContentLoaded", (() => {
@@ -65,6 +75,15 @@
         openMenu?.addEventListener("click", open);
         closeMenu?.addEventListener("click", close);
         overlay?.addEventListener("click", close);
+    }));
+    document.querySelectorAll(".arrow-open").forEach((btn => {
+        btn.addEventListener("click", (e => {
+            e.preventDefault();
+            const item = btn.closest(".open-dropwdown");
+            const top = item.querySelector(".open-dropwdown__top");
+            item.classList.toggle("active");
+            top.classList.toggle("active");
+        }));
     }));
     document.querySelectorAll("[data-video]").forEach((item => {
         const id = item.dataset.video;
@@ -143,6 +162,53 @@
             },
             grabCursor: true
         });
+    }));
+    document.querySelectorAll(".cards-slider-mob__slider").forEach((slider => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 1,
+            speed: 600,
+            spaceBetween: 7,
+            effect: "slide",
+            navigation: {
+                nextEl: slider.querySelector(".cards-slider-btn__next"),
+                prevEl: slider.querySelector(".cards-slider-btn__prev")
+            },
+            grabCursor: true,
+            on: {
+                init(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                },
+                slideChange(swiper) {
+                    updatePagination(swiper);
+                }
+            }
+        });
+        function createPagination(swiper) {
+            const pagination = slider.querySelector(".pagination2");
+            if (!pagination) return;
+            pagination.innerHTML = "";
+            const maxDots = window.innerWidth <= 576 ? 6 : 10;
+            const dotsCount = Math.min(swiper.slides.length, maxDots);
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", (() => swiper.slideTo(i)));
+                pagination.appendChild(dot);
+            }
+        }
+        function updatePagination(swiper) {
+            const dots = slider.querySelectorAll(".pagination2 .dot");
+            if (!dots.length) return;
+            const activeDot = swiper.activeIndex % dots.length;
+            dots.forEach(((dot, index) => {
+                dot.classList.toggle("active", index === activeDot);
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            createPagination(swiper);
+            updatePagination(swiper);
+        }));
     }));
     document.querySelectorAll(".consultation-slider").forEach((slider => {
         new Swiper(slider, {
@@ -290,6 +356,62 @@
             column.classList.remove("dragging");
         }));
     }));
+    document.querySelectorAll(".response-slider").forEach((slider => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 2.8,
+            spaceBetween: 12,
+            speed: 600,
+            grabCursor: true,
+            navigation: {
+                nextEl: slider.querySelector(".navigation-btn__next"),
+                prevEl: slider.querySelector(".navigation-btn__prev")
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 2.6
+                },
+                0: {
+                    slidesPerView: 1.3
+                }
+            },
+            on: {
+                init(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                },
+                slideChange(swiper) {
+                    updatePagination(swiper);
+                }
+            }
+        });
+        function createPagination(swiper) {
+            const pagination = slider.querySelector(".pagination2");
+            if (!pagination) return;
+            pagination.innerHTML = "";
+            const maxDots = window.innerWidth <= 1024 ? 6 : 10;
+            const dotsCount = Math.min(swiper.slides.length, maxDots);
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", (() => {
+                    swiper.slideTo(i);
+                }));
+                pagination.appendChild(dot);
+            }
+        }
+        function updatePagination(swiper) {
+            const dots = slider.querySelectorAll(".pagination2 .dot");
+            if (!dots.length) return;
+            const activeDot = swiper.activeIndex % dots.length;
+            dots.forEach(((dot, index) => {
+                dot.classList.toggle("active", index === activeDot);
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            createPagination(swiper);
+            updatePagination(swiper);
+        }));
+    }));
     document.querySelectorAll(".blog__slider").forEach((slider => {
         const swiper = new Swiper(slider, {
             slidesPerView: 3,
@@ -344,6 +466,80 @@
         window.addEventListener("resize", (() => {
             createPagination(swiper);
             updatePagination(swiper);
+        }));
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const buttons = document.querySelectorAll(".method-btn");
+        const hiddenInput = document.getElementById("contactMethod");
+        const output = document.querySelector("#selectedMethod span");
+        if (!buttons.length) return;
+        function setMethod(value = "") {
+            if (hiddenInput) hiddenInput.value = value;
+            if (output) output.textContent = value;
+        }
+        buttons.forEach((btn => {
+            btn.addEventListener("click", (() => {
+                if (btn.classList.contains("active")) {
+                    btn.classList.remove("active");
+                    setMethod("");
+                    return;
+                }
+                buttons.forEach((b => b.classList.remove("active")));
+                btn.classList.add("active");
+                setMethod(btn.dataset.value);
+            }));
+        }));
+        setMethod("");
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const buttons = document.querySelectorAll(".interest");
+        const hiddenInput = document.getElementById("interest");
+        if (!buttons.length) return;
+        function setInterest(value = "") {
+            if (hiddenInput) hiddenInput.value = value;
+        }
+        buttons.forEach((btn => {
+            btn.addEventListener("click", (() => {
+                if (btn.classList.contains("active")) {
+                    btn.classList.remove("active");
+                    setInterest("");
+                    return;
+                }
+                buttons.forEach((b => b.classList.remove("active")));
+                btn.classList.add("active");
+                setInterest(btn.dataset.value);
+            }));
+        }));
+    }));
+    document.querySelectorAll(".dropdown-interest").forEach((dropdown => {
+        const top = dropdown.querySelector(".dropdown-interest__top");
+        const span = top.querySelector("span");
+        const list = dropdown.querySelector(".consultation2-form__interest");
+        const arrow = dropdown.querySelector("svg");
+        let isOpen = false;
+        let selected = null;
+        const placeholder = span.textContent;
+        list.style.display = "none";
+        top.addEventListener("click", (() => {
+            isOpen = !isOpen;
+            list.style.display = isOpen ? "flex" : "none";
+            arrow.style.transform = isOpen ? "rotate(-90deg)" : "rotate(90deg)";
+        }));
+        const buttons = dropdown.querySelectorAll(".interest, .method-btn");
+        buttons.forEach((btn => {
+            btn.addEventListener("click", (() => {
+                const value = btn.dataset.value;
+                if (selected === value) {
+                    selected = null;
+                    span.textContent = placeholder;
+                } else {
+                    selected = value;
+                    span.textContent = value;
+                }
+                list.style.display = "none";
+                arrow.style.transform = "rotate(90deg)";
+                isOpen = false;
+            }));
         }));
     }));
     window["FLS"] = true;

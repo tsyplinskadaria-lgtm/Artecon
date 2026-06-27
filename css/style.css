@@ -1106,6 +1106,9 @@ html::selection {
   -o-object-fit: cover;
   object-fit: cover
 }
+.main .show-mob {
+  display: none
+}
 .main::after {
   position: absolute;
   top: 0;
@@ -3854,6 +3857,12 @@ html::selection {
     flex-direction: column;
     gap: 12px;
     align-items: start
+  }
+  .main .show-mob {
+    display: block
+  }
+  .main .hide-mob {
+    display: none
   }
   .about__blocks {
     gap: 32px

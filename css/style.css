@@ -3414,7 +3414,7 @@ html::selection {
     padding: 44px 0
   }
   .response__container {
-    padding: 0
+    padding: 0!important
   }
   .response__info {
     max-width: 100%;

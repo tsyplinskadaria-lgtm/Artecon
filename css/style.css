@@ -3904,7 +3904,7 @@ html::selection {
     font-size: 28px
   }
   .final-cta__blocks p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px
   }
   .final-cta__blocks a {
@@ -3937,7 +3937,7 @@ html::selection {
     padding: 6px
   }
   .main .benefits p {
-    font-size: 13px
+    font-size: 14px
   }
   .reformas .benefits {
     -webkit-column-gap: 12px;
@@ -4265,7 +4265,7 @@ html::selection {
     font-size: 28px
   }
   .about__stats .stat p {
-    font-size: 13px
+    font-size: 14px
   }
   .about__pictures {
     width: 100%;
@@ -4363,7 +4363,8 @@ html::selection {
     width: 100%
   }
   .faq-fields__info p {
-    font-size: 13px
+    line-height: 20px;
+    font-size: 14px
   }
   .faq-fields .btns {
     flex-direction: column
@@ -4467,7 +4468,7 @@ html::selection {
     text-transform: capitalize
   }
   .consultation-form__top p {
-    font-size: 13px
+    font-size: 14px
   }
   .consultation-form .form {
     padding: 0
@@ -4560,7 +4561,7 @@ html::selection {
   }
   .response .google-rating p {
     line-height: 20px;
-    font-size: 13px
+    font-size: 14px
   }
   .response .google-rating__block span {
     line-height: 20px;
@@ -4610,7 +4611,7 @@ html::selection {
   .faq .faq-fields__inner p {
     padding: 0;
     max-width: 100%;
-    font-size: 13px;
+    font-size: 14px;
     width: 100%
   }
   .faq .faq-fields__top:hover .faq-fields__top-left {
@@ -4620,7 +4621,7 @@ html::selection {
     gap: 16px
   }
   .faq .support-message p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px
   }
   .blog__blocks {

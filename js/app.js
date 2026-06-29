@@ -157,11 +157,6 @@
         let position = 0;
         let paused = false;
         let wheelSpeed = 0;
-        const items = column.querySelectorAll(".review-card");
-        items.forEach((card => {
-            card.addEventListener("mouseenter", (() => paused = true));
-            card.addEventListener("mouseleave", (() => paused = false));
-        }));
         const getHeight = () => column.scrollHeight / 2;
         let lastTime = performance.now();
         function animate(time) {
@@ -178,9 +173,16 @@
             requestAnimationFrame(animate);
         }
         requestAnimationFrame(animate);
+        column.addEventListener("mouseenter", (() => {
+            paused = true;
+        }));
+        column.addEventListener("mouseleave", (() => {
+            paused = false;
+        }));
         column.addEventListener("wheel", (e => {
             e.preventDefault();
-            wheelSpeed += e.deltaY * .2;
+            if (paused) return;
+            wheelSpeed += e.deltaY * .25;
         }), {
             passive: false
         });

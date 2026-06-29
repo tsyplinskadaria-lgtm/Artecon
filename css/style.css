@@ -4349,15 +4349,6 @@ html::selection {
     line-height: 28px;
     font-size: 20px
   }
-  .faq-fields__top .control-panel-btn svg {
-    width: 8px!important;
-    height: 8px!important
-  }
-  .faq-fields__top .control-panel-btn {
-    min-width: 24px;
-    width: 24px;
-    height: 24px
-  }
   .faq-fields__inner {
     flex-direction: column-reverse;
     padding: 0 16px 16px 16px

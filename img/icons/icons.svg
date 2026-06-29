@@ -2,6 +2,8 @@
 <path d="M5.83333 10V3.20833L3.66667 5.375L2.5 4.16667L6.66667 0L10.8333 4.16667L9.66667 5.375L7.5 3.20833V10H5.83333ZM1.66667 13.3333C1.20833 13.3333 0.816111 13.1703 0.49 12.8442C0.163889 12.5181 0.000555555 12.1256 0 11.6667V9.16666H1.66667V11.6667H11.6667V9.16666H13.3333V11.6667C13.3333 12.125 13.1703 12.5175 12.8442 12.8442C12.5181 13.1708 12.1256 13.3339 11.6667 13.3333H1.66667Z" fill="currentColor"/>
 </symbol><symbol viewBox="0 0 5 8" fill="none" id="arrow" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.353516 7.35547L3.85352 3.85547L0.353516 0.355469" stroke="currentColor"/>
+</symbol><symbol viewBox="0 0 14 14" fill="none" id="arrow-short-line" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.378 0.749396L1.06432 12.0631M0.750055 1.06367L1.06432 12.0631L12.0638 12.3774" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol viewBox="0 0 20 20" fill="none" id="close-icon" xmlns="http://www.w3.org/2000/svg">
 <line x1="4" y1="15.7264" x2="16.7279" y2="2.99849" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <line x1="4.41421" y1="3" x2="17.1421" y2="15.7279" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -32,6 +34,15 @@
 <path d="M4 8H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol viewBox="0 0 15 15" fill="none" id="phone" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.01667 6.49167C4.21667 8.85 6.15 10.775 8.50833 11.9833L10.3417 10.15C10.5667 9.925 10.9 9.85 11.1917 9.95C12.125 10.2583 13.1333 10.425 14.1667 10.425C14.625 10.425 15 10.8 15 11.2583V14.1667C15 14.625 14.625 15 14.1667 15C6.34167 15 0 8.65833 0 0.833333C0 0.375 0.375 0 0.833333 0H3.75C4.20833 0 4.58333 0.375 4.58333 0.833333C4.58333 1.875 4.75 2.875 5.05833 3.80833C5.15 4.1 5.08333 4.425 4.85 4.65833L3.01667 6.49167Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 12 12" fill="none" id="play" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#oclip0_1439_1938)">
+<path d="M10.2045 4.67665C10.4446 4.80436 10.6455 4.995 10.7856 5.22815C10.9257 5.46129 10.9997 5.72816 10.9997 6.00015C10.9997 6.27215 10.9257 6.53901 10.7856 6.77216C10.6455 7.00531 10.4446 7.19595 10.2045 7.32365L3.7985 10.8072C2.767 11.3687 1.5 10.6387 1.5 9.48415V2.51665C1.5 1.36165 2.767 0.632154 3.7985 1.19265L10.2045 4.67665Z" stroke="currentColor" stroke-width="1.5"/>
+</g>
+<defs>
+<clipPath id="oclip0_1439_1938">
+<rect width="12" height="12" fill="currentColor"/>
+</clipPath>
+</defs>
 </symbol><symbol viewBox="0 0 16 16" fill="none" id="plus" xmlns="http://www.w3.org/2000/svg">
 <path d="M2 8H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8 2V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

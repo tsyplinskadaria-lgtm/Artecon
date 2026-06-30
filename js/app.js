@@ -1,28 +1,27 @@
 (() => {
     "use strict";
-    function animateCounter(el) {
-        const target = parseFloat(el.dataset.target);
-        const suffix = el.dataset.suffix || "";
-        const duration = 1800;
-        let startTime = null;
-        function easeOutCubic(t) {
-            return 1 - Math.pow(1 - t, 3);
-        }
-        function step(time) {
-            if (!startTime) startTime = time;
-            const progress = Math.min((time - startTime) / duration, 1);
-            const eased = easeOutCubic(progress);
-            const value = Math.floor(eased * target);
-            el.textContent = value + suffix;
-            if (progress < 1) requestAnimationFrame(step); else el.textContent = target + suffix;
-        }
-        requestAnimationFrame(step);
-    }
     document.addEventListener("DOMContentLoaded", (() => {
         const section = document.querySelector(".about");
         const counters = document.querySelectorAll(".about__stats-number");
         if (!section || !counters.length) return;
         let started = false;
+        function animateCounter(counter) {
+            const target = Number(counter.dataset.target);
+            const prefix = counter.dataset.prefix || "";
+            const suffix = counter.dataset.suffix || "";
+            let current = 0;
+            const duration = 2e3;
+            const stepTime = 16;
+            const increment = target / (duration / stepTime);
+            function updateCounter() {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = `${prefix}${Math.floor(current)}${suffix}`;
+                    requestAnimationFrame(updateCounter);
+                } else counter.textContent = `${prefix}${target}${suffix}`;
+            }
+            updateCounter();
+        }
         const observer = new IntersectionObserver((entries => {
             entries.forEach((entry => {
                 if (entry.isIntersecting && !started) {
@@ -391,24 +390,31 @@
             updateNavState(swiper);
         }));
     }));
-    document.querySelectorAll(".response__column").forEach((column => {
-        let isDragging = false;
-        let startY = 0;
-        let startScrollTop = 0;
-        column.addEventListener("mousedown", (e => {
-            isDragging = true;
-            startY = e.clientY;
-            startScrollTop = column.scrollTop;
-            column.classList.add("dragging");
-        }));
-        document.addEventListener("mousemove", (e => {
-            if (!isDragging) return;
-            const delta = e.clientY - startY;
-            column.scrollTop = startScrollTop - delta;
-        }));
-        document.addEventListener("mouseup", (() => {
-            isDragging = false;
-            column.classList.remove("dragging");
+    document.querySelectorAll(".response").forEach((section => {
+        const columns = section.querySelectorAll(".response__column");
+        columns.forEach((column => {
+            let isDragging = false;
+            let startY = 0;
+            let startScrollTop = 0;
+            column.addEventListener("mousedown", (e => {
+                isDragging = true;
+                startY = e.clientY;
+                startScrollTop = column.scrollTop;
+                column.classList.add("dragging");
+            }));
+            column.addEventListener("mousemove", (e => {
+                if (!isDragging) return;
+                const delta = e.clientY - startY;
+                column.scrollTop = startScrollTop - delta;
+            }));
+            column.addEventListener("mouseup", (() => {
+                isDragging = false;
+                column.classList.remove("dragging");
+            }));
+            column.addEventListener("mouseleave", (() => {
+                isDragging = false;
+                column.classList.remove("dragging");
+            }));
         }));
     }));
     document.querySelectorAll(".response-slider").forEach((slider => {
@@ -646,13 +652,24 @@
     }));
     document.querySelectorAll(".services__slider").forEach((slider => {
         const swiper = new Swiper(slider, {
-            slidesPerView: 3.3,
+            slidesPerView: 3.5,
             spaceBetween: 12,
             speed: 600,
             grabCursor: true,
             navigation: {
                 nextEl: slider.querySelector(".navigation-btn__next"),
                 prevEl: slider.querySelector(".navigation-btn__prev")
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3.5
+                },
+                576: {
+                    slidesPerView: 2.3
+                },
+                0: {
+                    slidesPerView: 1
+                }
             },
             on: {
                 init(swiper) {
@@ -676,6 +693,62 @@
                 dot.addEventListener("click", (() => {
                     swiper.slideTo(i);
                 }));
+                pagination.appendChild(dot);
+            }
+        }
+        function updatePagination(swiper) {
+            const dots = slider.querySelectorAll(".pagination2 .dot");
+            if (!dots.length) return;
+            const activeDot = swiper.activeIndex % dots.length;
+            dots.forEach(((dot, index) => {
+                dot.classList.toggle("active", index === activeDot);
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            createPagination(swiper);
+            updatePagination(swiper);
+        }));
+    }));
+    document.querySelectorAll(".cards-slider-mob__slider2").forEach((slider => {
+        const swiper = new Swiper(slider, {
+            speed: 600,
+            spaceBetween: 12,
+            effect: "slide",
+            grabCursor: true,
+            slidesPerView: 1,
+            breakpoints: {
+                577: {
+                    slidesPerView: 2
+                }
+            },
+            navigation: {
+                nextEl: slider.querySelector(".cards-slider-btn__next"),
+                prevEl: slider.querySelector(".cards-slider-btn__prev")
+            },
+            on: {
+                init(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                },
+                slideChange(swiper) {
+                    updatePagination(swiper);
+                },
+                breakpoint(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                }
+            }
+        });
+        function createPagination(swiper) {
+            const pagination = slider.querySelector(".pagination2");
+            if (!pagination) return;
+            pagination.innerHTML = "";
+            const maxDots = window.innerWidth <= 576 ? 6 : 10;
+            const dotsCount = Math.min(swiper.slides.length, maxDots);
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", (() => swiper.slideTo(i)));
                 pagination.appendChild(dot);
             }
         }

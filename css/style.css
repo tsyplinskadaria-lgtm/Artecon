@@ -138,7 +138,8 @@ html::selection {
   line-height: 24px;
   font-size: 16px;
   font-weight: 700;
-  font-family: Mont
+  font-family: Mont;
+  text-align: center
 }
 .btn-red {
   border: 1px solid var(--red-color);
@@ -1355,7 +1356,14 @@ html::selection {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover
+  object-fit: cover;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.about__pictures .pic img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
 }
 .about .video__item {
   width: 50%
@@ -3209,11 +3217,19 @@ html::selection {
   padding: 12px 32px;
   display: flex;
   align-items: center;
-  gap: 12px
+  gap: 12px;
+  line-height: 24px
 }
 .reformas .main .btns .btn svg {
   width: 12px;
   height: 12px
+}
+.reformas .benefits {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+  justify-content: space-between;
+  width: 100%
 }
 .reformas .benefits__item {
   background: rgba(255,255,255,.2);
@@ -3261,7 +3277,8 @@ html::selection {
 }
 .reformas .about__inner {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  gap: 40px
 }
 .reformas .about__top {
   display: flex;
@@ -3290,12 +3307,22 @@ html::selection {
   width: -moz-fit-content;
   width: fit-content;
   display: grid;
-  grid-template-columns: repeat(1,1fr)
+  grid-template-columns: repeat(1,1fr);
+  max-width: 572px!important;
+  width: 100%
 }
 .reformas .about__pictures .pic {
   width: 258px!important;
   max-width: -webkit-fill-available;
-  height: 138px
+  height: 138px;
+  display: flex;
+  margin: 0 0 0 auto
+}
+.reformas .about__below,
+.reformas .about__middle {
+  display: flex;
+  justify-content: space-between;
+  gap: 56px
 }
 .reformas .about__stats {
   display: grid;
@@ -3315,6 +3342,20 @@ html::selection {
 .reformas .about .video__item {
   max-width: 572px;
   width: 100%
+}
+.reformas .about .text-block.show-mob {
+  display: none
+}
+.reformas .about .text-block.hide-mob {
+  display: flex
+}
+.reformas .completed-projects {
+  display: none
+}
+.reformas .cards-slider-mob__slider2 {
+  display: none;
+  width: 100%;
+  overflow: hidden
 }
 .our-works__blocks {
   padding: 56px 0 77px 0;
@@ -3395,7 +3436,8 @@ html::selection {
   padding: 56px 0;
   display: flex;
   flex-direction: column;
-  gap: 56px
+  gap: 56px;
+  overflow: hidden
 }
 .services__container {
   padding: 0
@@ -3421,13 +3463,15 @@ html::selection {
 .services .services-slide {
   border-radius: 15px;
   padding: 32px;
-  height: 380px;
+  min-height: 380px;
   position: relative;
   overflow: hidden;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  gap: 40px;
+  transition: all .2s ease-in-out;
+  width: 100%
 }
 .services .services-slide:hover .bg {
   visibility: visible;
@@ -3467,7 +3511,8 @@ html::selection {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover
+  object-fit: cover;
+  transition: all .2s ease-in-out
 }
 .services .services-slide__arrow {
   width: 40px;
@@ -3502,14 +3547,16 @@ html::selection {
   font-size: 32px;
   line-height: 40px;
   color: var(--black-color);
-  transition: color .2s ease-in-out
+  transition: all .2s ease-in-out;
+  overflow-wrap: anywhere;
+  word-break: break-word
 }
 .services .services-slide__content p {
   font-family: Mont;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  transition: color .2s ease-in-out;
+  transition: all .2s ease-in-out;
   color: var(--grey-color)
 }
 .services__navigation {
@@ -3521,6 +3568,20 @@ html::selection {
 }
 .services__navigation .navigation-btn {
   background-color: #fdfdfd
+}
+.services .navigation-btn__next {
+  margin-right: 72px
+}
+.services .swiper-wrapper {
+  align-items: stretch
+}
+.services .swiper {
+  margin-left: 32px;
+  margin-right: 0
+}
+.services .swiper-slide {
+  display: flex;
+  height: auto
 }
 @media (max-width:1550px) {
   .main__wrapper {
@@ -3912,8 +3973,47 @@ html::selection {
     font-size: 14px;
     line-height: 20px
   }
+  .reformas .about__content h2 {
+    font-size: 24px
+  }
+  .reformas .about__pictures .pic {
+    width: 230px!important;
+    height: 100%
+  }
+  .reformas .about__below,
+  .reformas .about__middle {
+    gap: 44px
+  }
+  .reformas .about__stats {
+    grid-template-columns: repeat(1,1fr)
+  }
+  .reformas .about__stats .stat {
+    max-width: 255px;
+    width: 100%
+  }
+  .reformas .about__stats .stat .stat__number {
+    font-size: 32px;
+    line-height: 40px
+  }
+  .reformas .about .text-block {
+    gap: 64px
+  }
+  .reformas .about .video__item {
+    height: 205px
+  }
+  .reformas .about .video__item .video__preview {
+    height: 205px
+  }
+  .reformas .about .video__item iframe {
+    height: 100%
+  }
   .our-works .photos-grid {
     grid-template-rows: repeat(3,152px)
+  }
+  .services .services-slide {
+    gap: 40px;
+    padding: 24px;
+    justify-content: space-between
   }
 }
 @media (max-width:992px) {
@@ -3941,9 +4041,14 @@ html::selection {
     font-size: 14px
   }
   .reformas .benefits {
+    grid-template-columns: repeat(2,1fr);
     -webkit-column-gap: 12px;
     -moz-column-gap: 12px;
-    column-gap: 12px
+    column-gap: 12px;
+    row-gap: 16px
+  }
+  .reformas .benefits__item {
+    gap: 24px
   }
 }
 @media (max-width:768px) {
@@ -3993,6 +4098,14 @@ html::selection {
   .main .btns .btn {
     font-size: 15px;
     line-height: 18px
+  }
+  .faq-cards .hide-mob {
+    display: none
+  }
+  .faq-fields__mob-show {
+    display: flex;
+    flex-direction: column;
+    gap: 24px
   }
   .slider-cards__blocks {
     padding: 56px 0 44px 0;
@@ -4073,8 +4186,34 @@ html::selection {
     font-size: 14px;
     height: 44px
   }
-  .reformas .benefits__item {
-    gap: 24px
+  .reformas .completed-projects {
+    display: flex;
+    margin-top: 16px
+  }
+  .reformas .completed-projects .completed-projects__item {
+    display: none
+  }
+  .reformas .completed-projects a {
+    margin: 0 0 0 auto
+  }
+  .reformas .slider-cards .cards-grid {
+    display: none
+  }
+  .reformas .slider-cards .cards-slider-mob {
+    display: block!important;
+    display: flex
+  }
+  .reformas .slider-cards .swiper-wrapper {
+    display: flex;
+    width: 100%
+  }
+  .reformas .cards-slider-mob__slider2 {
+    display: block
+  }
+  .reformas .cards-slider-mob__slider2 .swiper-slide {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0
   }
   .our-works__blocks {
     padding: 44px 0 56px 0;
@@ -4089,6 +4228,14 @@ html::selection {
   }
   .services .intro-description__general {
     gap: 12px
+  }
+  .services .services-slide__content .title {
+    font-size: 28px;
+    line-height: 40px
+  }
+  .services .services-slide__content p {
+    font-size: 16px;
+    line-height: 20px
   }
 }
 @media (max-width:756px) {
@@ -4108,6 +4255,10 @@ html::selection {
   .footer .footer-below span {
     font-size: 13px;
     line-height: 20px
+  }
+  .faq-cards .show-mob {
+    display: flex;
+    font-size: 14px
   }
   .faq .faq-fields__top-left {
     gap: 32px
@@ -4152,6 +4303,14 @@ html::selection {
     padding: 0 20px
   }
   .btn {
+    line-height: 20px;
+    font-size: 14px
+  }
+  .btn-red {
+    line-height: 20px;
+    font-size: 14px
+  }
+  .btn-white {
     line-height: 20px;
     font-size: 14px
   }
@@ -4306,13 +4465,6 @@ html::selection {
   .faq-cards__blocks {
     gap: 32px
   }
-  .faq-cards .show-mob {
-    display: flex;
-    font-size: 14px
-  }
-  .faq-cards .hide-mob {
-    display: none
-  }
   .faq-cards .video__item {
     border-radius: 8px;
     height: 160px
@@ -4352,11 +4504,10 @@ html::selection {
   }
   .faq-fields__inner {
     flex-direction: column-reverse;
+    gap: 24px;
     padding: 0 16px 16px 16px
   }
-  .faq-fields__mob-show {
-    display: flex;
-    flex-direction: column;
+  .faq-fields__info {
     gap: 24px
   }
   .faq-fields__info .items__item {
@@ -4675,16 +4826,71 @@ html::selection {
     line-height: 28px;
     font-size: 20px
   }
+  .reformas .main .btns {
+    flex-direction: column
+  }
   .reformas .main .btns .btn {
     max-width: 100%;
     width: 100%;
     justify-content: center;
     font-size: 14px;
-    line-height: 20px
+    line-height: 20px;
+    padding: 12px 15px
   }
   .reformas .about__blocks {
     padding: 44px 0;
     gap: 32px
+  }
+  .reformas .about__inner {
+    flex-direction: column
+  }
+  .reformas .about__top {
+    gap: 32px
+  }
+  .reformas .about__block {
+    gap: 32px;
+    max-width: 100%!important;
+    width: 100%
+  }
+  .reformas .about__content h2 {
+    font-size: 20px
+  }
+  .reformas .about__content {
+    gap: 12px
+  }
+  .reformas .about__pictures {
+    display: none
+  }
+  .reformas .about__stats {
+    gap: 12px
+  }
+  .reformas .about__stats .stat {
+    gap: 4px;
+    max-width: 100%;
+    width: 100%
+  }
+  .reformas .about__stats .stat .stat__number {
+    font-size: 28px;
+    line-height: 40px
+  }
+  .reformas .about .text-block {
+    gap: 32px
+  }
+  .reformas .about .video__item {
+    height: 180px;
+    border-radius: 8px
+  }
+  .reformas .about .video__item .video__preview {
+    height: 180px
+  }
+  .reformas .about .video__item iframe {
+    height: 100%
+  }
+  .reformas .about .text-block.show-mob {
+    display: flex
+  }
+  .reformas .about .text-block.hide-mob {
+    display: none!important
   }
   .our-works__blocks {
     padding: 44px 0 24px 0;
@@ -4700,14 +4906,36 @@ html::selection {
     padding: 44px 0;
     gap: 32px
   }
-  .services .intro-description {
+  .services__container {
     padding: 0 20px
+  }
+  .services .intro-description {
+    padding: 0 0
   }
   .services .swiper {
     margin-left: 20px
   }
+  .services .services-slide {
+    min-height: 305px;
+    gap: 40px;
+    padding: 20px
+  }
+  .services .services-slide__content .title {
+    font-size: 20px;
+    line-height: 28px
+  }
+  .services .services-slide__content p {
+    font-size: 14px;
+    line-height: 20px
+  }
   .services__navigation {
-    padding: 0 20px
+    padding: 0 0
+  }
+  .services .navigation-btn__next {
+    margin-right: 0
+  }
+  .services .swiper {
+    margin-left: 0
   }
 }
 @media (max-width:480px) {
@@ -4753,6 +4981,9 @@ html::selection {
   }
   .faq .support-message .btns .btn-white {
     max-width: 100%
+  }
+  .reformas .benefits {
+    display: none
   }
 }
 @media (max-width:425px) {

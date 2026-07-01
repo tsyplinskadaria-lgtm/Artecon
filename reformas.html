@@ -16,14 +16,14 @@
 	<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 
 	<!-- Swiper CSS (non-blocking) -->
-	<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260701014039" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260702015024" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 	<noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260701014039">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260702015024">
 	</noscript>
 
 	<!-- Main CSS -->
-	<link rel="stylesheet" href="./css/style.min.css?_v=20260701014039">
+	<link rel="stylesheet" href="./css/style.min.css?_v=20260702015024">
 	<title>Reformas | ARTECON</title>
 </head>
 
@@ -813,8 +813,8 @@
 											</p>
 
 											<div class="btns">
-												<button class="btn btn-red" aria-label="Explorar Especialidad">Explorar
-													Especialidad</button>
+												<a href="./reforma-apartamentos.html" class="btn btn-red" aria-label="Explorar Especialidad">Explorar
+													Especialidad</a>
 
 												<button class="btn btn-white" aria-label="Solicitar Presupuesto">Solicitar Presupuesto</button>
 											</div>
@@ -1422,7 +1422,106 @@
 				</div>
 			</section>
 
-			<!--  -->
+			<!-- Consultation -->
+
+			<section class="consultation">
+
+				<div class="bg">
+					<img src="img/main/consultation-bg.webp" loading="lazy" draggable="false" alt="">
+				</div>
+
+				<div class="consultation-form">
+					<div class="consultation-form__blocks">
+						<div class="consultation-form__top">
+							<div class="numbering">
+								<div class="numbering__icon">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+								</div>
+
+								<span>( Perspectivas Estratégicas y Consultas Técnicas )</span>
+							</div>
+
+							<div class="title">
+								Claridad Estratégica. <br>
+								Definiendo el Control Total.
+							</div>
+
+							<p>
+								Damos respuesta a las inquietudes clave de los inversores internacionales, aportando
+								total transparencia sobre cómo nuestra supervisión profesional protege su capital y
+								garantiza el cumplimiento técnico y normativo en la Costa del Sol.
+							</p>
+						</div>
+
+						<form class="form">
+							<div class="form__group">
+								<label for="name">Nombre Completo*</label>
+								<input type="text" placeholder="Introduce tu nombre completo" id="name" name="name" required>
+							</div>
+
+							<div class="form__group">
+								<label for="phone">Teléfono de contacto*</label>
+								<input type="tel" placeholder="+34 (000) 000-000" id="phone" name="phone" required>
+							</div>
+
+							<button type="submit" class="consultation-form-btn btn btn-red">
+								Hablar con un experto
+							</button>
+						</form>
+					</div>
+				</div>
+
+
+				<div class="consultation-pc__container">
+					<div class="consultation-pc">
+						<div class="consultation-form__blocks">
+							<div class="consultation-form__top">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>( ASESORÍA TÉCNICA Y PRESUPUESTO )</span>
+								</div>
+
+								<div class="title">
+									Especialistas en Rehabilitación Técnica en la Costa del Sol
+								</div>
+
+								<p>
+									Simplificamos la complejidad de su reforma integral en Marbella. Nuestro equipo
+									técnico le proporcionará un análisis detallado de costes, plazos y requerimientos
+									legales, asegurando que su inversión se transforme en un activo de lujo con total
+									seguridad y transparencia.
+								</p>
+							</div>
+
+							<form class="form">
+								<div class="form__group">
+									<label for="name">Nombre Completo*</label>
+									<input type="text" placeholder="Introduce tu nombre completo" id="name" name="name" required>
+								</div>
+
+								<div class="form__group">
+									<label for="phone">Teléfono de contacto*</label>
+									<input type="tel" placeholder="+34 (000) 000-000" id="phone" name="phone" required>
+								</div>
+
+								<button type="submit" class="consultation-form-btn btn btn-red">
+									Hablar con un experto
+								</button>
+							</form>
+						</div>
+
+						<div class="bg-pc">
+							<img src="img/reformas/consultation.webp" loading="lazy" draggable="false" alt="">
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- Методологія виконання -->
 
 			<section class="advantages" style="background-color:#f2f2f7">
 				<div class="advantages__container">
@@ -1455,20 +1554,20 @@
 						</div>
 
 						<div class="advantages__wrapper">
-							<div class="advantages__pic">
-								<img src="img/main/advantages/advantages-pic.webp" loading="lazy" draggable="false" alt="" class="">
-							</div>
+							<div class="advantages__grid">
+								<div class="process-card-image process-card--w1 process-card--h2">
+									<img src="img/reformas/advantages/advantages-pic2.webp" loading="lazy" draggable="false" class="advantages__picture" alt="">
+								</div>
 
-							<div class="advantages__items">
 								<div class="advantages__item">
-									<div class="advantages__icon">
-										<img src="img/main/advantages/01.svg" loading="lazy" draggable="false" alt="" class="">
+									<div class="advantages__counter">
+										<span>01</span>
+										<p>/06</p>
 									</div>
-
 
 									<div class="advantages__info">
 										<div class="title">
-											Consulta <br>
+											Consulta
 											y Auditoría Técnica
 										</div>
 
@@ -1479,35 +1578,135 @@
 									</div>
 
 								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__counter">
+										<span>02</span>
+										<p>/06</p>
+									</div>
+
+									<div class="advantages__info">
+										<div class="title">
+											Planificación
+											y Presupuesto Cerrado
+										</div>
+
+										<p>
+											Eliminación de riesgos financieros mediante una cotización técnica,
+											detallada y fija.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__counter">
+										<span>03</span>
+										<p>/06</p>
+									</div>
+
+									<div class="advantages__info">
+										<div class="title">
+											Gestión
+											de Licencias y Permisos
+										</div>
+
+										<p>
+											Tramitación de expedientes municipales para garantizar la total seguridad
+											jurídica.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__counter">
+										<span>04</span>
+										<p>/06</p>
+									</div>
+
+									<div class="advantages__info">
+										<div class="title">
+											Ejecución
+											y Supervisión In-situ
+										</div>
+
+										<p>
+											Dirección técnica rigurosa por ingenieros para asegurar la excelencia en
+											cada m².
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__counter">
+										<span>05</span>
+										<p>/06</p>
+									</div>
+
+									<div class="advantages__info">
+										<div class="title">
+											Control
+											de Calidad y Reportes
+										</div>
+
+										<p>
+											Monitoreo digital del progreso y auditorías para el cumplimiento del
+											cronograma.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__counter">
+										<span>06</span>
+										<p>/06</p>
+									</div>
+
+									<div class="advantages__info">
+										<div class="title">
+											Entrega Final y Post-venta
+										</div>
+
+										<p>
+											Recepción del activo revalorizado con soporte técnico y garantía de larga
+											duración.
+										</p>
+									</div>
+
+								</div>
+
 							</div>
 
 							<!--  -->
 
-							<div class="advantages-slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-								<div class="swiper-wrapper" id="swiper-wrapper-1bfe2d64fc02e9aa" aria-live="polite" style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(0px, 0px, 0px);">
+							<div class="advantages-slider swiper">
+								<div class="swiper-wrapper" aria-live="polite">
 
-									<div class="advantages-slider__slide swiper-slide swiper-slide-active" role="group" aria-label="1 / 3" style="width: 348px; margin-right: 7px;">
+									<div class="advantages-slider__slide swiper-slide">
 										<div class="advantages__item">
 
 											<div class="advantages__icon">
-												<img src="img/main/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
+												<img src="img/reformas/advantages/01.svg" loading="lazy" draggable="false" alt="" class="">
 											</div>
-
 
 											<div class="advantages__info">
 												<div class="title">
-													Revalorización <br>
-													Real del Activo
+													Gestión Integral
+													de Licencias y Normativa
 												</div>
 
 												<p>
-													Implementamos estrategias de construcción y materiales de alta gama
-													orientados a maximizar el valor de mercado y el retorno de inversión
-													de
-													su
-													propiedad.
+													Eliminamos la carga burocrática gestionando íntegramente todas las
+													licencias
+													(Obra Mayor/Menor) y permisos en los ayuntamientos de la Costa del
+													Sol,
+													garantizando la total legalidad y seguridad de su reforma.
 												</p>
 											</div>
+
 
 
 											<div class="advantages-slider__navigation">
@@ -1528,26 +1727,25 @@
 										</div>
 									</div>
 
-									<div class="advantages-slider__slide swiper-slide swiper-slide-next" role="group" aria-label="2 / 3" style="width: 348px; margin-right: 7px;">
+									<div class="advantages-slider__slide swiper-slide">
 										<div class="advantages__item">
 
 											<div class="advantages__icon">
-												<img src="img/main/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
+												<img src="img/reformas/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
 											</div>
 
 
 											<div class="advantages__info">
 												<div class="title">
-													Revalorización <br>
-													Real del Activo
+													Interlocutor Único
+													y Gestión "Llave en Mano"
 												</div>
 
 												<p>
-													Implementamos estrategias de construcción y materiales de alta gama
-													orientados a maximizar el valor de mercado y el retorno de inversión
-													de
-													su
-													propiedad.
+													Olvídese de coordinar a múltiples gremios. Actuamos como su único
+													punto de
+													contacto, integrando diseño, ingeniería y ejecución bajo una sola
+													responsabilidad para eliminar la fragmentación de riesgos.
 												</p>
 											</div>
 
@@ -1569,26 +1767,144 @@
 										</div>
 									</div>
 
-									<div class="advantages-slider__slide swiper-slide" role="group" aria-label="3 / 3" style="width: 348px; margin-right: 7px;">
+									<div class="advantages-slider__slide swiper-slide">
 										<div class="advantages__item">
 
 											<div class="advantages__icon">
-												<img src="img/main/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
+												<img src="img/reformas/advantages/03.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+											<div class="advantages__info">
+												<div class="title">
+													Presupuesto Cerrado
+													y Transparencia Total
+												</div>
+
+												<p>
+													Protegemos su capital con una auditoría técnica detallada desde el
+													inicio. Nuestra política de presupuesto cerrado elimina las
+													desviaciones financieras y los costes ocultos, asegurando una
+													transparencia absoluta.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/04.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+											<div class="advantages__info">
+												<div class="title">
+													Cumplimiento
+													de Plazos Garantizado
+												</div>
+
+												<p>
+													Aplicamos una planificación estratégica rigurosa y supervisión
+													in-situ
+													diaria para asegurar la entrega de su vivienda en el tiempo
+													acordado. Para
+													nosotros, los plazos son un compromiso contractual innegociable.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/05.svg" loading="lazy" draggable="false" alt="" class="">
 											</div>
 
 
 											<div class="advantages__info">
 												<div class="title">
-													Revalorización <br>
-													Real del Activo
+													Ingeniería Técnica y Materiales Premium
 												</div>
 
 												<p>
-													Implementamos estrategias de construcción y materiales de alta gama
-													orientados a maximizar el valor de mercado y el retorno de inversión
-													de
-													su
-													propiedad.
+													Resolvemos la complejidad técnica con soluciones de ingeniería
+													avanzada y
+													acabados de "quiet luxury". Utilizamos solo materiales certificados
+													de alta
+													gama que aseguran la longevidad estructural de su propiedad.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/06.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+
+											<div class="advantages__info">
+												<div class="title">
+													Revalorización Estratégica del Activo
+												</div>
+
+												<p>
+													No solo reformamos, invertimos con usted. Cada decisión técnica y
+													estética
+													está orientada a maximizar el valor de mercado de su vivienda,
+													garantizando
+													un alto retorno de inversión en la Costa del Sol.
 												</p>
 											</div>
 
@@ -1610,7 +1926,423 @@
 										</div>
 									</div>
 								</div>
-								<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="advantages" style="background-color:#f2f2f7">
+				<div class="advantages__container">
+					<div class="advantages__blocks">
+						<div class="intro-description">
+							<div class="numbering">
+								<div class="numbering__icon">
+									<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+								</div>
+
+								<span>00/04</span>
+							</div>
+
+							<div class="intro-description__content">
+								<div class="intro-description__general">
+									<span>( Excelencia Operativa y Valor Estratégico )</span>
+
+									<h5>
+										¿Por qué elegir a Artecon para su reforma en Marbella?
+									</h5>
+								</div>
+
+
+								<div class="intro-description__descript">
+									Optimizamos cada fase de su inversión inmobiliaria a través de una metodología
+									integral que fusiona la arquitectura técnica con un control rigurosa de la obra en
+									toda la Costa del Sol.
+								</div>
+							</div>
+						</div>
+
+						<div class="advantages__wrapper">
+							<div class="advantages__grid">
+								<div class="process-card-image process-card--w2 process-card--h1">
+									<img src="img/reformas/advantages/advantages-pic.webp" loading="lazy" class="advantages__picture" alt="">
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__icon">
+										<img src="img/reformas/advantages/01.svg" loading="lazy" draggable="false" alt="" class="">
+									</div>
+
+									<div class="advantages__info">
+										<div class="title">
+											Gestión Integral
+											de Licencias y Normativa
+										</div>
+
+										<p>
+											Eliminamos la carga burocrática gestionando íntegramente todas las licencias
+											(Obra Mayor/Menor) y permisos en los ayuntamientos de la Costa del Sol,
+											garantizando la total legalidad y seguridad de su reforma.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__icon">
+										<img src="img/reformas/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Interlocutor Único
+											y Gestión "Llave en Mano"
+										</div>
+
+										<p>
+											Olvídese de coordinar a múltiples gremios. Actuamos como su único punto de
+											contacto, integrando diseño, ingeniería y ejecución bajo una sola
+											responsabilidad para eliminar la fragmentación de riesgos.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__icon">
+										<img src="img/reformas/advantages/03.svg" loading="lazy" draggable="false" alt="" class="">
+									</div>
+
+									<div class="advantages__info">
+										<div class="title">
+											Presupuesto Cerrado
+											y Transparencia Total
+										</div>
+
+										<p>
+											Protegemos su capital con una auditoría técnica detallada desde el inicio.
+											Nuestra política de presupuesto cerrado elimina las desviaciones financieras
+											y los costes ocultos, asegurando una transparencia absoluta.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__icon">
+										<img src="img/reformas/advantages/04.svg" loading="lazy" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Cumplimiento
+											de Plazos Garantizado
+										</div>
+
+										<p>
+											Aplicamos una planificación estratégica rigurosa y supervisión in-situ
+											diaria para asegurar la entrega de su vivienda en el tiempo acordado. Para
+											nosotros, los plazos son un compromiso contractual innegociable.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__icon">
+										<img src="img/reformas/advantages/05.svg" loading="lazy" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Ingeniería Técnica y Materiales Premium
+										</div>
+
+										<p>
+											Resolvemos la complejidad técnica con soluciones de ingeniería avanzada y
+											acabados de "quiet luxury". Utilizamos solo materiales certificados de alta
+											gama que aseguran la longevidad estructural de su propiedad.
+										</p>
+									</div>
+
+								</div>
+
+								<div class="advantages__item">
+									<div class="advantages__icon">
+										<img src="img/reformas/advantages/06.svg" loading="lazy" draggable="false" alt="" class="">
+									</div>
+
+
+									<div class="advantages__info">
+										<div class="title">
+											Revalorización Estratégica del Activo
+										</div>
+
+										<p>
+											No solo reformamos, invertimos con usted. Cada decisión técnica y estética
+											está orientada a maximizar el valor de mercado de su vivienda, garantizando
+											un alto retorno de inversión en la Costa del Sol.
+										</p>
+									</div>
+
+								</div>
+							</div>
+
+							<!--  -->
+
+							<div class="advantages-slider swiper">
+								<div class="swiper-wrapper" aria-live="polite">
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/01.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+											<div class="advantages__info">
+												<div class="title">
+													Gestión Integral
+													de Licencias y Normativa
+												</div>
+
+												<p>
+													Eliminamos la carga burocrática gestionando íntegramente todas las
+													licencias
+													(Obra Mayor/Menor) y permisos en los ayuntamientos de la Costa del
+													Sol,
+													garantizando la total legalidad y seguridad de su reforma.
+												</p>
+											</div>
+
+
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/02.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+
+											<div class="advantages__info">
+												<div class="title">
+													Interlocutor Único
+													y Gestión "Llave en Mano"
+												</div>
+
+												<p>
+													Olvídese de coordinar a múltiples gremios. Actuamos como su único
+													punto de
+													contacto, integrando diseño, ingeniería y ejecución bajo una sola
+													responsabilidad para eliminar la fragmentación de riesgos.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/03.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+											<div class="advantages__info">
+												<div class="title">
+													Presupuesto Cerrado
+													y Transparencia Total
+												</div>
+
+												<p>
+													Protegemos su capital con una auditoría técnica detallada desde el
+													inicio. Nuestra política de presupuesto cerrado elimina las
+													desviaciones financieras y los costes ocultos, asegurando una
+													transparencia absoluta.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/04.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+											<div class="advantages__info">
+												<div class="title">
+													Cumplimiento
+													de Plazos Garantizado
+												</div>
+
+												<p>
+													Aplicamos una planificación estratégica rigurosa y supervisión
+													in-situ
+													diaria para asegurar la entrega de su vivienda en el tiempo
+													acordado. Para
+													nosotros, los plazos son un compromiso contractual innegociable.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/05.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+
+											<div class="advantages__info">
+												<div class="title">
+													Ingeniería Técnica y Materiales Premium
+												</div>
+
+												<p>
+													Resolvemos la complejidad técnica con soluciones de ingeniería
+													avanzada y
+													acabados de "quiet luxury". Utilizamos solo materiales certificados
+													de alta
+													gama que aseguran la longevidad estructural de su propiedad.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="advantages-slider__slide swiper-slide">
+										<div class="advantages__item">
+
+											<div class="advantages__icon">
+												<img src="img/reformas/advantages/06.svg" loading="lazy" draggable="false" alt="" class="">
+											</div>
+
+
+											<div class="advantages__info">
+												<div class="title">
+													Revalorización Estratégica del Activo
+												</div>
+
+												<p>
+													No solo reformamos, invertimos con usted. Cada decisión técnica y
+													estética
+													está orientada a maximizar el valor de mercado de su vivienda,
+													garantizando
+													un alto retorno de inversión en la Costa del Sol.
+												</p>
+											</div>
+
+											<div class="advantages-slider__navigation">
+												<button class="navigation-btn navigation-btn--prev">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+
+												<div class="pagination"></div>
+
+												<button class="navigation-btn navigation-btn--next">
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span> -->
 							</div>
 
 						</div>
@@ -1834,27 +2566,27 @@
 						<div class="photos-grid">
 
 							<div class="photos-grid__item item1">
-								<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
+								<img src="img/reformas/our-works/i-01.webp" loading="lazy" alt="">
 							</div>
 
 							<div class="photos-grid__item item2">
-								<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=700" alt="">
+								<img src="img/reformas/our-works/i-02.webp" loading="lazy" alt="">
 							</div>
 
 							<div class="photos-grid__item item3">
-								<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900" alt="">
+								<img src="img/reformas/our-works/i-03.webp" loading="lazy" alt="">
 							</div>
 
 							<div class="photos-grid__item item4">
-								<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=700" alt="">
+								<img src="img/reformas/our-works/i-04.webp" loading="lazy" alt="">
 							</div>
 
 							<div class="photos-grid__item item5">
-								<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&sig=2" alt="">
+								<img src="img/reformas/our-works/i-05.webp" loading="lazy" alt="">
 							</div>
 
 							<div class="photos-grid__item item6">
-								<img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700" alt="">
+								<img src="img/reformas/our-works/i-06.webp" loading="lazy" alt="">
 							</div>
 
 						</div>
@@ -1864,35 +2596,27 @@
 						<div class="photos__slider swiper">
 							<div class="swiper-wrapper">
 								<div class="photos-item swiper-slide">
-									<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
+									<img src="img/reformas/our-works/i-01.webp" loading="lazy" alt="">
 								</div>
 
 								<div class="photos-item swiper-slide">
-									<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
+									<img src="img/reformas/our-works/i-02.webp" loading="lazy" alt="">
 								</div>
 
 								<div class="photos-item swiper-slide">
-									<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
+									<img src="img/reformas/our-works/i-03.webp" loading="lazy" alt="">
 								</div>
 
 								<div class="photos-item swiper-slide">
-									<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
+									<img src="img/reformas/our-works/i-04.webp" loading="lazy" alt="">
 								</div>
 
 								<div class="photos-item swiper-slide">
-									<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
+									<img src="img/reformas/our-works/i-05.webp" loading="lazy" alt="">
 								</div>
 
 								<div class="photos-item swiper-slide">
-									<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
-								</div>
-
-								<div class="photos-item swiper-slide">
-									<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
-								</div>
-
-								<div class="photos-item swiper-slide">
-									<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900" alt="">
+									<img src="img/reformas/our-works/i-06.webp" loading="lazy" alt="">
 								</div>
 							</div>
 
@@ -2995,7 +3719,8 @@
 										<button type="button" class="interest" data-value="Gestión de Proyectos">Gestión
 											de Proyectos</button>
 										<button type="button" class="interest" data-value="Construcción">Construcción</button>
-										<button type="button" class="interest" data-value="Servicios y Oficios">Servicios y Oficios</button>
+										<button type="button" class="interest" data-value="Servicios y Oficios">Servicios y
+											Oficios</button>
 										<button type="button" class="interest" data-value="Reformas y Rehabilitaciones">Reformas y
 											Rehabilitaciones</button>
 										<button type="button" class="interest" data-value="Otro">Otro</button>
@@ -3022,7 +3747,8 @@
 										<div class="consultation2-form__interest">
 											<button type="button" class="method-btn" data-value="Llamar">Llamar</button>
 											<button type="button" class="method-btn" data-value="WhatsApp">WhatsApp</button>
-											<button type="button" class="method-btn" data-value="Correo Electrónico">Correo Electrónico</button>
+											<button type="button" class="method-btn" data-value="Correo Electrónico">Correo
+												Electrónico</button>
 										</div>
 									</div>
 								</div>
@@ -3632,8 +4358,8 @@
 		</footer>
 	</div>
 
-	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260701014039"></script>
-	<script defer src="js/app.min.js?_v=20260701014039"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260702015024"></script>
+	<script defer src="js/app.min.js?_v=20260702015024"></script>
 </body>
 
 </html>

@@ -6,19 +6,23 @@
         if (!section || !counters.length) return;
         let started = false;
         function animateCounter(counter) {
-            const target = Number(counter.dataset.target);
+            const target = counter.dataset.target;
             const prefix = counter.dataset.prefix || "";
             const suffix = counter.dataset.suffix || "";
+            if (target === "" || isNaN(target)) {
+                counter.textContent = `${prefix}${suffix}`;
+                return;
+            }
+            const number = Number(target);
             let current = 0;
             const duration = 2e3;
-            const stepTime = 16;
-            const increment = target / (duration / stepTime);
+            const increment = number / (duration / 16);
             function updateCounter() {
                 current += increment;
-                if (current < target) {
+                if (current < number) {
                     counter.textContent = `${prefix}${Math.floor(current)}${suffix}`;
                     requestAnimationFrame(updateCounter);
-                } else counter.textContent = `${prefix}${target}${suffix}`;
+                } else counter.textContent = `${prefix}${number}${suffix}`;
             }
             updateCounter();
         }
@@ -267,6 +271,9 @@
             slidesPerView: 1,
             spaceBetween: 7,
             speed: 600,
+            autoHeight: true,
+            observer: true,
+            observeParents: true,
             on: {
                 init(swiper) {
                     initControls(swiper);
@@ -735,6 +742,104 @@
                 },
                 breakpoint(swiper) {
                     createPagination(swiper);
+                    updatePagination(swiper);
+                }
+            }
+        });
+        function createPagination(swiper) {
+            const pagination = slider.querySelector(".pagination2");
+            if (!pagination) return;
+            pagination.innerHTML = "";
+            const maxDots = window.innerWidth <= 576 ? 6 : 10;
+            const dotsCount = Math.min(swiper.slides.length, maxDots);
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", (() => swiper.slideTo(i)));
+                pagination.appendChild(dot);
+            }
+        }
+        function updatePagination(swiper) {
+            const dots = slider.querySelectorAll(".pagination2 .dot");
+            if (!dots.length) return;
+            const activeDot = swiper.activeIndex % dots.length;
+            dots.forEach(((dot, index) => {
+                dot.classList.toggle("active", index === activeDot);
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            createPagination(swiper);
+            updatePagination(swiper);
+        }));
+    }));
+    document.querySelectorAll(".price__slider").forEach((slider => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 1,
+            speed: 600,
+            spaceBetween: 7,
+            effect: "slide",
+            autoHeight: true,
+            autoHeight: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: slider.querySelector(".navigation-btn__next"),
+                prevEl: slider.querySelector(".navigation-btn__prev")
+            },
+            grabCursor: true,
+            on: {
+                init(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                },
+                slideChange(swiper) {
+                    updatePagination(swiper);
+                }
+            }
+        });
+        function createPagination(swiper) {
+            const pagination = slider.querySelector(".pagination2");
+            if (!pagination) return;
+            pagination.innerHTML = "";
+            const maxDots = window.innerWidth <= 576 ? 6 : 10;
+            const dotsCount = Math.min(swiper.slides.length, maxDots);
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", (() => swiper.slideTo(i)));
+                pagination.appendChild(dot);
+            }
+        }
+        function updatePagination(swiper) {
+            const dots = slider.querySelectorAll(".pagination2 .dot");
+            if (!dots.length) return;
+            const activeDot = swiper.activeIndex % dots.length;
+            dots.forEach(((dot, index) => {
+                dot.classList.toggle("active", index === activeDot);
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            createPagination(swiper);
+            updatePagination(swiper);
+        }));
+    }));
+    document.querySelectorAll(".specialty-slider").forEach((slider => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 1.1,
+            speed: 600,
+            spaceBetween: 10,
+            effect: "slide",
+            navigation: {
+                nextEl: slider.querySelector(".navigation-btn__next"),
+                prevEl: slider.querySelector(".navigation-btn__prev")
+            },
+            grabCursor: true,
+            on: {
+                init(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                },
+                slideChange(swiper) {
                     updatePagination(swiper);
                 }
             }

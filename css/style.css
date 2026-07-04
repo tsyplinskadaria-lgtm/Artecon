@@ -3475,7 +3475,7 @@ html::selection {
   width: 100%;
   height: 100%;
   content: "";
-  background: rgba(0,0,0,.5019607843);
+  background: rgba(0,0,0,.6);
   z-index: 9
 }
 .reformas .about__blocks {
@@ -4165,7 +4165,8 @@ html::selection {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  gap: 32px
+  gap: 32px;
+  max-width: 100%
 }
 .advantages__counter {
   display: flex;
@@ -4207,6 +4208,134 @@ html::selection {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 12px
+}
+.request-form {
+  position: relative;
+  overflow: hidden
+}
+.request-form .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+.request-form .bg::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.7) 100%)
+}
+.request-form .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.request-form__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 56px 0;
+  position: relative;
+  z-index: 9
+}
+.request-form .intro-description {
+  max-width: 812px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center
+}
+.request-form .intro-description * {
+  color: #f2f2f7
+}
+.request-form .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px
+}
+.request-form .intro-description__general {
+  gap: 16px;
+  max-width: 100%;
+  width: 100%
+}
+.request-form .intro-description__descript {
+  max-width: 100%;
+  width: 100%
+}
+.request-form .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px
+}
+.request-form .tags .tag {
+  padding: 12px 24px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-self: center
+}
+.request-form .tags .tag p {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: #9898b1
+}
+.request-form .tags .tag__icon {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  position: relative
+}
+.request-form .tags .tag__icon::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(214,35,34,.1);
+  border-radius: 50%;
+  pointer-events: none
+}
+.request-form .description {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f2f2f7
+}
+.request-form .consultation-form {
+  position: relative!important;
+  top: auto!important;
+  left: auto!important;
+  -webkit-transform: translate(0)!important;
+  transform: translate(0)!important;
+  margin: 0 auto;
+  padding: 40px 32px;
+  max-width: 520px;
+  width: 100%;
+  z-index: 9;
+  min-height: auto;
+  border-radius: 15px;
+  backdrop-filter: blur(8px) saturate(180%)!important;
+  -webkit-backdrop-filter: blur(8px) saturate(180%)!important;
+  border: 1px solid rgba(255,255,255,.2)!important;
+  background: rgba(0,0,0,.6)!important;
+  overflow: hidden
+}
+.request-form .consultation-form .numbering span {
+  font-size: 14px
 }
 .apartamentos .advantages__items {
   display: grid;
@@ -4460,6 +4589,10 @@ html::selection {
   background-color: #fbfbfb;
   border-radius: 15px
 }
+.specialty-item:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
+}
 .specialty-item__pic {
   border-radius: 15px;
   overflow: hidden;
@@ -4469,7 +4602,10 @@ html::selection {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover
+  object-fit: cover;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
 }
 .specialty-item__content {
   padding: 12px 16px;
@@ -4542,6 +4678,428 @@ html::selection {
 }
 .specialty-slider {
   display: none
+}
+.locales .request-form__blocks {
+  max-width: 716px;
+  width: 100%;
+  margin: 0 auto
+}
+.locales .request-form .tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+.locales .request-form .tags .tag {
+  border-radius: 15px
+}
+.cocinas .advantages .intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.cocinas .advantages .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  max-width: 100%;
+  width: 100%
+}
+.cocinas .advantages .intro-description__descript,
+.cocinas .advantages .intro-description__general {
+  max-width: 100%;
+  width: 100%
+}
+.cocinas .advantages .intro-description__general {
+  gap: 16px
+}
+.reformas-pages2 .main__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.reformas-pages2 .main-form {
+  gap: 24px
+}
+.reformas-pages2 .advantages .intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.reformas-pages2 .advantages .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  max-width: 100%;
+  width: 100%
+}
+.reformas-pages2 .advantages .intro-description__descript,
+.reformas-pages2 .advantages .intro-description__general {
+  max-width: 100%;
+  width: 100%
+}
+.reformas-pages2 .advantages .intro-description__general {
+  gap: 16px
+}
+.reformas-pages2 .consultation2-form .btn,
+.reformas-pages2 .consultation2-form .number-group,
+.reformas-pages2 .consultation2-form .number-group2 {
+  max-width: 280px;
+  width: 100%
+}
+.reformas-pages2 .consultation2-form .btn {
+  line-height: 22px
+}
+.reformas-pages2 .consultation {
+  padding: 20px 0 12px 0;
+  margin: 40px 0 60px 0
+}
+.reformas-pages2 .consultation .consultation-form {
+  display: flex
+}
+.reformas-pages2 .consultation .consultation-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  padding: 40px 32px;
+  max-width: 520px;
+  width: 100%;
+  z-index: 9;
+  min-height: auto;
+  border-radius: 15px;
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255,255,255,.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.25);
+  background: linear-gradient(-45deg,rgba(255,255,255,.12),rgba(255,255,255,.04));
+  background: rgba(0,0,0,.6);
+  overflow: hidden
+}
+.reformas-pages2 .consultation .consultation-form__blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 9
+}
+.reformas-pages2 .consultation .consultation-form__top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center
+}
+.reformas-pages2 .consultation .consultation-form__top .numbering {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center
+}
+.reformas-pages2 .consultation .consultation-form__top .numbering span {
+  color: #f2f2f7
+}
+.reformas-pages2 .consultation .consultation-form__top .title {
+  font-family: Unbounded;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #fdfdfd
+}
+.reformas-pages2 .consultation .consultation-form__top p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f2f2f7
+}
+.reformas-pages2 .consultation .consultation-form .form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px
+}
+.reformas-pages2 .consultation .consultation-form .form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+.reformas-pages2 .consultation .consultation-form .form__group label {
+  font-size: 15px;
+  line-height: 24px;
+  color: #fdfdfd
+}
+.reformas-pages2 .consultation .consultation-form .form__group input {
+  padding: 8px 16px;
+  background-color: #fdfdfd;
+  width: 424;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--grey-color)
+}
+.reformas-pages2 .consultation .consultation-form .form__group input::-webkit-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px
+}
+.reformas-pages2 .consultation .consultation-form .form__group input:-ms-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px
+}
+.reformas-pages2 .consultation .consultation-form .form__group input::-ms-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px
+}
+.reformas-pages2 .consultation .consultation-form .form__group input::placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px
+}
+.reformas-pages2 .consultation .consultation-form .form .btn {
+  margin-top: 20px;
+  border-radius: 4px
+}
+.reformas-pages2 .consultation .consultation-pc {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 44px
+}
+.reformas-pages2 .consultation .consultation-pc .consultation-form__blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 56px;
+  position: relative;
+  z-index: 9;
+  max-width: 488px;
+  width: 100%
+}
+.reformas-pages2 .consultation .consultation-pc .consultation-form__top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: start
+}
+.reformas-pages2 .consultation .consultation-pc .consultation-form__top .numbering {
+  display: flex;
+  justify-content: start;
+  text-align: start;
+  align-items: start
+}
+.reformas-pages2 .consultation .consultation-pc .consultation-form__top .numbering span {
+  color: var(--grey-color)
+}
+.reformas-pages2 .consultation .consultation-pc .consultation-form__top .title {
+  font-family: Unbounded;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: start;
+  color: #242424
+}
+.reformas-pages2 .consultation .consultation-pc .consultation-form__top p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;
+  color: #9898b1
+}
+.reformas-pages2 .consultation .consultation-pc .form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  background-color: #f2f2f7;
+  border-radius: 15px
+}
+.reformas-pages2 .consultation .consultation-pc .form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+.reformas-pages2 .consultation .consultation-pc .form__group label {
+  font-size: 15px;
+  line-height: 24px;
+  color: #9898b1
+}
+.reformas-pages2 .consultation .consultation-pc .form__group input {
+  padding: 8px 16px;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--grey-color)
+}
+.reformas-pages2 .consultation .consultation-pc .form__group input::-webkit-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px;
+  font-family: Mont;
+  font-weight: 700
+}
+.reformas-pages2 .consultation .consultation-pc .form__group input:-ms-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px;
+  font-family: Mont;
+  font-weight: 700
+}
+.reformas-pages2 .consultation .consultation-pc .form__group input::-ms-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px;
+  font-family: Mont;
+  font-weight: 700
+}
+.reformas-pages2 .consultation .consultation-pc .form__group input::placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px;
+  font-family: Mont;
+  font-weight: 700
+}
+.reformas-pages2 .consultation .consultation-pc .form .btn {
+  margin-top: 20px;
+  border-radius: 4px;
+  line-height: 20px
+}
+.reformas-pages2 .consultation .consultation-pc .bg-pc {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 15px
+}
+.reformas-pages2 .consultation .consultation-pc .bg-pc img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.reformas-pages2 .consultation .consultation-pc .bg-pc img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
+}
+.reformas-pages2 .consultation .bg {
+  display: none
+}
+.reformas-pages2 .our-works .intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.reformas-pages2 .our-works .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  max-width: 100%;
+  width: 100%
+}
+.reformas-pages2 .our-works .intro-description__descript,
+.reformas-pages2 .our-works .intro-description__general {
+  max-width: 100%;
+  width: 100%
+}
+.reformas-pages2 .our-works .intro-description__general {
+  gap: 16px
+}
+.reformas-pages2 .metadology-2 .advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px
+}
+.reformas-pages2 .metadology-2 .advantages__slide {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.reformas-pages2 .about__pictures {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  max-width: 260px!important;
+  width: 100%;
+  gap: 12px
+}
+.reformas-pages2 .about__pictures .pic {
+  height: 100%;
+  width: auto!important
+}
+.reformas-pages2 .about__top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px
+}
+.reformas-pages2 .about__top .about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  max-width: 100%;
+  width: 100%
+}
+.reformas-pages2 .about__top__descript,
+.reformas-pages2 .about__top__general {
+  max-width: 100%;
+  width: 100%
+}
+.reformas-pages2 .about__top__general {
+  gap: 16px
+}
+.reformas-pages2 .about .intro-description__descript {
+  width: 100%;
+  max-width: 100%
+}
+.reformas-pages2 .about .show-mob {
+  display: none
+}
+.reformas-pages2 .about__inner {
+  display: flex;
+  justify-content: start;
+  gap: 56px
+}
+.reformas-pages2 .about__block {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  max-width: 100%!important;
+  width: 100%;
+  justify-content: space-between
+}
+.reformas-pages2 .about__stats {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  -webkit-column-gap: 44px;
+  -moz-column-gap: 44px;
+  column-gap: 44px;
+  row-gap: 21px;
+  width: 100%
+}
+.reformas-pages2 .about__stats .stat__number {
+  font-size: 28px
+}
+.reformas-pages2 .about .text-block {
+  max-width: 100%;
+  width: 100%;
+  gap: 64px
+}
+.reformas-pages2 .about .text-block a {
+  margin: 0 0 0 auto
+}
+.banos .advantages__item {
+  min-height: 232px
 }
 @media (max-width:1550px) {
   .main__wrapper {
@@ -4678,6 +5236,9 @@ html::selection {
   .villas .advantages__item {
     max-width: 100%;
     width: 100%
+  }
+  .reformas-pages2 .main-form {
+    display: flex
   }
 }
 @media (max-width:1024px) {
@@ -5213,6 +5774,33 @@ html::selection {
     font-size: 15px;
     line-height: 20px
   }
+  .reformas-pages2 .consultation .consultation-form {
+    min-height: auto
+  }
+  .reformas-pages2 .consultation .consultation-form__top .numbering span {
+    font-size: 15px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-form__top .title {
+    font-size: 20px;
+    line-height: 28px
+  }
+  .reformas-pages2 .consultation .consultation-form__top p {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-pc .consultation-form__top .numbering span {
+    font-size: 15px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-pc .consultation-form__top .title {
+    font-size: 20px;
+    line-height: 28px
+  }
+  .reformas-pages2 .consultation .consultation-pc .consultation-form__top p {
+    font-size: 14px;
+    line-height: 20px
+  }
 }
 @media (max-width:992px) {
   .main .benefits {
@@ -5455,6 +6043,178 @@ html::selection {
   .villas .metadology .advantages__grid-2 {
     grid-template-columns: repeat(2,1fr)
   }
+  .cocinas .advantages__grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr)
+  }
+  .reformas-pages2 .consultation {
+    padding: 0;
+    margin: 0
+  }
+  .reformas-pages2 .consultation .consultation-track {
+    display: none
+  }
+  .reformas-pages2 .consultation .consultation-form {
+    display: flex
+  }
+  .reformas-pages2 .consultation .consultation-form {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    max-width: 100%;
+    width: 100%;
+    padding: 44px 20px;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none
+  }
+  .reformas-pages2 .consultation .consultation-form__blocks {
+    gap: 24px;
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto
+  }
+  .reformas-pages2 .consultation .consultation-form__top {
+    gap: 12px
+  }
+  .reformas-pages2 .consultation .consultation-form__top .numbering {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px
+  }
+  .reformas-pages2 .consultation .consultation-form__top .numbering span {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize
+  }
+  .reformas-pages2 .consultation .consultation-form .form {
+    padding: 0
+  }
+  .reformas-pages2 .consultation .consultation-form .form__group label {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-form .form__group input {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-form .form__group input::-webkit-input-placeholder {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-form .form__group input:-ms-input-placeholder {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-form .form__group input::-ms-input-placeholder {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-form .form__group input::placeholder {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-form .form .btn {
+    margin-top: 12px;
+    line-height: 20px;
+    font-size: 15px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form__group label {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form__group input {
+    line-height: 20px;
+    font-size: 13px;
+    padding: 10px 16px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form__group input::-webkit-input-placeholder {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form__group input:-ms-input-placeholder {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form__group input::-ms-input-placeholder {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form__group input::placeholder {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form .btn {
+    margin-top: px
+  }
+  .reformas-pages2 .consultation .consultation-pc__container {
+    display: none
+  }
+  .reformas-pages2 .consultation .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block!important
+  }
+  .reformas-pages2 .consultation .bg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+  }
+  .reformas-pages2 .metadology-2 .advantages__grid {
+    grid-template-columns: repeat(1,1fr)
+  }
+  .reformas-pages2 .metadology-2 .advantages__slide {
+    flex-direction: row;
+    min-height: 240px
+  }
+  .reformas-pages2 .metadology-2 .advantages__slide:nth-child(even) {
+    flex-direction: row-reverse
+  }
+  .reformas-pages2 .metadology-2 .advantages__item {
+    width: 50%;
+    justify-content: space-between
+  }
+  .reformas-pages2 .metadology-2 .process-card-image {
+    display: block;
+    height: auto;
+    width: 50%
+  }
+  .reformas-pages2 .about__pictures {
+    max-width: 100%!important;
+    width: 100%
+  }
+  .reformas-pages2 .about .hide-mob {
+    display: none
+  }
+  .reformas-pages2 .about .show-mob {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 100%;
+    width: 100%
+  }
+  .reformas-pages2 .about .show-mob .pic {
+    height: 226px;
+    width: 100%!important
+  }
+  .reformas-pages2 .about__block {
+    gap: 40px
+  }
+  .reformas-pages2 .about__stats .stat {
+    max-width: 100%;
+    width: 100%
+  }
+  .reformas-pages2 .about .text-block {
+    gap: 40px
+  }
 }
 @media (max-width:768px) {
   .header .mobile-menu {
@@ -5526,6 +6286,9 @@ html::selection {
     font-size: 14px;
     line-height: 24px;
     white-space: nowrap
+  }
+  .advantages__blocks {
+    gap: 44px
   }
   .advantages__items {
     grid-template-columns: repeat(2,1fr)
@@ -5678,11 +6441,109 @@ html::selection {
     font-size: 16px;
     line-height: 20px
   }
+  .advantages__blocks {
+    gap: 44px
+  }
+  .request-form__blocks {
+    max-width: 607px;
+    width: 100%;
+    margin: 0 auto
+  }
+  .request-form .tags .tag p {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .request-form .description {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .request-form .consultation-form {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    z-index: 9;
+    min-height: auto;
+    border-radius: 0;
+    backdrop-filter: none!important;
+    -webkit-backdrop-filter: none!important;
+    border: none!important;
+    background: rgba(0,0,0,0)!important;
+    overflow: hidden;
+    box-shadow: none!important
+  }
+  .request-form .consultation-form .form {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+  }
+  .request-form .consultation-form-btn {
+    grid-column: 1/-1;
+    margin-top: 8px!important;
+    font-size: 15px
+  }
+  .request-form .consultation-form label {
+    font-size: 13px;
+    line-height: 20px;
+    color: #fdfdfd
+  }
+  .request-form .consultation-form input {
+    font-size: 13px;
+    line-height: 24px
+  }
+  .request-form .consultation-form input::-webkit-input-placeholder {
+    font-size: 13px;
+    line-height: 24px
+  }
+  .request-form .consultation-form input:-ms-input-placeholder {
+    font-size: 13px;
+    line-height: 24px
+  }
+  .request-form .consultation-form input::-ms-input-placeholder {
+    font-size: 13px;
+    line-height: 24px
+  }
+  .request-form .consultation-form input::placeholder {
+    font-size: 13px;
+    line-height: 24px
+  }
+  .request-form .consultation-form__top {
+    display: flex;
+    flex-direction: column;
+    gap: 0
+  }
+  .request-form .consultation-form__top .numbering {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px
+  }
+  .request-form .consultation-form__top .title {
+    margin-bottom: 12px
+  }
+  .request-form .consultation-form__blocks {
+    gap: 24px
+  }
   .apartamentos .advantages__items {
     grid-template-columns: repeat(2,1fr)
   }
   .villas .advantages__items {
     grid-template-columns: repeat(2,1fr)
+  }
+  .reformas-pages2 .main__blocks {
+    gap: 32px
+  }
+  .reformas-pages2 .main-form {
+    display: flex;
+    gap: 12px
+  }
+  .reformas-pages2 .consultation2-form .btn {
+    max-width: 165px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 10px
   }
 }
 @media (max-width:756px) {
@@ -5769,6 +6630,28 @@ html::selection {
   }
   .specialty-slider {
     display: block
+  }
+}
+@media (max-width:620px) {
+  .reformas-pages2 .main-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px
+  }
+  .reformas-pages2 .consultation2-form .btn,
+  .reformas-pages2 .consultation2-form .number-group,
+  .reformas-pages2 .consultation2-form .number-group2 {
+    max-width: 100%;
+    width: 100%
+  }
+  .reformas-pages2 .consultation2-form .btn {
+    max-width: 100%;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    padding: 12px 10px
   }
 }
 @media (max-width:576px) {
@@ -6557,6 +7440,83 @@ html::selection {
   .specialty .navigation-btn__next {
     margin: 0 20px 0 0
   }
+  .cocinas .advantages__grid {
+    display: none!important
+  }
+  .reformas-pages2 .consultation .consultation-form__top p {
+    font-size: 14px
+  }
+  .reformas-pages2 .consultation .consultation-pc .consultation-form__blocks {
+    gap: 24px
+  }
+  .reformas-pages2 .consultation .consultation-pc .consultation-form__top {
+    gap: 12px
+  }
+  .reformas-pages2 .consultation .consultation-pc .consultation-form__top .numbering {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+  }
+  .reformas-pages2 .consultation .consultation-pc .consultation-form__top .numbering span {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize
+  }
+  .reformas-pages2 .consultation .consultation-pc .consultation-form__top p {
+    font-size: 14px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form {
+    padding: 0
+  }
+  .reformas-pages2 .consultation .consultation-pc .form__group label {
+    font-size: 12px;
+    line-height: 20px
+  }
+  .reformas-pages2 .consultation .consultation-pc .form__group input {
+    font-size: 13px
+  }
+  .reformas-pages2 .metadology-2 .advantages__grid {
+    display: grid!important;
+    grid-template-columns: repeat(1,1fr)
+  }
+  .reformas-pages2 .metadology-2 .advantages__blocks {
+    padding: 44px 0;
+    gap: 32px
+  }
+  .reformas-pages2 .metadology-2 .advantages__slide {
+    flex-direction: column
+  }
+  .reformas-pages2 .metadology-2 .advantages__slide:nth-child(even) {
+    flex-direction: column
+  }
+  .reformas-pages2 .metadology-2 .advantages__item {
+    width: 100%
+  }
+  .reformas-pages2 .metadology-2 .process-card-image {
+    width: 100%;
+    height: 184px
+  }
+  .reformas-pages2 .metadology-2 .advantages__counter {
+    margin-bottom: 32px
+  }
+  .reformas-pages2 .about .show-mob .pic {
+    height: 88px;
+    width: 100%!important
+  }
+  .reformas-pages2 .about__block {
+    gap: 32px
+  }
+  .reformas-pages2 .about__stats {
+    gap: 20px;
+    grid-template-columns: repeat(1,1fr)
+  }
+  .reformas-pages2 .about__middle {
+    order: 4
+  }
+  .reformas-pages2 .about .text-block a {
+    margin: 0
+  }
 }
 @media (max-width:480px) {
   .header .logo {
@@ -6617,6 +7577,29 @@ html::selection {
   }
   .reformas .benefits {
     display: none
+  }
+  .request-form__blocks {
+    gap: 32px
+  }
+  .request-form .tags .tag {
+    padding: 12px 16px;
+    width: 100%
+  }
+  .request-form .description {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .request-form .consultation-form {
+    margin-top: 24px
+  }
+  .request-form .consultation-form .form {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px
+  }
+  .request-form .consultation-form .numbering span {
+    font-size: 13px
   }
 }
 @media (max-width:425px) {

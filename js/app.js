@@ -829,6 +829,9 @@
             speed: 600,
             spaceBetween: 10,
             effect: "slide",
+            autoHeight: true,
+            observer: true,
+            observeParents: true,
             navigation: {
                 nextEl: slider.querySelector(".navigation-btn__next"),
                 prevEl: slider.querySelector(".navigation-btn__prev")

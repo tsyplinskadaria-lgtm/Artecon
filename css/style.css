@@ -3807,6 +3807,10 @@ html::selection {
 .reformas .consultation .bg {
   display: none
 }
+.reformas .consultation2-form {
+  max-width: 100%;
+  width: 100%
+}
 .our-works__blocks {
   padding: 56px 0 77px 0;
   display: flex;
@@ -4419,6 +4423,29 @@ html::selection {
   grid-template-columns: repeat(4,1fr);
   gap: 12px
 }
+.villas .about__stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr)!important;
+  -webkit-column-gap: 35px;
+  -moz-column-gap: 35px;
+  column-gap: 35px;
+  row-gap: 21px;
+  width: 100%
+}
+.villas .about__stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+  width: 100%;
+  max-width: 190px!important
+}
+.villas .about__stats .stat p {
+  line-height: 24px
+}
+.villas .about__stats-number {
+  width: 50px
+}
 .price__blocks {
   padding: 56px 0;
   display: flex;
@@ -4692,27 +4719,6 @@ html::selection {
 .locales .request-form .tags .tag {
   border-radius: 15px
 }
-.cocinas .advantages .intro-description {
-  display: flex;
-  flex-direction: column;
-  gap: 24px
-}
-.cocinas .advantages .intro-description__content {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 16px;
-  max-width: 100%;
-  width: 100%
-}
-.cocinas .advantages .intro-description__descript,
-.cocinas .advantages .intro-description__general {
-  max-width: 100%;
-  width: 100%
-}
-.cocinas .advantages .intro-description__general {
-  gap: 16px
-}
 .reformas-pages2 .main__blocks {
   display: flex;
   flex-direction: column;
@@ -4742,14 +4748,14 @@ html::selection {
 .reformas-pages2 .advantages .intro-description__general {
   gap: 16px
 }
-.reformas-pages2 .consultation2-form .btn,
 .reformas-pages2 .consultation2-form .number-group,
 .reformas-pages2 .consultation2-form .number-group2 {
   max-width: 280px;
   width: 100%
 }
 .reformas-pages2 .consultation2-form .btn {
-  line-height: 22px
+  line-height: 22px;
+  justify-content: center
 }
 .reformas-pages2 .consultation {
   padding: 20px 0 12px 0;
@@ -4862,7 +4868,8 @@ html::selection {
 }
 .reformas-pages2 .consultation .consultation-form .form .btn {
   margin-top: 20px;
-  border-radius: 4px
+  border-radius: 4px;
+  justify-content: center
 }
 .reformas-pages2 .consultation .consultation-pc {
   display: flex;
@@ -5098,8 +5105,251 @@ html::selection {
 .reformas-pages2 .about .text-block a {
   margin: 0 0 0 auto
 }
+.reformas-pages2 .intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px!important
+}
+.reformas-pages2 .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px!important;
+  max-width: 100%;
+  width: 100%
+}
+.reformas-pages2 .intro-description__descript,
+.reformas-pages2 .intro-description__general {
+  max-width: 100%;
+  width: 100%
+}
+.reformas-pages2 .intro-description__general {
+  gap: 16px!important
+}
+.cocinas .advantages .intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.cocinas .advantages .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  max-width: 100%;
+  width: 100%
+}
+.cocinas .advantages .intro-description__descript,
+.cocinas .advantages .intro-description__general {
+  max-width: 100%;
+  gap: 16px;
+  width: 100%
+}
+.cocinas .advantages .intro-description__general {
+  gap: 16px
+}
+.cocinas .about__middle {
+  display: flex
+}
+.cocinas .about__pictures {
+  max-width: 100%!important;
+  width: 100%!important;
+  display: none
+}
+.cocinas .about .show-mob {
+  display: none
+}
+.cocinas .about .hide-mob {
+  display: flex
+}
+.cocinas .about .pic {
+  height: 100%;
+  max-width: 230px!important;
+  width: 100%!important
+}
+.cocinas .about__stats {
+  display: grid;
+  grid-template-columns: repeat(1,1fr)!important;
+  gap: 12px!important;
+  max-width: 400px!important;
+  width: 100%!important
+}
+.cocinas .about__stats .stat__number {
+  font-size: 36px;
+  line-height: 32px
+}
+.cocinas .about__stats .stat p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-color);
+  display: flex
+}
 .banos .advantages__item {
   min-height: 232px
+}
+.banos .request-form__blocks {
+  max-width: 685px;
+  width: 100%;
+  margin: 0 auto
+}
+.banos .request-form .tags {
+  display: flex;
+  flex-direction: column
+}
+.banos .tariffs__blocks {
+  padding: 56px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px
+}
+.banos .tariffs__tags {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%
+}
+.banos .tariffs .tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+.banos .tariffs .tags .tag {
+  padding: 26px;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px
+}
+.banos .tariffs .tags .tag p {
+  color: var(--grey-color);
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px
+}
+.banos .tariffs .tags .tag__icon {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  position: relative
+}
+.banos .tariffs .tags .tag__icon::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(214,35,34,.1);
+  border-radius: 50%;
+  pointer-events: none
+}
+.banos .tariffs__table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%
+}
+.banos .tariffs__table .description {
+  color: var(--grey-color);
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px
+}
+.banos .tariffs .price-table {
+  width: 100%;
+  background-color: #fdfdfd;
+  padding: 8px;
+  border-radius: 15px;
+  border-spacing: 0;
+  border: none
+}
+.banos .tariffs .price-table td,
+.banos .tariffs .price-table th {
+  border: none
+}
+.banos .tariffs .price-table thead tr {
+  padding: 12px 56px!important;
+  background: var(--red-color);
+  border-radius: 15px
+}
+.banos .tariffs .price-table thead th:first-child {
+  border-radius: 15px 0 0 15px
+}
+.banos .tariffs .price-table thead th:last-child {
+  border-radius: 0 15px 15px 0
+}
+.banos .tariffs .price-table thead th {
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  font-family: Mont;
+  font-weight: 700;
+  line-height: 24px
+}
+.banos .tariffs .price-table tbody tr {
+  background: #f5f5fb
+}
+.banos .tariffs .price-table tbody td {
+  padding: 12px;
+  text-align: center;
+  color: #7b7b95;
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px
+}
+.banos .tariffs .price-table tbody tr:nth-child(even) {
+  background: #f2f2f7
+}
+.banos .tariffs .price-table tbody tr:nth-child(odd) {
+  background-color: #fdfdfd
+}
+.banos .about__inner {
+  display: flex;
+  align-items: stretch
+}
+.banos .about__block {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  max-width: 700px;
+  width: 100%;
+  flex: 1
+}
+.banos .about .text-block p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #9898b1
+}
+.banos .about__stats-number {
+  font-size: 36px;
+  line-height: 32px
+}
+.banos .about__picture {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  flex: 1;
+  max-width: 445px;
+  width: 100%
+}
+.banos .about__picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.banos .about__picture img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
+}
+.banos .advantages__blocks {
+  padding: 56px 0!important
 }
 @media (max-width:1550px) {
   .main__wrapper {
@@ -5235,6 +5485,15 @@ html::selection {
   }
   .villas .advantages__item {
     max-width: 100%;
+    width: 100%
+  }
+  .villas .about__stats {
+    grid-template-columns: repeat(2,1fr)!important
+  }
+  .villas .about__stats .stat {
+    max-width: 100%!important
+  }
+  .villas .about__stats-number {
     width: 100%
   }
   .reformas-pages2 .main-form {
@@ -5666,6 +5925,12 @@ html::selection {
     font-size: 14px;
     line-height: 20px
   }
+  .reformas .consultation2-form {
+    background: rgba(0,0,0,0);
+    border-radius: 0;
+    padding: 0;
+    border: none
+  }
   .our-works .photos-grid {
     grid-template-rows: repeat(3,152px);
     gap: 8px
@@ -5836,6 +6101,10 @@ html::selection {
   .reformas .benefits__item {
     gap: 24px
   }
+  .reformas .about__stats .stat .stat__number {
+    line-height: 33px;
+    font-size: 28px
+  }
   .reformas .consultation {
     padding: 0;
     margin: 0
@@ -5859,7 +6128,7 @@ html::selection {
   }
   .reformas .consultation .consultation-form__blocks {
     gap: 24px;
-    max-width: 320px;
+    max-width: 350px;
     width: 100%;
     margin: 0 auto
   }
@@ -6043,10 +6312,6 @@ html::selection {
   .villas .metadology .advantages__grid-2 {
     grid-template-columns: repeat(2,1fr)
   }
-  .cocinas .advantages__grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2,1fr)
-  }
   .reformas-pages2 .consultation {
     padding: 0;
     margin: 0
@@ -6215,6 +6480,43 @@ html::selection {
   .reformas-pages2 .about .text-block {
     gap: 40px
   }
+  .cocinas .advantages__grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr)
+  }
+  .cocinas .about__pictures .pic:not(:first-child) {
+    display: none
+  }
+  .cocinas .about .pic {
+    max-width: 340px!important;
+    width: 100%!important;
+    height: 252px
+  }
+  .banos .tariffs__blocks {
+    align-items: start;
+    flex-direction: column
+  }
+  .banos .tariffs__tags {
+    width: 100%;
+    gap: 40px
+  }
+  .banos .tariffs .tags .tag {
+    padding: 12px 26px
+  }
+  .banos .tariffs .tags .tag p {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .banos .tariffs__table {
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 20px
+  }
+  .banos .tariffs__table .description {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center
+  }
 }
 @media (max-width:768px) {
   .header .mobile-menu {
@@ -6264,6 +6566,9 @@ html::selection {
     font-size: 15px;
     line-height: 18px
   }
+  .faq-cards__blocks {
+    gap: 44px
+  }
   .faq-cards .hide-mob {
     display: none
   }
@@ -6271,6 +6576,9 @@ html::selection {
     display: flex;
     flex-direction: column;
     gap: 24px
+  }
+  .intro-description__content {
+    align-items: start
   }
   .slider-cards__blocks {
     padding: 56px 0 44px 0;
@@ -6292,6 +6600,15 @@ html::selection {
   }
   .advantages__items {
     grid-template-columns: repeat(2,1fr)
+  }
+  .response .intro-description__content {
+    gap: 12px
+  }
+  .response .intro-description__general {
+    gap: 12px
+  }
+  .response .intro-description__descript {
+    gap: 12px
   }
   .response .review-card p {
     font-size: 14px
@@ -6371,6 +6688,10 @@ html::selection {
   }
   .consultation2 .consultation2-form .interest,
   .consultation2 .consultation2-form .method-btn {
+    padding: 10px 16px
+  }
+  .consultation2 .consultation2-form .interest,
+  .consultation2 .consultation2-form .method-btn {
     font-size: 13px;
     line-height: 20px;
     align-items: start;
@@ -6382,6 +6703,25 @@ html::selection {
     font-size: 14px;
     height: 44px
   }
+  .consultation2 .dropdown-interest__group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+  }
+  .consultation2 .dropdown-interest {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+  }
+  .consultation2 .consultation2-form__methods-wrap {
+    display: none
+  }
+  .consultation2 .dropdown-interest__groups {
+    display: flex
+  }
+  .consultation2 .hide-mobile {
+    display: flex
+  }
   .reformas .main .main__content {
     padding-bottom: 0
   }
@@ -6389,6 +6729,12 @@ html::selection {
     display: flex;
     flex-direction: column;
     gap: 32px
+  }
+  .reformas .about__top {
+    gap: 24px
+  }
+  .reformas .about__content {
+    gap: 12px
   }
   .reformas .completed-projects {
     display: flex;
@@ -6545,6 +6891,21 @@ html::selection {
     line-height: 18px;
     padding: 10px
   }
+  .reformas-pages2 .about__top {
+    gap: 24px
+  }
+  .reformas-pages2 .intro-description {
+    gap: 24px!important
+  }
+  .reformas-pages2 .intro-description__content {
+    gap: 12px!important
+  }
+  .reformas-pages2 .intro-description__general {
+    gap: 12px!important
+  }
+  .banos .tariffs__blocks {
+    padding: 44px 0
+  }
 }
 @media (max-width:756px) {
   .footer .footer-below {
@@ -6582,29 +6943,6 @@ html::selection {
   .faq .faq-fields__item.active .faq-fields__top-left {
     gap: 32px
   }
-  .consultation2 .consultation2-form .interest,
-  .consultation2 .consultation2-form .method-btn {
-    padding: 10px 16px
-  }
-  .consultation2 .dropdown-interest__group {
-    display: flex;
-    flex-direction: column;
-    gap: 4px
-  }
-  .consultation2 .dropdown-interest {
-    display: flex;
-    flex-direction: column;
-    gap: 4px
-  }
-  .consultation2 .consultation2-form__methods-wrap {
-    display: none
-  }
-  .consultation2 .dropdown-interest__groups {
-    display: flex
-  }
-  .consultation2 .hide-mobile {
-    display: flex
-  }
 }
 @media (max-width:720px) {
   .price .hide-mob {
@@ -6639,7 +6977,6 @@ html::selection {
     align-items: start;
     gap: 12px
   }
-  .reformas-pages2 .consultation2-form .btn,
   .reformas-pages2 .consultation2-form .number-group,
   .reformas-pages2 .consultation2-form .number-group2 {
     max-width: 100%;
@@ -7214,9 +7551,6 @@ html::selection {
   .reformas .about__content h2 {
     font-size: 20px
   }
-  .reformas .about__content {
-    gap: 12px
-  }
   .reformas .about__pictures {
     display: none
   }
@@ -7411,6 +7745,13 @@ html::selection {
     grid-template-columns: 1fr;
     display: none
   }
+  .villas .about__stats {
+    grid-template-columns: repeat(1,1fr)!important;
+    gap: 20px
+  }
+  .villas .about__stats .stat {
+    gap: 4px
+  }
   .price__blocks {
     gap: 32px
   }
@@ -7439,9 +7780,6 @@ html::selection {
   }
   .specialty .navigation-btn__next {
     margin: 0 20px 0 0
-  }
-  .cocinas .advantages__grid {
-    display: none!important
   }
   .reformas-pages2 .consultation .consultation-form__top p {
     font-size: 14px
@@ -7500,6 +7838,19 @@ html::selection {
   .reformas-pages2 .metadology-2 .advantages__counter {
     margin-bottom: 32px
   }
+  .reformas-pages2 .about__top {
+    gap: 32px
+  }
+  .reformas-pages2 .about__top .about__content {
+    gap: 12px
+  }
+  .reformas-pages2 .about__top__descript,
+  .reformas-pages2 .about__top__general {
+    gap: 12px
+  }
+  .reformas-pages2 .about__top__general {
+    gap: 12px
+  }
   .reformas-pages2 .about .show-mob .pic {
     height: 88px;
     width: 100%!important
@@ -7516,6 +7867,37 @@ html::selection {
   }
   .reformas-pages2 .about .text-block a {
     margin: 0
+  }
+  .reformas-pages2 .intro-description {
+    gap: 24px!important
+  }
+  .cocinas .advantages__grid {
+    display: none!important
+  }
+  .cocinas .about__pictures .pic:not(:first-child) {
+    display: flex
+  }
+  .cocinas .about .show-mob {
+    display: flex
+  }
+  .cocinas .about .hide-mob {
+    display: none!important
+  }
+  .cocinas .about__stats {
+    max-width: 100%!important;
+    width: 100%!important;
+    gap: 20px!important
+  }
+  .cocinas .about__stats .stat__number {
+    font-size: 28px;
+    line-height: 40px
+  }
+  .cocinas .about__stats .stat p {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .banos .tariffs__blocks {
+    gap: 32px
   }
 }
 @media (max-width:480px) {

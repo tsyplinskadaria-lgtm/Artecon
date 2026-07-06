@@ -4341,6 +4341,215 @@ html::selection {
 .request-form .consultation-form .numbering span {
   font-size: 14px
 }
+.quiz {
+  overflow: hidden
+}
+.quiz__wrap {
+  position: relative;
+  margin: 56px 0;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 25px
+}
+.quiz__wrap::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: rgba(0,0,0,.6509803922)
+}
+.quiz__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+.quiz__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.quiz__blocks {
+  position: relative;
+  z-index: 9
+}
+.quiz .intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+.quiz .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px
+}
+.quiz .intro-description__descript,
+.quiz .intro-description__general {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 100%;
+  width: 100%
+}
+.quiz .intro-description__descript {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f2f2f7
+}
+.quiz .intro-description .title {
+  font-family: Unbounded;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #fdfdfd
+}
+.quiz .intro-description .numbering span {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #f2f2f7
+}
+.quiz__progress {
+  margin: 44px 10px 32px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px
+}
+.quiz__progress-item {
+  width: 75px;
+  height: 40px;
+  border-radius: 50px;
+  background: #f2f2f7;
+  backdrop-filter: blur(4px);
+  opacity: .5;
+  color: #9898b1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .25s;
+  font-family: RobotoMono;
+  font-weight: 500;
+  font-style: Italic;
+  font-size: 16px;
+  line-height: 20px
+}
+.quiz__progress-item--active {
+  background: #f2f2f7;
+  opacity: 1;
+  color: #d62322
+}
+.quiz__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 42px
+}
+.quiz__button {
+  padding: 12px 48px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .25s;
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px
+}
+.quiz__button:disabled {
+  cursor: default
+}
+.quiz__button--prev {
+  background: #d8d8d8;
+  color: #d62322;
+  border-radius: 4px;
+  opacity: .7;
+  background: #f2f2f7
+}
+.quiz__button--next {
+  background: #d62322;
+  color: #f2f2f7;
+  opacity: .45;
+  pointer-events: none
+}
+.quiz__button--next.active {
+  opacity: 1;
+  pointer-events: auto
+}
+.quiz-slide {
+  display: none
+}
+.quiz-slide--active {
+  display: block
+}
+.quiz-slide__title {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #f2f2f7;
+  margin-bottom: 32px
+}
+.quiz-slide__cards {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 8px
+}
+.quiz-card {
+  cursor: pointer
+}
+.quiz-card input {
+  display: none
+}
+.quiz-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+.quiz-card__top {
+  padding: 10px;
+  font-family: Mont;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #f2f2f7;
+  color: #9898b1
+}
+.quiz-card__image {
+  height: 132px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden
+}
+.quiz-card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.quiz-card input:checked+.quiz-card__body .quiz-card__top {
+  color: #d62322
+}
+.reforma .quiz-slide__cards {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 8px
+}
 .apartamentos .advantages__items {
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -6547,6 +6756,47 @@ html::selection {
   .metadology .advantages__grid {
     grid-template-columns: repeat(3,1fr)
   }
+  .quiz__wrap {
+    margin: 0 0;
+    padding: 40px 24px
+  }
+  .quiz .intro-description {
+    gap: 16px
+  }
+  .quiz .intro-description__content {
+    gap: 16px
+  }
+  .quiz .intro-description__descript {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .quiz .intro-description .title {
+    font-size: 20px;
+    line-height: 28px
+  }
+  .quiz .intro-description .numbering span {
+    font-size: 13px
+  }
+  .quiz__progress {
+    margin: 28px 0 32px 0
+  }
+  .quiz__bottom {
+    margin-top: 28px
+  }
+  .quiz__button {
+    padding: 12px 46px;
+    font-size: 15px
+  }
+  .quiz-slide__title {
+    font-size: 16px;
+    line-height: 20px
+  }
+  .quiz-card__top {
+    font-size: 13px
+  }
+  .reforma .quiz-slide__cards {
+    grid-template-columns: repeat(3,1fr)
+  }
   .villas .advantages__grid-2 {
     grid-template-columns: repeat(2,1fr)
   }
@@ -7188,6 +7438,10 @@ html::selection {
   .request-form .consultation-form__blocks {
     gap: 24px
   }
+  .reforma .quiz__progress-item {
+    width: 59px;
+    height: 32px
+  }
   .apartamentos .advantages__items {
     grid-template-columns: repeat(2,1fr)
   }
@@ -7384,6 +7638,39 @@ html::selection {
   }
 }
 @media (max-width:620px) {
+  .quiz__wrap {
+    padding: 40px 15px
+  }
+  .quiz__container {
+    padding: 0 8px
+  }
+  .quiz__progress {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 28px auto 32px auto;
+    max-width: 240px;
+    width: 100%
+  }
+  .quiz__progress-item {
+    font-size: 14px
+  }
+  .quiz__button {
+    padding: 12px 24px;
+    font-size: 14px
+  }
+  .quiz-slide__cards {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .reforma .quiz-slide__cards {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .reforma .quiz__progress {
+    display: inline-grid;
+    grid-template-columns: repeat(4,1fr);
+    max-width: auto;
+    justify-items: center;
+    width: 100%
+  }
   .reformas-pages2 .main-form {
     display: flex;
     flex-direction: column;

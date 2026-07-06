@@ -923,5 +923,65 @@
             updatePagination(swiper);
         }));
     }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const quizzes = document.querySelectorAll(".quiz");
+        quizzes.forEach((quiz => {
+            const slides = quiz.querySelectorAll(".quiz-slide");
+            const progress = quiz.querySelectorAll(".quiz__progress-item");
+            const btnNext = quiz.querySelector(".quiz__button--next");
+            const btnPrev = quiz.querySelector(".quiz__button--prev");
+            let currentStep = 0;
+            const answers = {};
+            function showStep(index) {
+                slides.forEach((slide => {
+                    slide.classList.remove("quiz-slide--active");
+                }));
+                progress.forEach((item => {
+                    item.classList.remove("quiz__progress-item--active");
+                }));
+                slides[index].classList.add("quiz-slide--active");
+                progress[index].classList.add("quiz__progress-item--active");
+                btnPrev.disabled = index === 0;
+                btnPrev.style.opacity = index === 0 ? ".5" : "1";
+                checkSelected();
+            }
+            function checkSelected() {
+                const currentSlide = slides[currentStep];
+                if (!currentSlide) return;
+                const checked = currentSlide.querySelector('input[type="radio"]:checked');
+                if (checked) {
+                    btnNext.disabled = false;
+                    btnNext.classList.add("active");
+                } else {
+                    btnNext.disabled = true;
+                    btnNext.classList.remove("active");
+                }
+            }
+            quiz.addEventListener("change", (e => {
+                if (!e.target.matches('input[type="radio"]')) return;
+                answers[e.target.name] = e.target.value;
+                checkSelected();
+            }));
+            btnNext.addEventListener("click", (() => {
+                if (currentStep >= slides.length - 1) return;
+                currentStep++;
+                showStep(currentStep);
+            }));
+            btnPrev.addEventListener("click", (() => {
+                if (currentStep <= 0) return;
+                currentStep--;
+                showStep(currentStep);
+            }));
+            progress.forEach(((item, index) => {
+                item.addEventListener("click", (() => {
+                    if (index <= currentStep) {
+                        currentStep = index;
+                        showStep(currentStep);
+                    }
+                }));
+            }));
+            showStep(currentStep);
+        }));
+    }));
     window["FLS"] = true;
 })();

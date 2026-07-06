@@ -873,5 +873,55 @@
             updatePagination(swiper);
         }));
     }));
+    document.querySelectorAll(".decision-slider").forEach((slider => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 1,
+            speed: 600,
+            spaceBetween: 12,
+            effect: "slide",
+            autoHeight: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: slider.querySelector(".navigation-btn__next"),
+                prevEl: slider.querySelector(".navigation-btn__prev")
+            },
+            grabCursor: true,
+            on: {
+                init(swiper) {
+                    createPagination(swiper);
+                    updatePagination(swiper);
+                },
+                slideChange(swiper) {
+                    updatePagination(swiper);
+                }
+            }
+        });
+        function createPagination(swiper) {
+            const pagination = slider.querySelector(".pagination2");
+            if (!pagination) return;
+            pagination.innerHTML = "";
+            const maxDots = window.innerWidth <= 576 ? 6 : 10;
+            const dotsCount = Math.min(swiper.slides.length, maxDots);
+            for (let i = 0; i < dotsCount; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", (() => swiper.slideTo(i)));
+                pagination.appendChild(dot);
+            }
+        }
+        function updatePagination(swiper) {
+            const dots = slider.querySelectorAll(".pagination2 .dot");
+            if (!dots.length) return;
+            const activeDot = swiper.activeIndex % dots.length;
+            dots.forEach(((dot, index) => {
+                dot.classList.toggle("active", index === activeDot);
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            createPagination(swiper);
+            updatePagination(swiper);
+        }));
+    }));
     window["FLS"] = true;
 })();

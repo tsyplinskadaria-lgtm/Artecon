@@ -5126,6 +5126,14 @@ html::selection {
 .reformas-pages2 .intro-description__general {
   gap: 16px!important
 }
+.reformas-pages2 .services .intro-description__content {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 33px;
+  max-width: 100%;
+  width: 100%
+}
 .cocinas .advantages .intro-description {
   display: flex;
   flex-direction: column;
@@ -5285,19 +5293,28 @@ html::selection {
   text-align: left;
   font-family: Mont;
   font-weight: 700;
-  line-height: 24px
+  line-height: 24px;
+  padding: 12px 25px 12px 56px
 }
 .banos .tariffs .price-table tbody tr {
   background: #f5f5fb
 }
 .banos .tariffs .price-table tbody td {
   padding: 12px;
-  text-align: center;
-  color: #7b7b95;
+  text-align: start;
+  color: #9898b1;
   font-family: Mont;
   font-weight: 700;
   font-size: 15px;
-  line-height: 24px
+  line-height: 24px;
+  width: 108px;
+  padding: 12px 20px 12px 56px
+}
+.banos .tariffs .price-table tbody tr td:first-child {
+  border-radius: 15px 0 0 15px
+}
+.banos .tariffs .price-table tbody tr td:last-child {
+  border-radius: 0 15px 15px 0
 }
 .banos .tariffs .price-table tbody tr:nth-child(even) {
   background: #f2f2f7
@@ -5327,7 +5344,7 @@ html::selection {
   line-height: 32px
 }
 .banos .about__picture {
-  height: 100%;
+  height: auto;
   overflow: hidden;
   border-radius: 8px;
   flex: 1;
@@ -5348,8 +5365,232 @@ html::selection {
   -webkit-transform: scale(1.1);
   transform: scale(1.1)
 }
-.banos .advantages__blocks {
-  padding: 56px 0!important
+.banos .metadology-banos .advantages__blocks {
+  padding: 56px 0
+}
+.banos .metadology-banos .advantages__item {
+  min-height: auto
+}
+.banos .metadology-banos .process-card-image {
+  height: auto
+}
+.banos .metadology-banos .show-mob {
+  display: none
+}
+.piscinas .our-works .photos-grid {
+  grid-template-areas: "top    left    right" "bottom left    last" "bottom center  last"
+}
+.piscinas .about__middle {
+  display: flex
+}
+.piscinas .about__blocks {
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.piscinas .about__inner {
+  display: flex;
+  justify-content: space-between
+}
+.piscinas .about__block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 700px!important;
+  width: 100%
+}
+.piscinas .about__block p {
+  font-size: 16px;
+  line-height: 24px
+}
+.piscinas .about__pictures {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  max-width: 195px!important;
+  min-width: 195px!important
+}
+.piscinas .about__picture {
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 100%!important;
+  width: 100%
+}
+.piscinas .about__picture img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: .4s
+}
+.piscinas .about__picture img:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08)
+}
+.piscinas .about__stats {
+  display: grid;
+  grid-template-columns: repeat(2,1fr)!important;
+  gap: 12px!important
+}
+.piscinas .about__stats .stat__number {
+  font-size: 36px;
+  line-height: 32px
+}
+.piscinas .about__stats .stat p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-color);
+  display: flex
+}
+.decision-lists .intro-description__content {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 33px
+}
+.decision-lists__blocks {
+  padding: 56px 0 76px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.decision-lists .decision-slider__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px
+}
+.decision-lists .decision-slider__navigation .navigation-btn {
+  background-color: #fdfdfd
+}
+.decision-lists .swiper {
+  margin-left: 0;
+  margin-right: 0
+}
+.decision-lists .decision-slide {
+  display: flex;
+  gap: 12px;
+  align-items: stretch
+}
+.decision-lists .decision-slide__pic {
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 796px;
+  width: 100%;
+  flex: 1 1 auto;
+  height: auto;
+  display: flex
+}
+.decision-lists .decision-slide__pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: .4s
+}
+.decision-lists .decision-slide__pic img:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08)
+}
+.decision-lists .decision-slide .show-mob {
+  display: none
+}
+.decision-lists .decision-slide__list {
+  max-width: 392px;
+  width: 100%;
+  background-color: #fdfdfd;
+  padding: 8px;
+  border-radius: 15px
+}
+.decision-lists .decision-slide .decision-btns {
+  margin: 12px 24px!important
+}
+.decision-lists .decision-slide .btn-decision {
+  display: flex;
+  border-right: 4px;
+  padding: 12px 10px!important;
+  background-color: #d62322;
+  width: 100%;
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f2f2f7;
+  border: 1px solid #d62322;
+  transition: all .2s ease-in-out;
+  color: var(--white-color);
+  border-radius: 4px;
+  justify-content: center
+}
+.decision-lists .decision-slide .btn-decision:hover {
+  background-color: #222;
+  border: 1px solid var(--white-color)
+}
+.decision-lists .decision-slide__top {
+  border-radius: 15px;
+  background-color: #d62322;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative
+}
+.decision-lists .decision-slide__top::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+  width: 24px;
+  border: 1px solid rgba(242,242,247,.5019607843)
+}
+.decision-lists .decision-slide__top span {
+  width: 132px
+}
+.decision-lists .decision-slide__top * {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fdfdfd
+}
+.decision-lists .decision-slide__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  padding: 12px 24px
+}
+.decision-lists .decision-slide__item::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+  width: 24px;
+  border: 1px solid rgba(242,242,247,.5019607843)
+}
+.decision-lists .decision-slide__item:nth-child(even) {
+  background: #f2f2f7
+}
+.decision-lists .decision-slide__item span {
+  width: 132px
+}
+.decision-lists .decision-slide__item * {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: #9898b1
 }
 @media (max-width:1550px) {
   .main__wrapper {
@@ -6517,6 +6758,82 @@ html::selection {
     line-height: 20px;
     text-align: center
   }
+  .banos .about__inner {
+    gap: 33px
+  }
+  .banos .about__block {
+    gap: 44px
+  }
+  .banos .about .text-block p {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .banos .about__stats {
+    gap: 33px
+  }
+  .banos .metadology-banos .advantages__grid {
+    grid-template-columns: repeat(3,1fr)
+  }
+  .banos .metadology-banos .process-card-image {
+    display: block
+  }
+  .banos .metadology-banos .show-mob {
+    display: block
+  }
+  .banos .metadology-banos .hide-mob {
+    display: none
+  }
+  .banos .metadology-banos .process-card-image-mob {
+    display: none
+  }
+  .decision-lists .decision-slider__navigation {
+    margin-top: 0;
+    background-color: #fdfdfd;
+    padding: 24px 32px 16px 32px;
+    border-radius: 0 0 15px 15px
+  }
+  .decision-lists .decision-slider__navigation .navigation-btn {
+    background-color: #f2f2f7
+  }
+  .decision-lists .decision-slide__pic {
+    max-width: 100%;
+    width: 100%
+  }
+  .decision-lists .decision-slide .hide-mob {
+    display: none
+  }
+  .decision-lists .decision-slide .show-mob {
+    display: flex;
+    margin: 12px 0;
+    height: 470px
+  }
+  .decision-lists .decision-slide__list {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 15px 15px 0 0
+  }
+  .decision-lists .decision-slide__top::after {
+    display: none
+  }
+  .decision-lists .decision-slide__top span {
+    max-width: 298px;
+    width: 100%
+  }
+  .decision-lists .decision-slide__top * {
+    font-size: 16px;
+    line-height: 20px
+  }
+  .decision-lists .decision-slide__item::after {
+    display: none
+  }
+  .decision-lists .decision-slide__item span {
+    max-width: 298px;
+    width: 100%
+  }
+  .decision-lists .decision-slide__item * {
+    font-size: 13px;
+    line-height: 20px
+  }
 }
 @media (max-width:768px) {
   .header .mobile-menu {
@@ -6906,6 +7223,63 @@ html::selection {
   .banos .tariffs__blocks {
     padding: 44px 0
   }
+  .banos .tariffs .price-table thead th {
+    line-height: 20px;
+    font-size: 14px
+  }
+  .banos .tariffs .price-table tbody td {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .banos .metadology-banos .advantages__blocks {
+    padding: 44px 0;
+    gap: 44px
+  }
+  .piscinas .about__blocks {
+    padding: 44px 0
+  }
+  .piscinas .about__inner {
+    gap: 40px
+  }
+  .piscinas .about__block {
+    max-width: auto!important;
+    width: 50%
+  }
+  .piscinas .about__block p {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .piscinas .about__pictures {
+    max-width: auto;
+    min-width: auto;
+    gap: 10px;
+    width: 50%!important
+  }
+  .piscinas .about__picture {
+    width: 100%;
+    max-width: 100%!important
+  }
+  .piscinas .about__stats .stat p {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .decision-lists .intro-description__content {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px
+  }
+  .decision-lists__blocks {
+    padding: 44px 0;
+    gap: 44px
+  }
+  .decision-lists .decision-slide__top {
+    justify-content: start;
+    gap: 56px
+  }
+  .decision-lists .decision-slide__item {
+    justify-content: start;
+    gap: 56px
+  }
 }
 @media (max-width:756px) {
   .footer .footer-below {
@@ -6968,6 +7342,45 @@ html::selection {
   }
   .specialty-slider {
     display: block
+  }
+}
+@media (max-width:668px) {
+  .banos .about__inner {
+    flex-direction: column
+  }
+  .banos .about__block {
+    gap: 32px
+  }
+  .banos .about__stats-number {
+    font-size: 28px
+  }
+  .banos .about__stats {
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px
+  }
+  .banos .about__picture {
+    max-width: 100%;
+    width: 100%
+  }
+  .piscinas .about__inner {
+    flex-direction: column;
+    gap: 32px
+  }
+  .piscinas .about__block {
+    width: 100%;
+    gap: 32px
+  }
+  .piscinas .about__pictures {
+    width: 100%!important;
+    display: grid;
+    min-width: 100%!important;
+    grid-template-columns: 1fr 1fr
+  }
+  .piscinas .about__pictures .about__picture:nth-child(3) {
+    grid-column: 1/-1
+  }
+  .piscinas .about__picture {
+    height: 115px
   }
 }
 @media (max-width:620px) {
@@ -7871,6 +8284,11 @@ html::selection {
   .reformas-pages2 .intro-description {
     gap: 24px!important
   }
+  .reformas-pages2 .services .intro-description__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start
+  }
   .cocinas .advantages__grid {
     display: none!important
   }
@@ -7898,6 +8316,66 @@ html::selection {
   }
   .banos .tariffs__blocks {
     gap: 32px
+  }
+  .banos .tariffs__tags {
+    gap: 32px
+  }
+  .banos .tariffs .price-table thead th {
+    line-height: 16px;
+    padding: 12px;
+    font-size: 10px
+  }
+  .banos .tariffs .price-table tbody td {
+    padding: 12px
+  }
+  .banos .metadology-banos .advantages__blocks {
+    padding: 44px 0;
+    gap: 32px
+  }
+  .banos .metadology-banos .process-card-image-mob {
+    display: block
+  }
+  .piscinas .about__stats {
+    max-width: 100%!important;
+    width: 100%!important;
+    gap: 20px!important
+  }
+  .piscinas .about__stats .stat__number {
+    font-size: 28px;
+    line-height: 40px
+  }
+  .decision-lists__blocks {
+    gap: 32px
+  }
+  .decision-lists .decision-slider__navigation {
+    margin-top: 4px;
+    border-radius: 15px;
+    background-color: #fdfdfd;
+    padding: 16px 8px
+  }
+  .decision-lists .decision-slide .show-mob {
+    height: 160px
+  }
+  .decision-lists .decision-slide__list {
+    border-radius: 15px
+  }
+  .decision-lists .decision-slide .decision-btns {
+    margin: 12px!important
+  }
+  .decision-lists .decision-slide .btn-decision {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .decision-lists .decision-slide__top {
+    gap: 4px;
+    padding: 12px
+  }
+  .decision-lists .decision-slide__top * {
+    font-size: 14px
+  }
+  .decision-lists .decision-slide__item {
+    gap: 4px;
+    padding: 12px
   }
 }
 @media (max-width:480px) {

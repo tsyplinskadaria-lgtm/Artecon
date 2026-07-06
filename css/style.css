@@ -5370,7 +5370,8 @@ html::selection {
   gap: 16px
 }
 .cocinas .about__middle {
-  display: flex
+  display: flex;
+  flex-direction: row
 }
 .cocinas .about__pictures {
   max-width: 100%!important;
@@ -6954,16 +6955,6 @@ html::selection {
   }
   .reformas-pages2 .about .hide-mob {
     display: none
-  }
-  .reformas-pages2 .about .show-mob {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    max-width: 100%;
-    width: 100%
-  }
-  .reformas-pages2 .about .show-mob .pic {
-    height: 226px;
-    width: 100%!important
   }
   .reformas-pages2 .about__block {
     gap: 40px
@@ -8564,6 +8555,15 @@ html::selection {
   }
   .reformas-pages2 .about__top__general {
     gap: 12px
+  }
+  .reformas-pages2 .about .hide-mob {
+    display: none
+  }
+  .reformas-pages2 .about .show-mob {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 100%;
+    width: 100%
   }
   .reformas-pages2 .about .show-mob .pic {
     height: 88px;

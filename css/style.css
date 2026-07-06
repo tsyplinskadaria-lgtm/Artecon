@@ -7652,11 +7652,12 @@ html::selection {
     padding: 0 8px!important
   }
   .quiz__progress {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
     margin: 28px auto 32px auto;
-    max-width: 240px;
-    width: 100%
+    display: flex!important;
+    flex-wrap: wrap;
+    justify-items: center;
+    width: 100%;
+    max-width: 300px
   }
   .quiz__progress-item {
     font-size: 14px

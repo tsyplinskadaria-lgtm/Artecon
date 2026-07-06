@@ -6973,6 +6973,9 @@ html::selection {
   .cocinas .about__pictures .pic:not(:first-child) {
     display: none
   }
+  .cocinas .about .hide-mob {
+    display: flex
+  }
   .cocinas .about .pic {
     max-width: 340px!important;
     width: 100%!important;
@@ -8629,12 +8632,25 @@ html::selection {
   .banos .tariffs .price-table tbody td {
     padding: 12px
   }
+  .banos .about__stats {
+    grid-template-columns: repeat(2,1fr)!important;
+    gap: 15px
+  }
   .banos .metadology-banos .advantages__blocks {
     padding: 44px 0;
     gap: 32px
   }
   .banos .metadology-banos .process-card-image-mob {
     display: block
+  }
+  .piscinas .about__pictures {
+    width: 100%!important;
+    display: grid;
+    min-width: 100%!important;
+    grid-template-columns: 1fr 1fr
+  }
+  .piscinas .about__pictures .about__picture:nth-child(3) {
+    grid-column: 1/-1
   }
   .piscinas .about__stats {
     max-width: 100%!important;

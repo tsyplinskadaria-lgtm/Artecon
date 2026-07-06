@@ -4037,6 +4037,9 @@ html::selection {
   display: flex;
   height: auto
 }
+.reformas-pages .about__blocks {
+  padding: 56px 0
+}
 .reformas-pages .about__pictures {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -4534,7 +4537,8 @@ html::selection {
   height: 132px;
   background-color: #fff;
   border-radius: 10px;
-  overflow: hidden
+  overflow: hidden;
+  padding: 10px
 }
 .quiz-card__image img {
   width: 100%;
@@ -7354,6 +7358,9 @@ html::selection {
     font-size: 16px;
     line-height: 20px
   }
+  .reformas-pages .about__blocks {
+    padding: 44px 0
+  }
   .advantages__blocks {
     gap: 44px
   }
@@ -7642,7 +7649,7 @@ html::selection {
     padding: 40px 15px
   }
   .quiz__container {
-    padding: 0 8px
+    padding: 0 8px!important
   }
   .quiz__progress {
     display: grid;
@@ -7665,7 +7672,7 @@ html::selection {
     grid-template-columns: repeat(2,1fr)
   }
   .reforma .quiz__progress {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: repeat(4,1fr);
     max-width: auto;
     justify-items: center;
@@ -8417,6 +8424,9 @@ html::selection {
   .metadology .advantages__info {
     gap: 12px
   }
+  .quiz__container {
+    padding: 0 8px!important
+  }
   .apartamentos .advantages__items {
     display: none
   }
@@ -8457,6 +8467,9 @@ html::selection {
   }
   .specialty__blocks {
     gap: 32px
+  }
+  .specialty__container {
+    padding: 0 0!important
   }
   .specialty .intro-description {
     padding: 0 20px

@@ -830,6 +830,7 @@
             spaceBetween: 10,
             effect: "slide",
             autoHeight: true,
+            autoHeight: true,
             observer: true,
             observeParents: true,
             navigation: {

@@ -132,25 +132,41 @@
             }));
         }));
     }));
-    document.querySelectorAll(".faq-fields__item").forEach((item => {
-        const header = item.querySelector(".faq-fields__top");
-        const content = item.querySelector(".faq-fields__content");
-        header.addEventListener("click", (() => {
-            const isOpen = item.classList.contains("active");
-            if (isOpen) {
-                content.style.height = content.scrollHeight + "px";
-                requestAnimationFrame((() => {
-                    content.style.height = "0px";
+    document.querySelectorAll(".faq-fields").forEach((faq => {
+        faq.querySelectorAll(".faq-fields__item.active").forEach((item => {
+            const content = item.querySelector(".faq-fields__content");
+            content.style.height = "auto";
+        }));
+        faq.querySelectorAll(".faq-fields__item").forEach((item => {
+            const header = item.querySelector(".faq-fields__top");
+            const content = item.querySelector(".faq-fields__content");
+            header.addEventListener("click", (() => {
+                const isOpen = item.classList.contains("active");
+                faq.querySelectorAll(".faq-fields__item.active").forEach((activeItem => {
+                    if (activeItem === item) return;
+                    const activeContent = activeItem.querySelector(".faq-fields__content");
+                    activeContent.style.height = activeContent.scrollHeight + "px";
+                    requestAnimationFrame((() => {
+                        activeContent.style.height = "0px";
+                    }));
+                    activeItem.classList.remove("active");
                 }));
-                item.classList.remove("active");
-            } else {
-                item.classList.add("active");
-                content.style.height = content.scrollHeight + "px";
-                content.addEventListener("transitionend", (function handler() {
-                    if (item.classList.contains("active")) content.style.height = "auto";
-                    content.removeEventListener("transitionend", handler);
-                }));
-            }
+                if (isOpen) {
+                    content.style.height = content.scrollHeight + "px";
+                    requestAnimationFrame((() => {
+                        content.style.height = "0px";
+                    }));
+                    item.classList.remove("active");
+                } else {
+                    item.classList.add("active");
+                    content.style.height = content.scrollHeight + "px";
+                    content.addEventListener("transitionend", (function handler() {
+                        if (item.classList.contains("active")) content.style.height = "auto";
+                    }), {
+                        once: true
+                    });
+                }
+            }));
         }));
     }));
     function infiniteColumn(selector, direction = 1, baseSpeed = 60) {
@@ -270,10 +286,13 @@
         new Swiper(".advantages-slider", {
             slidesPerView: 1,
             spaceBetween: 7,
-            speed: 600,
             autoHeight: true,
             observer: true,
             observeParents: true,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
             on: {
                 init(swiper) {
                     initControls(swiper);
@@ -983,6 +1002,24 @@
             }));
             showStep(currentStep);
         }));
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const menuLinks = document.querySelectorAll(".menu a");
+        if (menuLinks.length) {
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            menuLinks.forEach((link => {
+                const href = link.getAttribute("href");
+                if (href === currentPage) link.classList.add("active");
+            }));
+        }
+        const footerLinks = document.querySelectorAll(".footer-menu a");
+        if (footerLinks.length) {
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            footerLinks.forEach((link => {
+                const href = link.getAttribute("href");
+                if (href === currentPage) link.parentElement.classList.add("active");
+            }));
+        }
     }));
     window["FLS"] = true;
 })();

@@ -99,7 +99,8 @@ body,
 html {
   height: 100%;
   font-family: Mont,sans-serif;
-  font-weight: 700
+  font-weight: 700;
+  scroll-behavior: smooth
 }
 body::selection,
 html::selection {
@@ -388,6 +389,9 @@ html::selection {
 }
 .header .menu__list *:hover {
   color: var(--white-color)
+}
+.header .menu__list *.active {
+  color: #fdfdfd
 }
 .header .details {
   display: flex;
@@ -1198,7 +1202,7 @@ html::selection {
 .main .menu {
   position: absolute;
   right: 0;
-  top: 220px
+  top: 230px
 }
 .main .menu__list {
   display: flex;
@@ -3431,7 +3435,7 @@ html::selection {
 .reformas .main .menu {
   position: absolute;
   right: 0;
-  top: 180px
+  top: 230px
 }
 .reformas .benefits {
   display: grid;
@@ -5806,18 +5810,503 @@ html::selection {
   line-height: 24px;
   color: #9898b1
 }
+.construction .main .btns .btn {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 24px
+}
+.construction .main .btns .btn svg {
+  width: 12px;
+  height: 12px
+}
+.construction .main .benefits {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+  justify-content: space-between;
+  width: 100%
+}
+.construction .main .benefits__item {
+  background: rgba(255,255,255,.2);
+  backdrop-filter: blur(5px);
+  border: none;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px
+}
+.construction .main .benefits__item p {
+  color: #f2f2f7;
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px
+}
+.construction .main .benefits__icon {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  background-color: #f2f3f7;
+  padding: 8px
+}
+.construction .metadology .intro-description__content {
+  align-items: end
+}
+.construction .metadology .advantages__blocks {
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.construction .about__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.construction .about__below,
+.construction .about__top {
+  gap: 56px
+}
+.construction .about__below-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 50%
+}
+.construction .about__stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 56px;
+  width: 100%
+}
+.construction .about .video__item {
+  width: 100%
+}
+.construction .about .show-mob {
+  display: none
+}
+.construction .consultation {
+  position: relative;
+  padding: 56px 32px;
+  margin: 0
+}
+.construction .consultation::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(0,0,0,.6431372549)
+}
+.construction .consultation .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block!important
+}
+.construction .consultation .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top
+}
+.construction .consultation-form {
+  position: relative!important;
+  top: auto!important;
+  left: auto!important;
+  -webkit-transform: none!important;
+  transform: none!important;
+  padding: 40px 32px;
+  max-width: 595px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 9;
+  min-height: auto;
+  border-radius: 15px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255,255,255,.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.25);
+  background: linear-gradient(-45deg,rgba(255,255,255,.12),rgba(255,255,255,.04));
+  background: rgba(0,0,0,.431372549);
+  overflow: hidden
+}
+.construction .consultation-form__blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 9
+}
+.construction .consultation-form__top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center
+}
+.construction .consultation-form__top .numbering {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center
+}
+.construction .consultation-form__top .numbering span {
+  color: #f2f2f7
+}
+.construction .consultation-form__top .title {
+  font-family: Unbounded;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #fdfdfd
+}
+.construction .consultation-form__top p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f2f2f7
+}
+.construction .consultation-form .form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 425px;
+  width: 100%;
+  margin: 0 auto
+}
+.construction .consultation-form .form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+.construction .consultation-form .form__group label {
+  font-size: 15px;
+  line-height: 24px;
+  color: #fdfdfd
+}
+.construction .consultation-form .form__group input {
+  padding: 8px 16px;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--grey-color)
+}
+.construction .consultation-form .form__group input::-webkit-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px
+}
+.construction .consultation-form .form__group input:-ms-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px
+}
+.construction .consultation-form .form__group input::-ms-input-placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px
+}
+.construction .consultation-form .form__group input::placeholder {
+  font-size: 15px;
+  color: var(--grey-color);
+  line-height: 24px
+}
+.construction .consultation-form .form .btn {
+  margin-top: 20px;
+  border-radius: 4px
+}
+.cta {
+  position: relative;
+  overflow: hidden
+}
+.cta::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(0,0,0,.7)
+}
+.cta .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+.cta .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.cta__blocks {
+  position: relative;
+  z-index: 9;
+  padding: 72px 0;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px
+}
+.cta .intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+.cta .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.cta .intro-description__descript,
+.cta .intro-description__general {
+  max-width: 100%;
+  width: 100%
+}
+.cta .intro-description__descript {
+  color: #f2f2f7
+}
+.cta .intro-description .numbering span {
+  color: #f2f2f7
+}
+.cta .intro-description .title {
+  color: #fdfdfd
+}
+.cta .cta-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px
+}
+.cta .cta-btns .btn {
+  max-width: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px
+}
+.contract-models__blocks {
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.contract-models .intro-description__content {
+  align-items: start
+}
+.contract-models .intro-description__descript,
+.contract-models .intro-description__general {
+  max-width: 415px;
+  width: 100%
+}
+.contract-models__list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px
+}
+.contract-models__item {
+  border-radius: 15px;
+  background-color: #fdfdfd;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px
+}
+.contract-models__top {
+  display: flex;
+  flex-direction: column;
+  align-items: start
+}
+.contract-models__top span {
+  color: #242424;
+  font-size: 18px;
+  line-height: 20px
+}
+.contract-models__top p {
+  color: var(--grey-color);
+  font-size: 15px;
+  line-height: 24px;
+  margin-top: 12px
+}
+.contract-models__icon {
+  min-width: 20px;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 22px
+}
+.contract-models__icon img {
+  width: 100%;
+  height: 100%
+}
+.contract-models__columns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.contract-models__box {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px
+}
+.contract-models__box p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #9898b1
+}
+.contract-models__box img {
+  min-width: 16px;
+  height: 16px;
+  width: 16px;
+  margin-top: 2px
+}
+.service-process__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 56px 0
+}
+.service-process__list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px
+}
+.service-process__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.service-process__top {
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px
+}
+.service-process__top span {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242424
+}
+.service-process__top img {
+  min-width: 20px;
+  width: 20px;
+  height: 20px
+}
+.service-process__columns {
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%
+}
+.service-process__column {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px
+}
+.service-process__column p {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #9898b1
+}
+.service-process__column img {
+  min-width: 16px;
+  height: 16px;
+  width: 16px
+}
+.service-process__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.service-process__pic {
+  border-radius: 15px;
+  height: 600px;
+  overflow: hidden
+}
+.service-process__pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: .4s
+}
+.service-process__pic img:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08)
+}
+.technical-capability .advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+  align-items: start
+}
+.technical-capability .advantages__item {
+  border-radius: 10px;
+  height: 100%
+}
+.technical-capability .advantages__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px
+}
+.technical-capability .advantages__icon {
+  min-width: 20px;
+  width: 20px;
+  height: 20px
+}
 @media (max-width:1550px) {
   .main__wrapper {
     padding-top: 180px
+  }
+  .main .menu {
+    top: 190px
+  }
+  .reformas .main .menu {
+    top: 180px
   }
 }
 @media (max-width:1200px) {
   .main__content {
     max-width: 750px;
     width: 100%
-  }
-  .main .menu {
-    top: 180px
   }
   .advantages__wrapper {
     flex-direction: column
@@ -5920,9 +6409,6 @@ html::selection {
   .reformas .main__content {
     max-width: 750px;
     width: 100%
-  }
-  .reformas .main .menu {
-    top: 150px
   }
   .apartamentos .advantages__pic {
     max-width: 100%;
@@ -6521,6 +7007,32 @@ html::selection {
     font-size: 14px;
     line-height: 20px
   }
+  .construction .about .video__preview {
+    height: 300px
+  }
+  .construction .about .video__item iframe {
+    height: 300px
+  }
+  .construction .consultation {
+    padding: 44px 32px;
+    margin: 0
+  }
+  .construction .consultation-form {
+    min-height: auto;
+    max-width: 480px;
+    width: 100%
+  }
+  .construction .consultation-form__blocks {
+    gap: 32px
+  }
+  .construction .consultation-form__top .title {
+    font-size: 20px;
+    line-height: 28px
+  }
+  .construction .consultation-form__top p {
+    font-size: 13px;
+    line-height: 20px
+  }
 }
 @media (max-width:992px) {
   .main .benefits {
@@ -7082,6 +7594,141 @@ html::selection {
     font-size: 13px;
     line-height: 20px
   }
+  .construction .main .benefits {
+    grid-template-columns: repeat(2,1fr);
+    -webkit-column-gap: 12px;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    row-gap: 16px
+  }
+  .construction .main .benefits__item {
+    gap: 24px
+  }
+  .construction .metadology .process-card-image {
+    display: block;
+    height: auto
+  }
+  .construction .metadology .process-card-image-mob {
+    display: none
+  }
+  .construction .metadology .advantages__grid {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .construction .about__blocks {
+    gap: 40px
+  }
+  .construction .about__below,
+  .construction .about__top {
+    gap: 40px
+  }
+  .construction .about__below-left {
+    width: 50%
+  }
+  .construction .about__stats {
+    grid-template-columns: repeat(1,1fr);
+    gap: 12px
+  }
+  .construction .about__stats .stat__number {
+    font-size: 32px;
+    line-height: 40px
+  }
+  .construction .about .video__item {
+    width: 100%
+  }
+  .construction .about .video__preview {
+    height: 200px
+  }
+  .construction .about .video__item iframe {
+    height: 200px
+  }
+  .construction .about .hide-mob {
+    display: none
+  }
+  .construction .about .show-mob {
+    display: grid
+  }
+  .construction .about .text-block {
+    justify-content: start;
+    align-items: start;
+    gap: 64px
+  }
+  .construction .consultation-form__top .numbering span {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .construction .consultation-form .form {
+    max-width: 100%;
+    width: 100%
+  }
+  .construction .consultation-form .form__group label {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .construction .consultation-form .form__group input {
+    font-size: 13px
+  }
+  .construction .consultation-form .form__group input::-webkit-input-placeholder {
+    font-size: 13px
+  }
+  .construction .consultation-form .form__group input:-ms-input-placeholder {
+    font-size: 13px
+  }
+  .construction .consultation-form .form__group input::-ms-input-placeholder {
+    font-size: 13px
+  }
+  .construction .consultation-form .form__group input::placeholder {
+    font-size: 13px
+  }
+  .construction .consultation-form .form .btn {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .contract-models__blocks {
+    padding: 44px 0;
+    gap: 44px
+  }
+  .contract-models .intro-description__content {
+    align-items: end
+  }
+  .contract-models__item {
+    padding: 20px
+  }
+  .contract-models__top span {
+    font-size: 16px;
+    line-height: 20px
+  }
+  .contract-models__top p {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .contract-models__box p {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .service-process__top {
+    padding: 20px
+  }
+  .service-process__top span {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .service-process__columns {
+    padding: 20px;
+    gap: 12px
+  }
+  .service-process__column {
+    gap: 12px
+  }
+  .service-process__column p {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .service-process__wrapper {
+    gap: 24px
+  }
+  .service-process__pic {
+    height: 336px
+  }
 }
 @media (max-width:768px) {
   .header .mobile-menu {
@@ -7535,6 +8182,21 @@ html::selection {
     justify-content: start;
     gap: 56px
   }
+  .construction .metadology .advantages__blocks {
+    padding: 44px 0;
+    gap: 40px
+  }
+  .cta .intro-description__content {
+    gap: 12px
+  }
+  .cta .cta-btns .btn {
+    font-size: 15px;
+    line-height: 20px
+  }
+  .service-process__blocks {
+    gap: 44px;
+    padding: 44px 0
+  }
 }
 @media (max-width:756px) {
   .footer .footer-below {
@@ -7636,6 +8298,36 @@ html::selection {
   }
   .piscinas .about__picture {
     height: 115px
+  }
+  .contract-models__list {
+    grid-template-columns: repeat(1,1fr)
+  }
+  .service-process__list {
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px
+  }
+  .service-process__top {
+    padding: 16px
+  }
+  .service-process__top span {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .service-process__top img {
+    min-width: 16px;
+    width: 16px;
+    height: 16px
+  }
+  .service-process__columns {
+    padding: 16px
+  }
+  .service-process__wrapper {
+    flex-direction: column-reverse;
+    gap: 24px
+  }
+  .service-process__pic {
+    height: 200px;
+    border-radius: 10px
   }
 }
 @media (max-width:620px) {
@@ -8694,6 +9386,147 @@ html::selection {
     gap: 4px;
     padding: 12px
   }
+  .construction .main .btns .btn {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 15px
+  }
+  .construction .metadology .intro-description__content {
+    align-items: start
+  }
+  .construction .metadology .advantages__blocks {
+    padding: 44px 0;
+    gap: 32px
+  }
+  .construction .metadology .process-card-image {
+    display: none
+  }
+  .construction .metadology .process-card-image-mob {
+    display: block
+  }
+  .construction .about__blocks {
+    gap: 32px
+  }
+  .construction .about__top {
+    gap: 32px
+  }
+  .construction .about__content {
+    gap: 12px
+  }
+  .construction .about__below-left {
+    gap: 32px;
+    width: 100%;
+    flex-direction: column-reverse
+  }
+  .construction .about__stats .stat__number {
+    font-size: 28px
+  }
+  .construction .about .video__preview {
+    height: 180px
+  }
+  .construction .about .video__item iframe {
+    height: 180px
+  }
+  .construction .about .text-block {
+    gap: 32px
+  }
+  .construction .consultation {
+    margin: 0;
+    padding: 44px 20px
+  }
+  .construction .consultation-form {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    max-width: 100%;
+    width: 100%;
+    padding: 44px 20px;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none
+  }
+  .construction .consultation-form__blocks {
+    gap: 32px
+  }
+  .construction .consultation-form__top {
+    gap: 12px
+  }
+  .construction .consultation-form__top .numbering {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px
+  }
+  .construction .consultation-form__top .numbering span {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize
+  }
+  .construction .consultation-form__top p {
+    font-size: 13px
+  }
+  .construction .consultation-form .form {
+    padding: 0
+  }
+  .construction .consultation-form .form__group label {
+    font-size: 12px;
+    line-height: 20px
+  }
+  .construction .consultation-form .form__group input::-webkit-input-placeholder {
+    font-size: 13px
+  }
+  .construction .consultation-form .form__group input:-ms-input-placeholder {
+    font-size: 13px
+  }
+  .construction .consultation-form .form__group input::-ms-input-placeholder {
+    font-size: 13px
+  }
+  .construction .consultation-form .form__group input::placeholder {
+    font-size: 13px
+  }
+  .construction .consultation-form .form .btn {
+    margin-top: 8px
+  }
+  .cta__blocks {
+    padding: 44px 0;
+    gap: 32px
+  }
+  .cta .intro-description {
+    gap: 32px
+  }
+  .cta .intro-description .numbering {
+    display: flex;
+    flex-direction: column
+  }
+  .cta .cta-btns {
+    flex-direction: column
+  }
+  .cta .cta-btns .btn {
+    font-size: 14px
+  }
+  .contract-models__blocks {
+    padding: 44px 0 24px 0;
+    gap: 32px
+  }
+  .contract-models .intro-description {
+    gap: 24px
+  }
+  .contract-models__item {
+    border-radius: 10px
+  }
+}
+@media (max-width:576px)and (max-width:576px) {
+  .construction .consultation-form {
+    background: rgba(0,0,0,0);
+    padding: 0
+  }
 }
 @media (max-width:480px) {
   .header .logo {
@@ -8750,7 +9583,10 @@ html::selection {
     height: 230px
   }
   .reformas .main-form .btn {
-    margin-top: 5px
+    margin-top: 5px;
+    padding: 10px 5px;
+    border-radius: 4px;
+    line-height: 22px
   }
   .reformas .benefits {
     display: none
@@ -8777,6 +9613,9 @@ html::selection {
   }
   .request-form .consultation-form .numbering span {
     font-size: 13px
+  }
+  .construction .main .benefits {
+    display: none
   }
 }
 @media (max-width:425px) {

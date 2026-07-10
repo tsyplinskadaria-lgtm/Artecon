@@ -5886,54 +5886,6 @@ html::selection {
   line-height: 24px;
   color: #9898b1
 }
-.construction .main .btns .btn {
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 12px 32px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  line-height: 24px
-}
-.construction .main .btns .btn svg {
-  width: 12px;
-  height: 12px
-}
-.construction .main .benefits {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 12px;
-  justify-content: space-between;
-  width: 100%
-}
-.construction .main .benefits__item {
-  background: rgba(255,255,255,.2);
-  backdrop-filter: blur(5px);
-  border: none;
-  padding: 20px 12px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px
-}
-.construction .main .benefits__item p {
-  color: #f2f2f7;
-  font-family: Mont;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px
-}
-.construction .main .benefits__icon {
-  min-width: 32px;
-  width: 32px;
-  height: 32px;
-  background-color: #f2f3f7;
-  padding: 8px
-}
 .construction .metadology .intro-description__content {
   align-items: end
 }
@@ -6367,6 +6319,101 @@ html::selection {
   min-width: 20px;
   width: 20px;
   height: 20px
+}
+.structures .main .btns .btn {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 24px
+}
+.structures .main .btns .btn svg {
+  width: 12px;
+  height: 12px
+}
+.structures .main .benefits {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+  justify-content: space-between;
+  width: 100%
+}
+.structures .main .benefits__item {
+  background: rgba(255,255,255,.2);
+  backdrop-filter: blur(5px);
+  border: none;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px
+}
+.structures .main .benefits__item p {
+  color: #f2f2f7;
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px
+}
+.structures .main .benefits__icon {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  background-color: #f2f3f7;
+  padding: 8px
+}
+.construction-pages .cta__blocks {
+  max-width: 100%;
+  gap: 40px;
+  padding: 56px 0
+}
+.construction-pages .cta .intro-description {
+  gap: 24px
+}
+.construction-pages .cta .intro-description__content {
+  gap: 24px
+}
+.construction-pages .cta .director {
+  border: 1px solid rgba(253,253,253,.1);
+  background: rgba(0,0,0,.02);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  max-width: 448px;
+  width: 100%;
+  margin: 0 auto
+}
+.construction-pages .cta .director .intro-description__descript {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff
+}
+.construction-pages .cta .director span {
+  font-family: Mont;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #f2f2f7;
+  opacity: .7
+}
+.construction-pages .cta .btn {
+  max-width: 347px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 4px
 }
 @media (max-width:1550px) {
   .main__wrapper {
@@ -7109,6 +7156,21 @@ html::selection {
     font-size: 13px;
     line-height: 20px
   }
+  .construction-pages .cta__blocks {
+    padding: 44px 0
+  }
+  .construction-pages .cta .director {
+    gap: 12px
+  }
+  .construction-pages .cta .director .intro-description__descript {
+    line-height: 20px;
+    font-size: 14px
+  }
+  .construction-pages .cta .btn {
+    padding: 10px 12px;
+    font-size: 15px;
+    line-height: 20px
+  }
 }
 @media (max-width:992px) {
   .main .benefits {
@@ -7670,16 +7732,6 @@ html::selection {
     font-size: 13px;
     line-height: 20px
   }
-  .construction .main .benefits {
-    grid-template-columns: repeat(2,1fr);
-    -webkit-column-gap: 12px;
-    -moz-column-gap: 12px;
-    column-gap: 12px;
-    row-gap: 16px
-  }
-  .construction .main .benefits__item {
-    gap: 24px
-  }
   .construction .metadology .process-card-image {
     display: block;
     height: auto
@@ -7804,6 +7856,16 @@ html::selection {
   }
   .service-process__pic {
     height: 336px
+  }
+  .structures .main .benefits {
+    grid-template-columns: repeat(2,1fr);
+    -webkit-column-gap: 12px;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    row-gap: 16px
+  }
+  .structures .main .benefits__item {
+    gap: 24px
   }
 }
 @media (max-width:768px) {
@@ -9462,14 +9524,6 @@ html::selection {
     gap: 4px;
     padding: 12px
   }
-  .construction .main .btns .btn {
-    max-width: 100%;
-    width: 100%;
-    justify-content: center;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 12px 15px
-  }
   .construction .metadology .intro-description__content {
     align-items: start
   }
@@ -9597,6 +9651,33 @@ html::selection {
   .contract-models__item {
     border-radius: 10px
   }
+  .structures .main .btns .btn {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 15px
+  }
+  .construction-pages .cta__blocks {
+    gap: 32px
+  }
+  .construction-pages .cta .intro-description {
+    gap: 32px
+  }
+  .construction-pages .cta .intro-description__content {
+    gap: 32px
+  }
+  .construction-pages .cta .director .intro-description__descript {
+    font-size: 13px
+  }
+  .construction-pages .cta .director span {
+    font-size: 10px
+  }
+  .construction-pages .cta .btn {
+    padding: 12px 10px;
+    font-size: 14px
+  }
 }
 @media (max-width:576px)and (max-width:576px) {
   .construction .consultation-form {
@@ -9614,6 +9695,10 @@ html::selection {
   .header .details-mobile {
     display: flex
   }
+  .main {
+    min-height: auto;
+    min-height: 612px
+  }
   .main__wrapper {
     padding-top: 108px;
     padding-bottom: 0
@@ -9628,6 +9713,9 @@ html::selection {
   .main__content-top p {
     line-height: 20px;
     font-size: 14px
+  }
+  .main__content {
+    gap: 45px
   }
   .main .btns {
     flex-direction: column
@@ -9690,7 +9778,7 @@ html::selection {
   .request-form .consultation-form .numbering span {
     font-size: 13px
   }
-  .construction .main .benefits {
+  .structures .main .benefits {
     display: none
   }
 }

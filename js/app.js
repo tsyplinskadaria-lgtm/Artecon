@@ -140,7 +140,12 @@
         faq.querySelectorAll(".faq-fields__item").forEach((item => {
             const header = item.querySelector(".faq-fields__top");
             const content = item.querySelector(".faq-fields__content");
-            header.addEventListener("click", (() => {
+            const link = item.querySelector(".title");
+            if (link) link.addEventListener("click", (e => {
+                if (!item.classList.contains("active")) e.preventDefault();
+            }));
+            header.addEventListener("click", (e => {
+                if (item.classList.contains("active") && e.target.closest(".title")) return;
                 const isOpen = item.classList.contains("active");
                 faq.querySelectorAll(".faq-fields__item.active").forEach((activeItem => {
                     if (activeItem === item) return;
@@ -682,6 +687,7 @@
             spaceBetween: 12,
             speed: 600,
             grabCursor: true,
+            loop: true,
             navigation: {
                 nextEl: slider.querySelector(".navigation-btn__next"),
                 prevEl: slider.querySelector(".navigation-btn__prev")
@@ -711,23 +717,20 @@
             const pagination = slider.querySelector(".pagination2");
             if (!pagination) return;
             pagination.innerHTML = "";
-            const maxDots = window.innerWidth <= 576 ? 6 : 10;
-            const dotsCount = Math.min(swiper.slides.length, maxDots);
-            for (let i = 0; i < dotsCount; i++) {
+            const realSlides = [ ...swiper.slidesEl.querySelectorAll(".swiper-slide:not(.swiper-slide-duplicate)") ];
+            realSlides.forEach(((_, index) => {
                 const dot = document.createElement("span");
-                dot.classList.add("dot");
+                dot.className = "dot";
                 dot.addEventListener("click", (() => {
-                    swiper.slideTo(i);
+                    swiper.slideToLoop(index);
                 }));
                 pagination.appendChild(dot);
-            }
+            }));
         }
         function updatePagination(swiper) {
             const dots = slider.querySelectorAll(".pagination2 .dot");
-            if (!dots.length) return;
-            const activeDot = swiper.activeIndex % dots.length;
             dots.forEach(((dot, index) => {
-                dot.classList.toggle("active", index === activeDot);
+                dot.classList.toggle("active", index === swiper.realIndex);
             }));
         }
         window.addEventListener("resize", (() => {

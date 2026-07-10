@@ -265,7 +265,7 @@ html::selection {
   font-family: Mont;
   font-display: swap;
   src: url(../fonts/Mont-SemiBold.woff2) format("woff2");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal
 }
 @font-face {
@@ -1445,7 +1445,7 @@ html::selection {
   gap: 16px
 }
 .about .text-block p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   color: var(--black-color);
   vertical-align: middle
@@ -2452,6 +2452,82 @@ html::selection {
 }
 .response .google-rating__block img {
   width: 16px
+}
+.response .google-rating__block {
+  position: relative;
+  transition: box-shadow .3s ease,-webkit-transform .3s ease;
+  transition: transform .3s ease,box-shadow .3s ease;
+  transition: transform .3s ease,box-shadow .3s ease,-webkit-transform .3s ease
+}
+.response .google-rating__block img {
+  width: 16px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2
+}
+.response .google-rating__block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(110deg,transparent,rgba(255,255,255,.8),transparent);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  -webkit-animation: googleShine 4s ease-in-out infinite;
+  animation: googleShine 4s ease-in-out infinite;
+  pointer-events: none
+}
+.response .google-rating__block:hover::after {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused
+}
+.response .google-rating__block:hover .google-rating__text-inner {
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px)
+}
+.response .google-rating__text {
+  overflow: hidden;
+  height: 20px;
+  display: block;
+  position: relative;
+  z-index: 2
+}
+.response .google-rating__text-inner {
+  display: flex;
+  flex-direction: column;
+  transition: -webkit-transform .25s ease;
+  transition: transform .25s ease;
+  transition: transform .25s ease,-webkit-transform .25s ease
+}
+.response .google-rating__back,
+.response .google-rating__front {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  white-space: nowrap
+}
+.response .google-rating__back {
+  color: var(--grey-color)
+}
+@-webkit-keyframes googleShine {
+  0%,
+  75% {
+    left: -120%
+  }
+  100% {
+    left: 150%
+  }
+}
+@keyframes googleShine {
+  0%,
+  75% {
+    left: -120%
+  }
+  100% {
+    left: 150%
+  }
 }
 .response__general {
   max-width: 100%;
@@ -3932,18 +4008,18 @@ html::selection {
   width: 100%
 }
 .services .services-slide:hover .bg {
-  visibility: visible;
-  opacity: 1
+  visibility: hidden;
+  opacity: 0
 }
 .services .services-slide:hover .services-slide__arrow {
-  background-color: #d62322;
-  border: 1px solid #d62322
+  background-color: var(--black-color);
+  border: 1px solid var(--black-color)
 }
 .services .services-slide:hover .services-slide__content .title {
-  color: #fff
+  color: var(--black-color)
 }
 .services .services-slide:hover .services-slide__content p {
-  color: #f2f2f7
+  color: var(--grey-color)
 }
 .services .services-slide .bg {
   position: absolute;
@@ -3951,8 +4027,8 @@ html::selection {
   left: 0;
   width: 100%;
   height: 100%;
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   transition: all .2s ease-in-out
 }
 .services .services-slide .bg::after {
@@ -3976,15 +4052,15 @@ html::selection {
   width: 40px;
   height: 40px;
   min-width: 40px;
-  background-color: var(--black-color);
-  border: 1px solid var(--black-color);
   border-radius: 100px;
   z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all .2s ease-in-out;
-  margin: 0 0 0 auto
+  margin: 0 0 0 auto;
+  background-color: #d62322;
+  border: 1px solid #d62322
 }
 .services .services-slide__arrow svg {
   width: 13px;
@@ -4004,7 +4080,7 @@ html::selection {
   font-weight: 300;
   font-size: 32px;
   line-height: 40px;
-  color: var(--black-color);
+  color: #fff;
   transition: all .2s ease-in-out;
   overflow-wrap: anywhere;
   word-break: break-word
@@ -4015,7 +4091,7 @@ html::selection {
   font-size: 18px;
   line-height: 24px;
   transition: all .2s ease-in-out;
-  color: var(--grey-color)
+  color: #f2f2f7
 }
 .services__navigation {
   display: flex;

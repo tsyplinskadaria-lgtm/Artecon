@@ -140,12 +140,12 @@
         faq.querySelectorAll(".faq-fields__item").forEach((item => {
             const header = item.querySelector(".faq-fields__top");
             const content = item.querySelector(".faq-fields__content");
-            const link = item.querySelector(".title");
+            const link = item.querySelector("a.title");
             if (link) link.addEventListener("click", (e => {
                 if (!item.classList.contains("active")) e.preventDefault();
             }));
             header.addEventListener("click", (e => {
-                if (item.classList.contains("active") && e.target.closest(".title")) return;
+                if (link && item.classList.contains("active") && e.target.closest("a.title")) return;
                 const isOpen = item.classList.contains("active");
                 faq.querySelectorAll(".faq-fields__item.active").forEach((activeItem => {
                     if (activeItem === item) return;

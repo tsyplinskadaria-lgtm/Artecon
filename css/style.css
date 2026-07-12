@@ -5895,6 +5895,29 @@ html::selection {
   flex-direction: column;
   gap: 56px
 }
+.construction .metadology .process-card-image {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+.construction .metadology .process-card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.construction .metadology .process-card-image img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
+}
 .construction .about__blocks {
   display: flex;
   flex-direction: column;
@@ -6437,6 +6460,119 @@ html::selection {
   width: 100%;
   margin: 0 auto;
   border-radius: 4px
+}
+.construction-pages .about__blocks {
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.construction-pages .about__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 56px
+}
+.construction-pages .about__top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-between
+}
+.construction-pages .about__block {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  max-width: 100%!important;
+  width: 100%;
+  justify-content: space-between
+}
+.construction-pages .about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content
+}
+.construction-pages .about__pictures {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  max-width: 572px!important;
+  width: 100%
+}
+.construction-pages .about__pictures .pic {
+  width: 258px!important;
+  max-width: -webkit-fill-available;
+  height: 138px;
+  display: flex;
+  margin: 0 0 0 auto
+}
+.construction-pages .about__below,
+.construction-pages .about__middle {
+  display: flex;
+  justify-content: space-between;
+  gap: 56px
+}
+.construction-pages .about__stats {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 32px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content
+}
+.construction-pages .about .text-block {
+  max-width: 100%;
+  width: 100%;
+  gap: 64px
+}
+.construction-pages .about .text-block a {
+  margin: 0 0 0 auto
+}
+.construction-pages .about .text-block a {
+  justify-content: start
+}
+.construction-pages .about .video__item {
+  max-width: 572px;
+  width: 100%
+}
+.construction-pages .about .text-block.show-mob {
+  display: none
+}
+.construction-pages .about .text-block.hide-mob {
+  display: flex
+}
+.construction-pages .about__pictures {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  max-width: 260px!important;
+  width: 100%;
+  gap: 12px
+}
+.construction-pages .about__pictures .pic {
+  height: 100%;
+  width: auto!important
+}
+.construction-pages .about .show-mob {
+  display: none
+}
+.construction-pages .about__stats {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  -webkit-column-gap: 44px;
+  -moz-column-gap: 44px;
+  column-gap: 44px;
+  row-gap: 21px;
+  width: 100%
+}
+.construction-pages .about__stats .stat__number {
+  font-size: 28px
 }
 .contractor-general__blocks {
   padding: 56px 0;
@@ -7316,6 +7452,37 @@ html::selection {
     font-size: 15px;
     line-height: 20px
   }
+  .construction-pages .about__content h2 {
+    font-size: 24px
+  }
+  .construction-pages .about__pictures .pic {
+    width: 230px!important;
+    height: 100%
+  }
+  .construction-pages .about__below,
+  .construction-pages .about__middle {
+    gap: 44px
+  }
+  .construction-pages .about__stats {
+    grid-template-columns: repeat(1,1fr)
+  }
+  .construction-pages .about__stats .stat {
+    max-width: 255px;
+    width: 100%
+  }
+  .construction-pages .about__stats .stat .stat__number {
+    font-size: 32px;
+    line-height: 40px
+  }
+  .construction-pages .about .video__item {
+    height: 205px
+  }
+  .construction-pages .about .video__item .video__preview {
+    height: 205px
+  }
+  .construction-pages .about .video__item iframe {
+    height: 100%
+  }
 }
 @media (max-width:992px) {
   .main .benefits {
@@ -8002,6 +8169,20 @@ html::selection {
   .service-process__pic {
     height: 336px
   }
+  .technical-capability .advantages__grid {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .technical-capability .advantages__item {
+    gap: 12px
+  }
+  .technical-capability .advantages__item .title {
+    font-size: 14px
+  }
+  .technical-capability .advantages__top {
+    align-items: start;
+    flex-direction: column-reverse;
+    gap: 32px
+  }
   .structures .main .benefits {
     grid-template-columns: repeat(2,1fr);
     -webkit-column-gap: 12px;
@@ -8011,6 +8192,37 @@ html::selection {
   }
   .structures .main .benefits__item {
     gap: 24px
+  }
+  .construction-pages .about__block {
+    gap: 40px
+  }
+  .construction-pages .about__stats .stat .stat__number {
+    line-height: 33px;
+    font-size: 28px
+  }
+  .construction-pages .about .text-block {
+    gap: 40px
+  }
+  .construction-pages .about__pictures {
+    max-width: 100%!important;
+    width: 100%
+  }
+  .construction-pages .about .hide-mob {
+    display: none
+  }
+  .construction-pages .about .show-mob {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 100%;
+    width: 100%
+  }
+  .construction-pages .about .show-mob .pic {
+    height: 226px;
+    width: 100%!important
+  }
+  .construction-pages .about__stats .stat {
+    max-width: 100%;
+    width: 100%
   }
   .contractor-general__item {
     background-color: #fdfdfd;
@@ -8507,6 +8719,12 @@ html::selection {
   .service-process__blocks {
     gap: 44px;
     padding: 44px 0
+  }
+  .construction-pages .about__top {
+    gap: 24px
+  }
+  .construction-pages .about__content {
+    gap: 12px
   }
   .contractor-general__blocks {
     gap: 40px;
@@ -9865,6 +10083,12 @@ html::selection {
   .contract-models__item {
     border-radius: 10px
   }
+  .technical-capability .advantages__grid {
+    display: none
+  }
+  .technical-capability .advantages__item {
+    gap: 0
+  }
   .structures .main .btns .btn {
     max-width: 100%;
     width: 100%;
@@ -9891,6 +10115,67 @@ html::selection {
   .construction-pages .cta .btn {
     padding: 12px 10px;
     font-size: 14px
+  }
+  .construction-pages .about__blocks {
+    padding: 44px 0;
+    gap: 32px
+  }
+  .construction-pages .about__inner {
+    flex-direction: column
+  }
+  .construction-pages .about__top {
+    gap: 32px
+  }
+  .construction-pages .about__block {
+    gap: 32px
+  }
+  .construction-pages .about__content h2 {
+    font-size: 20px
+  }
+  .construction-pages .about__pictures {
+    display: none
+  }
+  .construction-pages .about__stats {
+    gap: 12px
+  }
+  .construction-pages .about__stats .stat {
+    gap: 4px;
+    max-width: 100%;
+    width: 100%
+  }
+  .construction-pages .about__stats .stat .stat__number {
+    font-size: 28px;
+    line-height: 40px
+  }
+  .construction-pages .about .text-block a {
+    margin: 0
+  }
+  .construction-pages .about .video__item {
+    height: 180px;
+    border-radius: 8px
+  }
+  .construction-pages .about .video__item .video__preview {
+    height: 180px
+  }
+  .construction-pages .about .video__item iframe {
+    height: 100%
+  }
+  .construction-pages .about .text-block.show-mob {
+    display: flex
+  }
+  .construction-pages .about .text-block.hide-mob {
+    display: none!important
+  }
+  .construction-pages .about .show-mob .pic {
+    height: 88px;
+    width: 100%!important
+  }
+  .construction-pages .about__stats {
+    gap: 20px;
+    grid-template-columns: repeat(1,1fr)
+  }
+  .construction-pages .about__middle {
+    order: 4
   }
   .contractor-general__blocks {
     gap: 32px;

@@ -6334,7 +6334,7 @@ html::selection {
 }
 .technical-capability .advantages__top {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: 12px
 }
@@ -6365,6 +6365,21 @@ html::selection {
 .technical-capability .process-card-image img:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1)
+}
+.technical-capability-villas .advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+  align-items: start
+}
+.technical-capability-villas .process-card-image-mob {
+  display: none
+}
+.technical-capability-villas .process-card-image {
+  display: block!important
+}
+.technical-capability-villas .show-mob {
+  display: none
 }
 .structures .main .btns .btn {
   max-width: -webkit-fit-content;
@@ -6574,6 +6589,64 @@ html::selection {
 .construction-pages .about__stats .stat__number {
   font-size: 28px
 }
+.construction-pages .cards-slider-mob__slider2 {
+  display: none;
+  width: 100%;
+  overflow: hidden
+}
+.construction-pages .request-form {
+  position: relative
+}
+.construction-pages .request-form::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 372px;
+  backdrop-filter: blur(1px);
+  background: rgba(0,0,0,.4);
+  content: "";
+  border-radius: 30px 30px 0 0
+}
+.construction-pages .request-form .tags {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 56px
+}
+.construction-pages .request-form .consultation-form {
+  position: relative!important;
+  top: auto!important;
+  left: auto!important;
+  -webkit-transform: translate(0)!important;
+  transform: translate(0)!important;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+  z-index: 9;
+  min-height: auto;
+  border-radius: 0;
+  backdrop-filter: blur(0) saturate(100%)!important;
+  -webkit-backdrop-filter: blur(0) saturate(100%)!important;
+  border: transparent!important;
+  background: rgba(0,0,0,0)!important;
+  overflow: hidden!important;
+  box-shadow: none!important
+}
+.construction-pages .request-form .form {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: end
+}
+.construction-pages .request-form .form .btn {
+  margin-top: 0;
+  padding: 8px 8px;
+  line-height: 23px
+}
 .contractor-general__blocks {
   padding: 56px 0;
   display: flex;
@@ -6695,6 +6768,134 @@ html::selection {
 }
 .contractor-general .btn-white:hover {
   border: 1px solid var(--red-color)
+}
+.construction-expertise__blocks {
+  display: flex;
+  gap: 56px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 56px 0
+}
+.construction-expertise__info {
+  max-width: 572px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px
+}
+.construction-expertise .intro-description {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px
+}
+.construction-expertise .intro-description__general {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 100%;
+  width: 100%
+}
+.construction-expertise .intro-description .title {
+  color: #d62322
+}
+.construction-expertise__descripts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px
+}
+.construction-expertise__text {
+  display: flex;
+  align-items: start;
+  gap: 12px
+}
+.construction-expertise__text * {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #9898b1
+}
+.construction-expertise__text span {
+  white-space: nowrap
+}
+.construction-expertise__pic {
+  width: 50%
+}
+.construction-expertise .show-mob {
+  display: none
+}
+.construction-process__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 56px 0
+}
+.construction-process__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.construction-process__inner {
+  display: flex;
+  gap: 12px;
+  align-items: stretch
+}
+.construction-process__inner:nth-child(even) {
+  flex-direction: row-reverse
+}
+.construction-process__list {
+  max-width: 442px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.construction-process__item {
+  padding: 16px 32px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  align-items: start;
+  gap: 32px
+}
+.construction-process__item span {
+  font-family: RobotoMono;
+  font-weight: 500;
+  font-style: Italic;
+  font-size: 16px;
+  line-height: 20px;
+  color: #d62322
+}
+.construction-process__item p {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242424
+}
+.construction-process__pic {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto
+}
+.construction-process__pic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.construction-process__pic img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
 }
 @media (max-width:1550px) {
   .main__wrapper {
@@ -7483,6 +7684,30 @@ html::selection {
   .construction-pages .about .video__item iframe {
     height: 100%
   }
+  .construction-expertise__info {
+    width: 100%;
+    max-width: 100%
+  }
+  .construction-expertise .intro-description {
+    gap: 16px
+  }
+  .construction-expertise .intro-description__general {
+    gap: 16px
+  }
+  .construction-expertise__descripts {
+    flex-direction: row
+  }
+  .construction-expertise__pic {
+    width: 100%;
+    height: 456px
+  }
+  .construction-expertise .show-mob {
+    display: flex;
+    justify-content: center
+  }
+  .construction-expertise .hide-mob {
+    display: none
+  }
 }
 @media (max-width:992px) {
   .main .benefits {
@@ -8183,6 +8408,15 @@ html::selection {
     flex-direction: column-reverse;
     gap: 32px
   }
+  .technical-capability-villas .advantages__grid {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .technical-capability-villas .hide-mob {
+    display: none
+  }
+  .technical-capability-villas .show-mob {
+    display: block
+  }
   .structures .main .benefits {
     grid-template-columns: repeat(2,1fr);
     -webkit-column-gap: 12px;
@@ -8250,6 +8484,17 @@ html::selection {
     max-width: 100%;
     font-size: 15px;
     line-height: 20px;
+    width: 100%
+  }
+  .construction-process__blocks {
+    padding: 44px 0
+  }
+  .construction-process__list {
+    max-width: 100%;
+    width: 100%
+  }
+  .construction-process__pic {
+    max-width: 256px;
     width: 100%
   }
 }
@@ -8709,6 +8954,27 @@ html::selection {
     padding: 44px 0;
     gap: 40px
   }
+  .construction .slider-cards__blocks {
+    padding: 44px 0;
+    gap: 32px
+  }
+  .construction .slider-cards .intro-description {
+    gap: 32px
+  }
+  .construction .slider-cards .intro-description__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px
+  }
+  .construction .slider-cards .intro-description__descript,
+  .construction .slider-cards .intro-description__general {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+    width: 100%
+  }
   .cta .intro-description__content {
     gap: 12px
   }
@@ -8726,9 +8992,119 @@ html::selection {
   .construction-pages .about__content {
     gap: 12px
   }
+  .construction-pages .slider-cards .cards-grid {
+    display: none
+  }
+  .construction-pages .slider-cards .cards-slider-mob {
+    display: block!important;
+    display: flex
+  }
+  .construction-pages .slider-cards .swiper-wrapper {
+    display: flex;
+    width: 100%
+  }
+  .construction-pages .cards-slider-mob__slider2 {
+    display: block
+  }
+  .construction-pages .cards-slider-mob__slider2 .swiper-slide {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0
+  }
+  .construction-pages .request-form::after {
+    height: 464px
+  }
+  .construction-pages .request-form__blocks {
+    max-width: 688px!important;
+    width: 100%!important;
+    margin: 0 auto
+  }
+  .construction-pages .request-form .intro-description {
+    max-width: 100%;
+    width: 100%
+  }
+  .construction-pages .request-form .intro-description .title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px
+  }
+  .construction-pages .request-form .intro-description__descript {
+    font-size: 16px;
+    line-height: 24px
+  }
+  .construction-pages .request-form .intro-description__content {
+    gap: 0
+  }
+  .construction-pages .request-form .tags .tag p {
+    font-size: 15px;
+    line-height: 24px
+  }
+  .construction-pages .request-form .consultation-form__top {
+    gap: 0
+  }
+  .construction-pages .request-form .consultation-form__top .numbering {
+    display: flex;
+    flex-direction: row;
+    gap: 12px
+  }
+  .construction-pages .request-form .consultation-form__blocks {
+    gap: 40px
+  }
+  .construction-pages .request-form .consultation-form input {
+    line-height: 20px
+  }
+  .construction-pages .request-form .form {
+    grid-template-columns: 1fr 1fr
+  }
+  .construction-pages .request-form .form .btn {
+    line-height: 20px;
+    margin-top: 16px!important;
+    font-size: 15px
+  }
+  .construction-pages .request-form .consultation-form-btn {
+    grid-column: 1/-1
+  }
   .contractor-general__blocks {
     gap: 40px;
     padding: 44px 0
+  }
+  .construction-expertise__descripts {
+    gap: 20px
+  }
+  .construction-expertise__text * {
+    font-size: 13px
+  }
+  .construction-process .intro-description {
+    flex-direction: column;
+    gap: 24px
+  }
+  .construction-process .intro-description__content {
+    flex-direction: column;
+    gap: 16px;
+    max-width: 100%;
+    width: 100%
+  }
+  .construction-process .intro-description__general {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 100%;
+    width: 100%
+  }
+  .construction-process .intro-description__descript {
+    max-width: 100%;
+    width: 100%
+  }
+  .construction-process__list {
+    gap: 8px
+  }
+  .construction-process__item {
+    gap: 15px;
+    padding: 16px 20px
+  }
+  .construction-process__item p {
+    font-size: 14px;
+    line-height: 20px
   }
 }
 @media (max-width:756px) {
@@ -10089,6 +10465,9 @@ html::selection {
   .technical-capability .advantages__item {
     gap: 0
   }
+  .technical-capability-villas .advantages__grid {
+    display: none
+  }
   .structures .main .btns .btn {
     max-width: 100%;
     width: 100%;
@@ -10177,9 +10556,92 @@ html::selection {
   .construction-pages .about__middle {
     order: 4
   }
+  .construction-pages .request-form::after {
+    display: none
+  }
+  .construction-pages .request-form__blocks {
+    gap: 0
+  }
+  .construction-pages .request-form .intro-description {
+    margin-bottom: 32px
+  }
+  .construction-pages .request-form .intro-description .title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px
+  }
+  .construction-pages .request-form .intro-description__descript {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .construction-pages .request-form .tags {
+    margin-bottom: 0;
+    gap: 8px
+  }
+  .construction-pages .request-form .tags .tag p {
+    font-size: 13px;
+    line-height: 20px
+  }
+  .construction-pages .request-form .consultation-form {
+    margin-top: 56px
+  }
+  .construction-pages .request-form .consultation-form__top .numbering {
+    flex-direction: column
+  }
+  .construction-pages .request-form .consultation-form__blocks {
+    gap: 24px
+  }
+  .construction-pages .request-form .consultation-form input {
+    padding: 10px 16px
+  }
+  .construction-pages .request-form .form {
+    grid-template-columns: 1fr
+  }
+  .construction-pages .request-form .form .btn {
+    line-height: 20px;
+    font-size: 14px;
+    margin-top: 8px!important;
+    padding: 12px 8px
+  }
   .contractor-general__blocks {
     gap: 32px;
     padding: 44px 0
+  }
+  .construction-expertise__blocks {
+    gap: 40px;
+    padding: 44px 0
+  }
+  .construction-expertise__info {
+    gap: 32px
+  }
+  .construction-expertise .intro-description {
+    gap: 24px
+  }
+  .construction-expertise .intro-description__general {
+    gap: 12px
+  }
+  .construction-expertise__descripts {
+    gap: 32px;
+    flex-direction: column
+  }
+  .construction-expertise__pic {
+    height: auto
+  }
+  .construction-process__blocks {
+    gap: 32px
+  }
+  .construction-process__inner {
+    gap: 8px;
+    flex-direction: column
+  }
+  .construction-process__inner:nth-child(even) {
+    flex-direction: column-reverse
+  }
+  .construction-process__pic {
+    height: 160px;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%
   }
 }
 @media (max-width:576px)and (max-width:576px) {

@@ -1362,12 +1362,16 @@ html::selection {
 }
 .about__pictures .pic {
   max-width: 182px;
-  width: 100%;
+  width: 100%!important;
   height: 184px;
-  overflow: hidden;
-  border-radius: 8px
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden
 }
 .about__pictures .pic img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -6348,7 +6352,8 @@ html::selection {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100%
+  height: 100%;
+  min-height: 180px
 }
 .technical-capability .process-card-image img {
   position: absolute;
@@ -6366,18 +6371,26 @@ html::selection {
   -webkit-transform: scale(1.1);
   transform: scale(1.1)
 }
+.technical-capability-industrial .advantages__grid,
 .technical-capability-villas .advantages__grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 12px;
   align-items: start
 }
+.technical-capability-industrial .process-card-image-mob,
 .technical-capability-villas .process-card-image-mob {
   display: none
 }
-.technical-capability-villas .process-card-image {
+.technical-capability-industrial .process-card-image.hide-mob,
+.technical-capability-villas .process-card-image.hide-mob {
   display: block!important
 }
+.technical-capability-industrial .process-card-image.show-mob,
+.technical-capability-villas .process-card-image.show-mob {
+  display: none
+}
+.technical-capability-industrial .show-mob,
 .technical-capability-villas .show-mob {
   display: none
 }
@@ -6571,8 +6584,29 @@ html::selection {
   gap: 12px
 }
 .construction-pages .about__pictures .pic {
+  width: auto!important;
+  max-width: 100%;
+  width: 100%!important;
   height: 100%;
-  width: auto!important
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden
+}
+.construction-pages .about__pictures .pic img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.construction-pages .about__pictures .pic img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
 }
 .construction-pages .about .show-mob {
   display: none
@@ -6588,6 +6622,41 @@ html::selection {
 }
 .construction-pages .about__stats .stat__number {
   font-size: 28px
+}
+.construction-pages .about__pic-big {
+  max-width: 415px;
+  width: 100%;
+  position: relative;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden
+}
+.construction-pages .about__pic-big img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: left;
+  object-position: left
+}
+.construction-pages .about-pic-big .text-block {
+  gap: 16px
+}
+.construction-pages .about-pic-big .text-block a {
+  margin: 0
+}
+.construction-pages .about .text-block.text-mob-show {
+  display: none
+}
+.construction-pages .about .about__pic-big.show-mob {
+  display: none
+}
+.construction-pages .about__block-mob-left {
+  display: flex;
+  flex-direction: column;
+  gap: 56px
 }
 .construction-pages .cards-slider-mob__slider2 {
   display: none;
@@ -6896,6 +6965,21 @@ html::selection {
 .construction-process__pic img:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1)
+}
+.construction-process__wrap-2 {
+  display: flex;
+  gap: 30px
+}
+.construction-process__wrap-2 .construction-process__pic {
+  max-width: 270px;
+  width: 100%
+}
+.construction-process__wrap-2 .construction-process__list {
+  max-width: 100%;
+  width: 100%
+}
+.construction-process .construction-process__wrap.show-mob {
+  display: none
 }
 @media (max-width:1550px) {
   .main__wrapper {
@@ -7684,6 +7768,27 @@ html::selection {
   .construction-pages .about .video__item iframe {
     height: 100%
   }
+  .construction-pages .about-pic-big .about__stats {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 12px;
+    width: 100%
+  }
+  .construction-pages .about-pic-big .about__stats .stat {
+    max-width: 100%;
+    width: 100%
+  }
+  .construction-pages .about .about__pic-big.hide-mob {
+    display: none
+  }
+  .construction-pages .about .about__pic-big.show-mob {
+    display: flex
+  }
+  .construction-pages .about__block-mob {
+    display: flex;
+    justify-content: space-between;
+    gap: 44px
+  }
   .construction-expertise__info {
     width: 100%;
     max-width: 100%
@@ -8408,14 +8513,56 @@ html::selection {
     flex-direction: column-reverse;
     gap: 32px
   }
+  .technical-capability-industrial .advantages__grid,
   .technical-capability-villas .advantages__grid {
     grid-template-columns: repeat(2,1fr)
   }
-  .technical-capability-villas .hide-mob {
-    display: none
+  .technical-capability-industrial .process-card-image.hide-mob,
+  .technical-capability-villas .process-card-image.hide-mob {
+    display: none!important
   }
+  .technical-capability-industrial .process-card-image.show-mob,
+  .technical-capability-villas .process-card-image.show-mob {
+    display: block!important
+  }
+  .technical-capability-industrial .advantages__top,
+  .technical-capability-villas .advantages__top {
+    align-items: start;
+    flex-direction: row;
+    gap: 15px
+  }
+  .technical-capability-industrial .advantages__item,
+  .technical-capability-villas .advantages__item {
+    gap: 24px
+  }
+  .technical-capability-industrial .hide-mob,
+  .technical-capability-villas .hide-mob {
+    display: none!important
+  }
+  .technical-capability-industrial .show-mob,
   .technical-capability-villas .show-mob {
     display: block
+  }
+  .technical-capability-industrial .intro-description,
+  .technical-capability-villas .intro-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+  }
+  .technical-capability-industrial .intro-description__content,
+  .technical-capability-industrial .intro-description__general,
+  .technical-capability-villas .intro-description__content,
+  .technical-capability-villas .intro-description__general {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    max-width: 100%;
+    width: 100%
+  }
+  .technical-capability-industrial .intro-description__descript,
+  .technical-capability-villas .intro-description__descript {
+    max-width: 100%;
+    width: 100%
   }
   .structures .main .benefits {
     grid-template-columns: repeat(2,1fr);
@@ -8458,6 +8605,9 @@ html::selection {
     max-width: 100%;
     width: 100%
   }
+  .construction-pages .about__block-mob-left {
+    gap: 40px
+  }
   .contractor-general__item {
     background-color: #fdfdfd;
     border-radius: 15px;
@@ -8496,6 +8646,12 @@ html::selection {
   .construction-process__pic {
     max-width: 256px;
     width: 100%
+  }
+  .construction-process .construction-process__wrap-2.hide-mob {
+    display: none
+  }
+  .construction-process .construction-process__wrap.show-mob {
+    display: flex
   }
 }
 @media (max-width:768px) {
@@ -8986,11 +9142,25 @@ html::selection {
     gap: 44px;
     padding: 44px 0
   }
+  .technical-capability-industrial .advantages__blocks,
+  .technical-capability-villas .advantages__blocks {
+    gap: 32px
+  }
+  .construction-pages .about__blocks {
+    gap: 44px;
+    padding: 44px 0
+  }
   .construction-pages .about__top {
     gap: 24px
   }
   .construction-pages .about__content {
     gap: 12px
+  }
+  .construction-pages .about-pic-big .about__block-mob-left {
+    width: 50%
+  }
+  .construction-pages .about-pic-big .about__pic-big.show-mob {
+    width: 50%
   }
   .construction-pages .slider-cards .cards-grid {
     display: none
@@ -9237,6 +9407,41 @@ html::selection {
   .service-process__pic {
     height: 200px;
     border-radius: 10px
+  }
+  .construction-pages .about-pic-big .about__block-mob-left {
+    width: 100%
+  }
+  .construction-pages .about-pic-big .about__pic-big.show-mob {
+    display: none!important
+  }
+  .construction-pages .about-pic-big .about__pic-big.hide-mob {
+    display: flex!important;
+    height: 420px;
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%
+  }
+  .construction-pages .about-pic-big .about__pic-big.hide-mob img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: fill;
+    object-fit: fill;
+    -o-object-position: bottom;
+    object-position: bottom
+  }
+  .construction-pages .about-pic-big .about__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px
+  }
+  .construction-pages .about .text-block.text-mob-hide {
+    display: none
+  }
+  .construction-pages .about .text-block.text-mob-show {
+    display: flex
   }
   .contractor-general__item {
     grid-template-columns: repeat(1,1fr);
@@ -10465,8 +10670,17 @@ html::selection {
   .technical-capability .advantages__item {
     gap: 0
   }
+  .technical-capability-industrial .advantages__grid,
   .technical-capability-villas .advantages__grid {
     display: none
+  }
+  .technical-capability-industrial .process-card-image-mob,
+  .technical-capability-villas .process-card-image-mob {
+    display: flex
+  }
+  .technical-capability-industrial .advantages__item,
+  .technical-capability-villas .advantages__item {
+    gap: 0
   }
   .structures .main .btns .btn {
     max-width: 100%;
@@ -10556,6 +10770,9 @@ html::selection {
   .construction-pages .about__middle {
     order: 4
   }
+  .construction-pages .about__block-mob-left {
+    gap: 32px
+  }
   .construction-pages .request-form::after {
     display: none
   }
@@ -10628,6 +10845,7 @@ html::selection {
     height: auto
   }
   .construction-process__blocks {
+    padding: 44px 0 24px 0;
     gap: 32px
   }
   .construction-process__inner {
@@ -10636,6 +10854,11 @@ html::selection {
   }
   .construction-process__inner:nth-child(even) {
     flex-direction: column-reverse
+  }
+  .construction-process__item {
+    padding: 16px;
+    display: flex;
+    flex-direction: column
   }
   .construction-process__pic {
     height: 160px;

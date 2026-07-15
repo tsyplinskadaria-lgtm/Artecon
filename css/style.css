@@ -2259,7 +2259,8 @@ html::selection {
   border-radius: 15px;
   padding: 24px;
   max-width: 291px;
-  width: 100%
+  width: 100%;
+  justify-content: center
 }
 .advantages__icon {
   width: 24px;
@@ -4257,7 +4258,8 @@ html::selection {
   flex-direction: column;
   justify-content: start;
   gap: 32px;
-  max-width: 100%
+  max-width: 100%;
+  justify-content: center
 }
 .advantages__counter {
   display: flex;
@@ -4393,7 +4395,7 @@ html::selection {
 .request-form .tags .tag__icon::after {
   content: "";
   position: absolute;
-  inset: -4px;
+  inset: -3px;
   border: 1px solid rgba(214,35,34,.1);
   border-radius: 50%;
   pointer-events: none
@@ -6716,6 +6718,47 @@ html::selection {
   padding: 8px 8px;
   line-height: 23px
 }
+.construction-pages .slider-cards__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 56px 0
+}
+.construction-pages .slider-cards .intro-description__descript,
+.construction-pages .slider-cards .intro-description__general {
+  max-width: 415px;
+  width: 100%
+}
+.construction-pages .faq .faq-fields__top .control-panel-btn {
+  border: 1px solid #9898b1;
+  background-color: rgba(0,0,0,0)
+}
+.construction-pages .faq .faq-fields__top .control-panel-btn * {
+  color: #9898b1
+}
+.construction-pages .faq .faq-fields__item:hover .faq-fields__top * {
+  color: var(--red-color)
+}
+.construction-pages .faq .faq-fields__item:hover .faq-fields__top * svg * {
+  color: #fff
+}
+.construction-pages .faq .faq-fields__item:hover .faq-fields__top * .control-panel-btn {
+  background-color: var(--red-color)
+}
+.construction-pages .faq .faq-fields__item:hover .faq-fields__top .control-panel-btn {
+  border: 1px solid var(--red-color);
+  background-color: var(--red-color)
+}
+.construction-pages .faq .faq-fields__item.active .faq-fields__top .control-panel-btn {
+  border: 1px solid var(--red-color);
+  background-color: var(--red-color)
+}
+.construction-pages .faq .faq-fields__item.active .faq-fields__top * {
+  color: var(--red-color)
+}
+.construction-pages .faq .faq-fields__item.active .faq-fields__top * svg * {
+  color: #fff
+}
 .contractor-general__blocks {
   padding: 56px 0;
   display: flex;
@@ -6980,6 +7023,175 @@ html::selection {
 }
 .construction-process .construction-process__wrap.show-mob {
   display: none
+}
+.build-process .intro-description {
+  flex-direction: column;
+  gap: 40px
+}
+.build-process .intro-description__content {
+  gap: 16px
+}
+.build-process .intro-description__general {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 100%;
+  width: 100%
+}
+.build-process .intro-description__descript {
+  max-width: 100%;
+  width: 100%
+}
+.residential-construction-expertise__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px
+}
+.residential-construction-expertise .show-mob-block {
+  display: none
+}
+.residential-construction-expertise .construction-expertise__blocks {
+  display: flex;
+  flex-direction: row
+}
+.project-management-pages .benefits {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px
+}
+.project-management-pages .benefits__item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+  background-color: rgba(255,255,255,.2);
+  padding: 20px 25px;
+  border: 1px solid rgba(242,242,247,.1019607843);
+  border-radius: 10px
+}
+.project-management-pages .benefits__icon {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.project-management-pages .benefits p {
+  color: var(--white-color);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0
+}
+.project-management-pages .main .btns .btn {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 24px
+}
+.project-management-pages .main .btns .btn svg {
+  width: 12px;
+  height: 12px
+}
+.project-management-pages .about__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 56px 0
+}
+.project-management-pages .about__below,
+.project-management-pages .about__top {
+  gap: 56px
+}
+.project-management-pages .about__below-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 50%
+}
+.project-management-pages .about__stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 56px;
+  width: 100%
+}
+.project-management-pages .about .video__item {
+  width: 100%
+}
+.project-management-pages .about .show-mob {
+  display: none
+}
+.project-management-pages .service-process__top {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: start
+}
+.project-management-pages .service-process__top-name {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%
+}
+.project-management-pages .service-process__top p {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #9898b1
+}
+.project-management-pages .service-process__columns {
+  justify-content: center
+}
+.project-management-pages .service-process__column p {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424
+}
+.project-management-pages .service-process__list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 32px;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+  column-gap: 12px
+}
+.project-management-pages .service-process__slider {
+  display: none
+}
+.project-management-pages .service-process .swiper-wrapper {
+  display: flex;
+  width: 100%
+}
+.project-management-pages .service-process .swiper-slide {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 0
+}
+.project-management-pages .service-process__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 32px
+}
+.project-management-pages .service-process__navigation .navigation-btn {
+  background-color: #fdfdfd
+}
+.project-management-pages .service-process .swiper {
+  margin-left: 0;
+  margin-right: 0
 }
 @media (max-width:1550px) {
   .main__wrapper {
@@ -7812,6 +8024,39 @@ html::selection {
   }
   .construction-expertise .hide-mob {
     display: none
+  }
+  .residential-construction-expertise .hide-mob-pic {
+    display: none
+  }
+  .residential-construction-expertise .construction-expertise__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px
+  }
+  .residential-construction-expertise .construction-expertise__info .intro-description {
+    grid-column: 1/-1;
+    width: 50%
+  }
+  .residential-construction-expertise .construction-expertise__descripts {
+    flex-direction: column
+  }
+  .residential-construction-expertise .construction-expertise .show-mob {
+    display: flex;
+    justify-content: center;
+    height: 215px
+  }
+  .residential-construction-expertise .construction-expertise__pic {
+    height: 215px
+  }
+  .residential-construction-expertise .construction-expertise__blocks {
+    gap: 40px;
+    padding: 44px 0
+  }
+  .project-management-pages .about .video__preview {
+    height: 300px
+  }
+  .project-management-pages .about .video__item iframe {
+    height: 300px
   }
 }
 @media (max-width:992px) {
@@ -8653,6 +8898,74 @@ html::selection {
   .construction-process .construction-process__wrap.show-mob {
     display: flex
   }
+  .about-residential-construction .about__pictures.show-mob {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 100%;
+    width: 100%
+  }
+  .project-management-pages .benefits {
+    grid-template-columns: repeat(2,1fr);
+    gap: 0;
+    -webkit-column-gap: 8px;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    row-gap: 16px;
+    width: 100%
+  }
+  .project-management-pages .benefits__item {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px
+  }
+  .project-management-pages .benefits__icon {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    padding: 6px
+  }
+  .project-management-pages .benefits p {
+    font-size: 14px
+  }
+  .project-management-pages .about__blocks {
+    gap: 40px;
+    padding: 44px 0
+  }
+  .project-management-pages .about__below,
+  .project-management-pages .about__top {
+    gap: 40px
+  }
+  .project-management-pages .about__below-left {
+    width: 50%
+  }
+  .project-management-pages .about__stats {
+    grid-template-columns: repeat(1,1fr);
+    gap: 12px
+  }
+  .project-management-pages .about__stats .stat__number {
+    font-size: 32px;
+    line-height: 40px
+  }
+  .project-management-pages .about .video__item {
+    width: 100%
+  }
+  .project-management-pages .about .video__preview {
+    height: 200px
+  }
+  .project-management-pages .about .video__item iframe {
+    height: 200px
+  }
+  .project-management-pages .about .hide-mob {
+    display: none
+  }
+  .project-management-pages .about .show-mob {
+    display: grid
+  }
+  .project-management-pages .about .text-block {
+    justify-content: end;
+    align-items: end;
+    gap: 52px
+  }
 }
 @media (max-width:768px) {
   .header .mobile-menu {
@@ -9234,6 +9547,25 @@ html::selection {
   .construction-pages .request-form .consultation-form-btn {
     grid-column: 1/-1
   }
+  .construction-pages .slider-cards__blocks {
+    gap: 32px;
+    padding: 44px 0
+  }
+  .construction-pages .slider-cards .intro-description {
+    gap: 32px
+  }
+  .construction-pages .slider-cards .intro-description__content,
+  .construction-pages .slider-cards .intro-description__general {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px
+  }
+  .construction-pages .slider-cards .intro-description__descript,
+  .construction-pages .slider-cards .intro-description__general {
+    max-width: 100%;
+    width: 100%
+  }
   .contractor-general__blocks {
     gap: 40px;
     padding: 44px 0
@@ -9275,6 +9607,27 @@ html::selection {
   .construction-process__item p {
     font-size: 14px;
     line-height: 20px
+  }
+  .project-management-pages .service-process .intro-description__content {
+    align-items: end
+  }
+  .project-management-pages .service-process__top {
+    gap: 24px
+  }
+  .project-management-pages .service-process__top-name {
+    gap: 15px
+  }
+  .project-management-pages .service-process__top p {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .project-management-pages .service-process__column p {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .project-management-pages .service-process__list {
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px
   }
 }
 @media (max-width:756px) {
@@ -9479,6 +9832,46 @@ html::selection {
   .contractor-general .btn-white {
     line-height: 20px;
     font-size: 14px
+  }
+  .residential-construction-expertise .construction-expertise__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px
+  }
+  .residential-construction-expertise .construction-expertise__info .intro-description {
+    width: 100%
+  }
+  .residential-construction-expertise .construction-expertise .show-mob {
+    display: flex;
+    justify-content: center;
+    height: 188px
+  }
+  .residential-construction-expertise .construction-expertise__pic {
+    height: 188px
+  }
+  .project-management-pages .about__blocks {
+    gap: 32px
+  }
+  .project-management-pages .about__below {
+    gap: 32px;
+    flex-direction: column-reverse
+  }
+  .project-management-pages .about__top {
+    gap: 32px;
+    flex-direction: column
+  }
+  .project-management-pages .about__content {
+    gap: 12px;
+    width: 100%
+  }
+  .project-management-pages .about__below-left {
+    gap: 32px;
+    width: 100%;
+    flex-direction: column-reverse
+  }
+  .project-management-pages .about .text-block {
+    gap: 36px;
+    width: 100%
   }
 }
 @media (max-width:620px) {
@@ -10820,6 +11213,9 @@ html::selection {
     margin-top: 8px!important;
     padding: 12px 8px
   }
+  .construction-pages .slider-cards__blocks {
+    padding: 44px 0 24px 0
+  }
   .contractor-general__blocks {
     gap: 32px;
     padding: 44px 0
@@ -10839,6 +11235,9 @@ html::selection {
   }
   .construction-expertise__descripts {
     gap: 32px;
+    flex-direction: column
+  }
+  .construction-expertise__text {
     flex-direction: column
   }
   .construction-expertise__pic {
@@ -10865,6 +11264,59 @@ html::selection {
     border-radius: 10px;
     max-width: 100%;
     width: 100%
+  }
+  .about-residential-construction .about__block {
+    display: flex;
+    flex-direction: column
+  }
+  .about-residential-construction .about__top {
+    order: 1
+  }
+  .about-residential-construction .text-block {
+    order: 2
+  }
+  .about-residential-construction .about__pictures {
+    gap: 8px;
+    order: 3
+  }
+  .about-residential-construction .about__middle {
+    order: 4
+  }
+  .about-residential-construction .pic {
+    height: 200px!important;
+    width: 100%!important
+  }
+  .project-management-pages .main .btns {
+    flex-direction: column
+  }
+  .project-management-pages .main .btns .btn {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 15px
+  }
+  .project-management-pages .about__stats .stat__number {
+    font-size: 28px
+  }
+  .project-management-pages .about .video__preview {
+    height: 180px
+  }
+  .project-management-pages .about .video__item iframe {
+    height: 180px
+  }
+  .project-management-pages .service-process .intro-description__content {
+    align-items: start
+  }
+  .project-management-pages .service-process__blocks {
+    gap: 32px
+  }
+  .project-management-pages .service-process__wrapper {
+    display: none
+  }
+  .project-management-pages .service-process__slider {
+    display: block
   }
 }
 @media (max-width:576px)and (max-width:576px) {
@@ -10967,6 +11419,9 @@ html::selection {
     font-size: 13px
   }
   .structures .main .benefits {
+    display: none
+  }
+  .project-management-pages .benefits {
     display: none
   }
 }

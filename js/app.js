@@ -1079,9 +1079,6 @@
             slidesPerView: 1,
             speed: 600,
             spaceBetween: 12,
-            autoHeight: true,
-            observer: true,
-            observeParents: true,
             effect: "slide",
             navigation: {
                 nextEl: slider.querySelector(".navigation-btn__next"),

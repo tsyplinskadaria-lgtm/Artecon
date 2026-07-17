@@ -6758,34 +6758,34 @@ html::selection {
   width: 100%
 }
 .construction-pages .faq .faq-fields__top .control-panel-btn {
-  border: 1px solid #9898b1;
-  background-color: rgba(0,0,0,0)
+  border: 1px solid #9898b1!important;
+  background-color: rgba(0,0,0,0)!important
 }
 .construction-pages .faq .faq-fields__top .control-panel-btn * {
-  color: #9898b1
+  color: #9898b1!important
 }
 .construction-pages .faq .faq-fields__item:hover .faq-fields__top * {
-  color: var(--red-color)
+  color: var(--red-color)!important
 }
 .construction-pages .faq .faq-fields__item:hover .faq-fields__top * svg * {
-  color: #fff
+  color: #fff!important
 }
 .construction-pages .faq .faq-fields__item:hover .faq-fields__top * .control-panel-btn {
-  background-color: var(--red-color)
+  background-color: var(--red-color)!important
 }
 .construction-pages .faq .faq-fields__item:hover .faq-fields__top .control-panel-btn {
-  border: 1px solid var(--red-color);
-  background-color: var(--red-color)
+  border: 1px solid var(--red-color)!important;
+  background-color: var(--red-color)!important
 }
 .construction-pages .faq .faq-fields__item.active .faq-fields__top .control-panel-btn {
-  border: 1px solid var(--red-color);
-  background-color: var(--red-color)
+  border: 1px solid var(--red-color)!important;
+  background-color: var(--red-color)!important
 }
 .construction-pages .faq .faq-fields__item.active .faq-fields__top * {
-  color: var(--red-color)
+  color: var(--red-color)!important
 }
 .construction-pages .faq .faq-fields__item.active .faq-fields__top * svg * {
-  color: #fff
+  color: #fff!important
 }
 .contractor-general__blocks {
   padding: 56px 0;
@@ -7447,40 +7447,41 @@ html::selection {
   display: none
 }
 .project-management-pages .faq .faq-fields__top .control-panel-btn {
-  border: 1px solid #9898b1;
-  background-color: rgba(0,0,0,0)
+  border: 1px solid #9898b1!important;
+  background-color: rgba(0,0,0,0)!important
 }
 .project-management-pages .faq .faq-fields__top .control-panel-btn * {
-  color: #9898b1
+  color: #9898b1!important
 }
 .project-management-pages .faq .faq-fields__item:hover .faq-fields__top * {
-  color: var(--red-color)
+  color: var(--red-color)!important
 }
 .project-management-pages .faq .faq-fields__item:hover .faq-fields__top * svg * {
-  color: #fff
+  color: #fff!important
 }
 .project-management-pages .faq .faq-fields__item:hover .faq-fields__top * .control-panel-btn {
-  background-color: var(--red-color)
+  background-color: var(--red-color)!important
 }
 .project-management-pages .faq .faq-fields__item:hover .faq-fields__top .control-panel-btn {
-  border: 1px solid var(--red-color);
-  background-color: var(--red-color)
+  border: 1px solid var(--red-color)!important;
+  background-color: var(--red-color)!important
 }
 .project-management-pages .faq .faq-fields__item.active .faq-fields__top .control-panel-btn {
-  border: 1px solid var(--red-color);
-  background-color: var(--red-color)
+  border: 1px solid var(--red-color)!important;
+  background-color: var(--red-color)!important
 }
 .project-management-pages .faq .faq-fields__item.active .faq-fields__top * {
-  color: var(--red-color)
+  color: var(--red-color)!important
 }
 .project-management-pages .faq .faq-fields__item.active .faq-fields__top * svg * {
-  color: #fff
+  color: #fff!important
 }
 .featured-project__blocks {
   display: flex;
   flex-direction: column;
   gap: 56px;
-  padding: 56px 0
+  padding: 56px 0;
+  overflow: hidden
 }
 .featured-project .swiper-wrapper {
   display: flex;
@@ -7493,7 +7494,8 @@ html::selection {
 }
 .featured-project .swiper {
   margin-left: 0;
-  margin-right: 0
+  margin-right: 0;
+  overflow: visible
 }
 .featured-project-card {
   width: 100%;
@@ -12122,6 +12124,9 @@ html::selection {
   }
   .featured-project-card__item-title {
     margin-bottom: 40px
+  }
+  .featured-project__navigation {
+    margin-top: 32px
   }
   .featured-project .advantages-slider {
     display: block

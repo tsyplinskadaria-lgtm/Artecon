@@ -7299,6 +7299,9 @@ html::selection {
   font-size: 15px;
   font-weight: 700
 }
+.project-management-pages .faq-cards .faq-fields__info .items__item:hover {
+  color: var(--red-color)
+}
 .project-management-pages .faq-cards .btns {
   margin-top: 8px
 }

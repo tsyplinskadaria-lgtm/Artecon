@@ -1,0 +1,3361 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- fonts preload -->
+	<link rel="preload" href="fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/Unbounded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+	<!-- CDN optimization -->
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+
+	<!-- Swiper CSS (non-blocking) -->
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260723021202" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260723021202">
+	</noscript>
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="./css/style.min.css?_v=20260723021202">
+	<title>Estructuras | ARTECON</title>
+</head>
+
+<body class="service-pages">
+	<div class="wrapper">
+		<header class="header">
+
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="header__blocks">
+
+					<div class="details details-mobile">
+						<div class="details__item">
+							<a href="#!" aria-label="Phone">
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#phone"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<a href="index.html" class="logo" aria-label="Logo">
+						<img src="img/svg/logo.svg" draggable="false" alt="Logo">
+					</a>
+
+					<!-- Menu -->
+
+					<nav class="menu">
+						<ul class="menu__list">
+							<li>
+								<a href="project-management.html" aria-label="Gestión de Proyectos">[ Gestión de Proyectos ]</a>
+							</li>
+
+							<li>
+								<a href="construction.html" aria-label="Construcción">[ Construcción ]</a>
+							</li>
+
+							<li>
+								<a href="services-trades.html" aria-label="Servicios y Oficios">[ Servicios y Oficios ]</a>
+							</li>
+
+							<li>
+								<a href="reformas.html" aria-label="Reformas">[ Reformas ]</a>
+							</li>
+						</ul>
+					</nav>
+
+					<!--  -->
+
+					<div class="details">
+						<div class="details__item languages hide-mob">
+							<a href="#!" class="languages__current" aria-label="ES">
+								ES
+							</a>
+
+							<div class="languages__dropdown">
+								<a href="#!" class="active" aria-label="ES">
+									ES
+								</a>
+
+								<a href="#!" aria-label="EN">
+									EN
+								</a>
+
+								<a href="#!" aria-label="RU">
+									RU
+								</a>
+							</div>
+						</div>
+
+						<div class="details__item hide-mob">
+							<a href="#!" aria-label="Es">
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#phone"></use>
+								</svg>
+							</a>
+						</div>
+
+						<div class="details__item open-menu">
+							<a href="#!" class="menu-btn" aria-label="Es">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+						</div>
+					</div>
+
+					<div class="mobile-menu">
+						<div class="mobile-menu__blocks">
+							<div class="mobile-menu__wrapper">
+								<div class="mobile-menu__top">
+									<a href="../../index.html" class="logo" aria-label="Logo">
+										<img src="img/svg/logo-black.svg" draggable="false" alt="Logo">
+									</a>
+
+									<div class="details">
+										<div class="details__item languages">
+											<a href="#!" class="languages__current" aria-label="Es">
+												Es
+											</a>
+										</div>
+
+										<div class="details__item">
+											<a href="#!" aria-label="Es">
+												<svg class="icon">
+													<use xlink:href="img/icons/icons.svg#phone"></use>
+												</svg>
+											</a>
+										</div>
+
+										<div class="details__item close-menu">
+											<a href="#!" aria-label="Es">
+												<svg class="icon">
+													<use xlink:href="img/icons/icons.svg#close-icon"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<nav class="menu-mobile">
+									<div class="menu-mobile__slider">
+
+										<!-- Головне меню -->
+										<div class="menu-mobile__page">
+											<ul class="menu-mobile__list">
+												<li><a href="index.html">Homepage</a></li>
+												<li><a href="#!">About Artecon</a></li>
+												<li><a href="#!">Partners & Investors</a></li>
+												<li>
+													<a href="construction.html">Construcción</a>
+
+													<button class="submenu-open" data-menu="construction" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+												</li>
+
+												<li><a href="project-management.html">Gestión de Proyectos</a></li>
+
+												<li>
+													<a href="services-trades.html">Servicios y Oficios</a>
+
+													<button class="submenu-open" data-menu="servicios" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+												</li>
+
+												<li>
+													<a href="reformas.html">Reformas</a>
+
+													<button class="submenu-open" data-menu="reformas" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+												</li>
+
+												<li><a href="#!">Contacts</a></li>
+											</ul>
+										</div>
+
+										<!-- Підменю -->
+										<div class="menu-mobile__page menu-mobile__submenu" data-submenu="reformas">
+											<ul class="menu-mobile__list">
+												<li class="submenu-back">
+													<button class="submenu-close" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+
+													<a href="reformas.html" class="submenu-back-next">
+														<span>Servicios y Oficios</span>
+
+
+														<button class="submenu-open" type="button">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+															</svg>
+														</button>
+													</a>
+												</li>
+
+												<li><a href="reforma-villas.html">Reforma de Villas</a></li>
+												<li><a href="reforma-apartamentos.html">Reforma de Apartamentos</a></li>
+												<li><a href="reforma-locales.html">Reforma de Locales</a></li>
+											</ul>
+										</div>
+
+										<!-- Підменю -->
+										<div class="menu-mobile__page menu-mobile__submenu" data-submenu="construction">
+											<ul class="menu-mobile__list">
+												<li class="submenu-back">
+													<button class="submenu-close" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+
+													<a href="construction.html" class="submenu-back-next">
+														<span>Servicios y Oficios</span>
+
+
+														<button class="submenu-open" type="button">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+															</svg>
+														</button>
+													</a>
+												</li>
+
+												<li><a href="construction-villas.html">Construcción de Villas</a></li>
+												<li><a href="construction-industrial.html">Construcción de Industriales</a></li>
+												<li><a href="residential-buildings.html">Construcción de Residenciales</a></li>
+											</ul>
+										</div>
+
+										<div class="menu-mobile__page menu-mobile__submenu" data-submenu="servicios">
+											<ul class="menu-mobile__list">
+												<li class="submenu-back">
+													<button class="submenu-close" type="button">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+														</svg>
+													</button>
+
+													<a href="#!" class="submenu-back-next">
+														<span>Servicios y Oficios</span>
+
+
+														<button class="submenu-open" type="button">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+															</svg>
+														</button>
+													</a>
+												</li>
+
+												<li><a href="#!">Demolición</a></li>
+												<li><a href="#!">Estructuras</a></li>
+												<li><a href="#!">Albañilería</a></li>
+												<li><a href="#!">Cubiertas</a></li>
+												<li><a href="#!">Yeso y Revoque</a></li>
+												<li><a href="#!">Pintura</a></li>
+												<li><a href="#!">Electricidad</a></li>
+												<li><a href="#!">Fontanería</a></li>
+												<li><a href="#!">Climatización</a></li>
+												<li><a href="#!">Impermeabilización</a></li>
+												<li><a href="#!">Domótica</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+							</div>
+
+							<div class="below-info show-mob">
+								<div class="social">
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="facebook">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="In">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#in"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Telegram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#telegram"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="btns">
+								<button class="btn btn-red" aria-label="Explorar Soluciones">Explorar
+									Soluciones</button>
+
+								<button class="btn btn-white" aria-label="Solicitar Consultoría">Solicitar
+									Consultoría</button>
+							</div>
+
+							<div class="below-info">
+								<div class="social hide-mob">
+									<a href="#!" aria-label="Instagram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#instagram"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="facebook">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="In">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#in"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Telegram">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#telegram"></use>
+										</svg>
+									</a>
+								</div>
+
+								<div class="languages mobile-languages">
+									<div class="languages__dropdown">
+										<a href="#!" class="active" aria-label="ES">ES</a>
+										<a href="#!" aria-label="EN">EN</a>
+										<a href="#!" aria-label="RU">RU</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="services-trades service-pages">
+
+			<div class="wrapper-container">
+				<main class="main">
+					<div class="main-bg">
+						<img src="img/estructuras/main-bg.webp" alt="Estructuras de hormigón armado en Málaga y Costa del Sol" class="main__bg hide-mob" fetchpriority="high" decoding="async">
+
+						<img src="img/estructuras/main-bg-mob.webp" alt="Estructuras de hormigón armado en Málaga y Costa del Sol" class="main__bg show-mob" fetchpriority="high" decoding="async">
+					</div>
+
+					<div class="main__container">
+						<div class="main__wrapper">
+
+							<div class="main__blocks">
+								<div class="main__content">
+									<div class="main__content-top">
+										<h1>
+											Estructuras de hormigón armado en Málaga y Costa del Sol
+										</h1>
+
+										<p>
+											Construimos estructuras portantes y cimentaciones fiables para villas de
+											lujo y propiedades comerciales en la Costa del Sol. Trabajamos siguiendo
+											estrictamente las normas CTE, garantizando una precisión milimétrica y
+											plazos de entrega fijos.
+										</p>
+									</div>
+
+
+									<div class="btns">
+										<button class="btn btn-red" aria-label="Solicitar Estudio Estructural">Solicitar
+											Estudio Estructural</button>
+
+										<button class="btn btn-white" aria-label="Play Video">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#play"></use>
+											</svg>
+
+											Play Video
+										</button>
+									</div>
+
+								</div>
+
+								<!-- Додаткове меню -->
+
+								<nav class="menu">
+									<ul class="menu__list">
+										<li>
+											<a href="#!" aria-label="Especialidades">[ Especialidades ]</a>
+										</li>
+
+										<li>
+											<a href="#!" aria-label="Proyectos">[ Proyectos ]</a>
+										</li>
+
+										<li>
+											<a href="#!" aria-label="Preguntas frecuentes">[ Preguntas frecuentes ]</a>
+										</li>
+
+										<li>
+											<a href="#!" aria-label="Sobre nosotros">[ Sobre nosotros ]</a>
+										</li>
+									</ul>
+								</nav>
+
+							</div>
+
+							<!-- benefits -->
+
+							<div class="benefits">
+								<div class="benefits__item">
+									<div class="benefits__icon">
+										<img src="img/reformas-vilas/benefits/01.svg" draggable="false" alt="">
+									</div>
+
+									<p>
+										Equipos técnicos propios
+									</p>
+								</div>
+
+								<div class="benefits__item">
+									<div class="benefits__icon">
+										<img src="img/reformas-vilas/benefits/02.svg" draggable="false" alt="">
+									</div>
+
+									<p>
+										Cumplimiento estricto del CTE
+									</p>
+								</div>
+
+								<div class="benefits__item">
+									<div class="benefits__icon">
+										<img src="img/reformas-vilas/benefits/03.svg" draggable="false" alt="">
+									</div>
+
+									<p>
+										Maquinaria y flota propia
+									</p>
+								</div>
+
+								<div class="benefits__item">
+									<div class="benefits__icon">
+										<img src="img/reformas-vilas/benefits/04.svg" draggable="false" alt="">
+									</div>
+
+									<p>
+										Supervisión técnica experta
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+
+				<!-- About Us -->
+
+				<section class="about about-version-3">
+					<div class="about__container">
+						<div class="about__blocks">
+							<div class="about__top">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>00/01</span>
+								</div>
+
+								<div class="about__content">
+									<span>( INGENIERÍA Y ESTRUCTURAS )</span>
+
+									<h2>
+										El Esqueleto Perfecto para Proyectos de Alta Exigencia
+									</h2>
+								</div>
+							</div>
+
+							<div class="about__middle">
+								<div class="about__stats">
+
+									<div class="stat">
+										<div class="stat__number">
+											<span class="about__stats-number" data-target="10" data-suffix=" Años">0</span>
+										</div>
+
+										<p>Garantía estructural legal asegurada por la supervisión estricta de cada fase
+											constructiva (OCT).</p>
+									</div>
+
+									<div class="stat">
+										<div class="stat__number">
+											<span class="about__stats-number" data-prefix="± " data-target="2" data-suffix=" mm">0</span>
+										</div>
+
+										<p>Margen de tolerancia máxima en la planimetría gracias a nuestro control
+											topográfico láser continuo.</p>
+									</div>
+
+									<div class="stat">
+										<div class="stat__number">
+											<span class="about__stats-number" data-prefix="-" data-target="20" data-suffix="%">0</span>
+										</div>
+
+										<p>Ahorro promedio en materiales de nivelación y revestimientos durante la fase
+											de acabados por la exactitud de la estructura.</p>
+									</div>
+
+									<div class="stat">
+										<div class="stat__number">
+											<span class="about__stats-number" data-target="100" data-suffix="%">0</span>
+										</div>
+
+										<p>Trazabilidad total con pruebas de laboratorio independiente (probetas) en
+											cada vertido de hormigón.</p>
+									</div>
+
+								</div>
+
+								<div class="about__pictures">
+									<div class="pic">
+										<img src="img/estructuras/about/about-01.webp" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<div class="pic">
+										<img src="img/estructuras/about/about-02.webp" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<div class="pic">
+										<img src="img/estructuras/about/about-03.webp" loading="lazy" draggable="false" alt="">
+									</div>
+								</div>
+							</div>
+
+							<div class="about__below">
+
+								<div class="video__item" data-video="XZTU3tYTkGc">
+									<div class="video__preview">
+
+										<div class="youtube-pin">
+											<img src="img/svg/youtube.svg" draggable="false" alt="">
+											<p>Youtube Overview</p>
+										</div>
+
+										<!-- твоя картинка-прелоадер -->
+										<img class="video__thumb" src="img/estructuras/consultation-f-down.webp" loading="lazy" draggable="false" alt="">
+
+										<button class="video__play">
+											<img src="img/svg/play.svg" loading="lazy" draggable="false" alt="">
+										</button>
+
+									</div>
+								</div>
+
+
+								<div class="text-block">
+									<p>
+										Ejecutamos estructuras de hormigón armado con tolerancias milimétricas para
+										edificaciones residenciales y comerciales. Desde la cimentación profunda hasta
+										el último forjado, garantizamos la máxima estabilidad sísmica, geometría exacta
+										para cerramientos premium y el cumplimiento absoluto del Código Técnico de la
+										Edificación (CTE). Construimos una base sólida e inquebrantable que optimiza el
+										tiempo y el coste de todas las fases posteriores de la obra.
+									</p>
+
+									<a href="#!" aria-label="Acerca de la empresa">
+										Acerca de la empresa
+
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Concrete-services -->
+
+				<section class="concrete-services" style="background-color:#f2f2f7">
+					<div class="concrete-services__container">
+						<div class="concrete-services__blocks">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>02/03</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( Lo que ejecutamos )</span>
+
+										<h3 class="title">
+											Nuestros servicios de estructuras de hormigón
+										</h3>
+									</div>
+
+
+									<div class="intro-description__descript">
+										Realizamos todo tipo de estructuras monolíticas de hormigón, ejecutadas in situ,
+										para proyectos residenciales, comerciales e industriales en Málaga y Costa del
+										Sol. Desarrollamos cimentaciones y cimientos, zapatas, vigas, pilares y forjados
+										de hormigón armado, garantizando resistencia estructural, precisión técnica y
+										cumplimiento estricto de plazos. <br>
+										Trabajamos tanto para empresas constructoras y promotores como para clientes
+										particulares que buscan una solución sólida y duradera desde la base del
+										proyecto. Realizamos los trabajos monolíticos como parte de nuestros servicios
+										de obra nueva y construcción integral, en colaboración con <strong>nuestra
+											empresa
+											constructora.</strong>
+									</div>
+								</div>
+							</div>
+
+							<div class="concrete-services__columns">
+								<div class="concrete-services__column">
+									<img src="img/estructuras/concrete-services/01.webp" class="concrete-services__pic" loading="lazy" alt="">
+
+									<div class="concrete-services__info">01 / Cimentaciones y zapatas</div>
+								</div>
+
+								<div class="concrete-services__column">
+									<img src="img/estructuras/concrete-services/02.webp" class="concrete-services__pic" loading="lazy" alt="">
+
+									<div class="concrete-services__info">02 / Forjados y losas</div>
+								</div>
+
+								<div class="concrete-services__column">
+									<img src="img/estructuras/concrete-services/03.webp" class="concrete-services__pic" loading="lazy" alt="">
+
+									<div class="concrete-services__info">03 / Cubiertas</div>
+								</div>
+
+								<div class="concrete-services__column">
+									<img src="img/estructuras/concrete-services/04.webp" class="concrete-services__pic" loading="lazy" alt="">
+
+									<div class="concrete-services__info">04 / Muros</div>
+								</div>
+
+								<div class="concrete-services__column">
+									<img src="img/estructuras/concrete-services/05.webp" class="concrete-services__pic" loading="lazy" alt="">
+
+									<div class="concrete-services__info">05 / Pilares y vigas</div>
+								</div>
+
+								<div class="concrete-services__column">
+									<img src="img/estructuras/concrete-services/06.webp" class="concrete-services__pic" loading="lazy" alt="">
+
+									<div class="concrete-services__info">06 / Piscinas</div>
+								</div>
+							</div>
+
+							<a href="#!" class="btn btn-red" aria-label="Solicitar presupuesto técnico">Solicitar
+								presupuesto técnico</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- Consultation form -->
+
+				<section class="request-form request-form-version-2">
+
+					<div class="bg">
+						<img src="img/demolitions/consultation-f.webp" draggable="false" loading="Lazy" alt="">
+					</div>
+
+					<div class="request-form__container">
+						<div class="request-form__blocks">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>00/02</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( EL VALOR DE LA PRECISIÓN )</span>
+
+										<h4 class="title">
+											¿Por qué la geometría exacta de ARTECON le ahorra miles de euros en
+											acabados?
+										</h4>
+									</div>
+
+
+									<div class="intro-description__descript">
+										Un error de apenas 2 o 3 cm en la estructura de hormigón encarece
+										exponencialmente las siguientes fases de la obra. En ARTECON aplicamos un
+										riguroso control topográfico láser en cada etapa del encofrado y vertido para
+										garantizar tolerancias milimétricas.
+									</div>
+								</div>
+							</div>
+
+							<!--  -->
+
+							<div class="request-form__columns">
+								<div class="request-form__column">
+									<div class="request-form__column-top">
+										<div class="tag__icon">
+											<img src="img/svg/arrow-circle.svg" draggable="false" alt="">
+										</div>
+
+										<span class="title">Ajuste perfecto de cerramientos premium</span>
+									</div>
+
+									<p>
+										Las marcas de ventanas de alta gama (como Reynaers, Technal o Schüco) no admiten
+										márgenes de error. Una estructura con precisión milimétrica evita la aparición
+										de huecos gigantes, problemas de aislamiento térmico y sobrecostes en la
+										instalación de cristales panorámicos.
+									</p>
+								</div>
+
+								<div class="request-form__column">
+									<div class="request-form__column-top">
+										<div class="tag__icon">
+											<img src="img/svg/arrow-circle.svg" draggable="false" alt="">
+										</div>
+
+										<span class="title">Ahorro masivo en materiales de nivelación</span>
+									</div>
+
+									<p>
+										Corregir paredes desplomadas o techos irregulares exige toneladas de yeso y
+										mortero, lo que retrasa la obra e infla el presupuesto. Nuestros sistemas de
+										encofrado europeos entregan superficies perfectamente aplomadas y listas para la
+										fase de albañilería fina.
+									</p>
+								</div>
+
+								<div class="request-form__column">
+									<div class="request-form__column-top">
+										<div class="tag__icon">
+											<img src="img/svg/arrow-circle.svg" draggable="false" alt="">
+										</div>
+
+										<span class="title">Transición rápida a las instalaciones</span>
+									</div>
+
+									<p>
+										Cuando el esqueleto del edificio es exacto a los planos, los equipos de
+										fontanería, climatización y domótica trabajan a máxima velocidad, sin necesidad
+										de paralizar la obra para picar hormigón o buscar soluciones improvisadas a
+										errores estructurales.
+									</p>
+								</div>
+							</div>
+
+							<div class="consultation-form">
+								<div class="consultation-form__blocks">
+									<div class="consultation-form__top">
+										<div class="numbering">
+											<div class="numbering__icon">
+												<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<span>( CONSULTA TÉCNICA )</span>
+										</div>
+
+										<div class="title">
+											¿Aún en fase inicial? Hable con nuestro ingeniero estructural.
+										</div>
+
+										<p>
+											Si todavía no dispone del proyecto de ejecución o tiene dudas sobre los
+											retos de su parcela, déjenos sus datos. Le contactaremos en 24 horas para
+											ofrecerle una primera valoración técnica sin compromiso.
+										</p>
+									</div>
+
+									<form class="form">
+										<div class="form__group">
+											<label for="name">Nombre Completo*</label>
+											<input type="text" placeholder="Introduce tu nombre completo" id="name" name="name" required>
+										</div>
+
+										<div class="form__group">
+											<label for="phone">Teléfono de contacto*</label>
+											<input type="tel" placeholder="+34 (000) 000-000" id="phone" name="phone" required>
+										</div>
+
+										<button type="submit" class="consultation-form-btn btn btn-red">
+											Contácte con nosotros
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Security and regulations -->
+
+				<section class="security-regulations security-regulations-version-2" style="background-color:#f2f2f7">
+					<div class="security-regulations__container">
+						<div class="security-regulations__blocks">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>02/03</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( SEGURIDAD Y NORMATIVA )</span>
+
+										<h5 class="title">
+											Máximos Estándares: El Compromiso de ARTECON con el CTE
+										</h5>
+									</div>
+
+
+									<div class="intro-description__descript">
+										La calidad real no es solo lo que se ve, sino lo que perdura. Gestionamos cada
+										detalle de las instalaciones ocultas para garantizar que su propiedad no solo
+										cumpla con la normativa española más exigente, sino que esté blindada contra
+										cualquier deficiencia operativa o estructural.
+									</div>
+								</div>
+							</div>
+
+							<div class="security-regulations__list">
+								<div class="security-regulations__item">
+									<div class="security-regulations__top">
+										<div class="security-regulations__icon">
+											<img src="img/services-trades/security-regulations/01.svg" loading="lazy" alt="">
+										</div>
+
+										<div class="title">
+											Integridad
+											Estructural
+										</div>
+									</div>
+
+									<div class="security-regulations__info">
+										<p>
+											Garantizamos la inalterabilidad de su edificio mediante controles
+											exhaustivos de hormigón y acero. Cada cimentación y muro de carga se somete
+											a auditorías continuas para asegurar que el comportamiento de la estructura
+											sea impecable, siguiendo con exactitud los cálculos de ingeniería más
+											rigurosos.
+										</p>
+									</div>
+								</div>
+
+								<div class="security-regulations__item">
+									<div class="security-regulations__top">
+
+										<div class="security-regulations__icon">
+											<img src="img/services-trades/security-regulations/02.svg" loading="lazy" alt="">
+										</div>
+
+										<div class="title">
+											Seguridad en Instalaciones
+										</div>
+									</div>
+
+									<div class="security-regulations__info">
+
+										<p>
+											Ejecutamos sistemas eléctricos y de saneamiento bajo estrictos protocolos
+											industriales. Empleamos exclusivamente componentes certificados de alto
+											rendimiento para prevenir fallos, fugas o cortocircuitos, asegurando una
+											funcionalidad duradera, segura y sin interrupciones para el usuario final.
+										</p>
+									</div>
+								</div>
+
+								<div class="security-regulations__item">
+									<div class="security-regulations__top">
+										<div class="security-regulations__icon">
+											<img src="img/services-trades/security-regulations/02.svg" loading="lazy" alt="">
+										</div>
+
+										<div class="title">
+											Estanqueidad y Aislamiento
+										</div>
+									</div>
+
+									<div class="security-regulations__info">
+										<p>
+											Implementamos soluciones técnicas multicapa de impermeabilización en
+											cubiertas y áreas húmedas. Realizamos pruebas de presión y estanqueidad
+											antes de cerrar cualquier elemento, protegiendo su propiedad frente a
+											filtraciones, condensaciones y cualquier amenaza de humedad a largo plazo.
+										</p>
+									</div>
+								</div>
+
+								<div class="security-regulations__item">
+									<div class="security-regulations__top">
+										<div class="security-regulations__icon">
+											<img src="img/services-trades/security-regulations/03.svg" loading="lazy" alt="">
+										</div>
+
+										<div class="title">
+											Trazabilidad y Documentación
+										</div>
+									</div>
+
+									<div class="security-regulations__info">
+										<p>
+											Entregamos un expediente técnico exhaustivo y un registro fotográfico de
+											todas las instalaciones ocultas. Al finalizar, le proveemos las
+											certificaciones necesarias que avalan el cumplimiento integral de su
+											propiedad con todas las normativas legales vigentes y los estándares de
+											calidad del CTE.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ( INGENIERÍA DE PROCESOS ) -->
+
+				<section class="security-regulations safety-rules" style="background-color:#f2f2f7">
+					<div class="security-regulations__container">
+						<div class="security-regulations__blocks">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>02/03</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( Cómo trabajamos )</span>
+
+										<div class="title">
+											Proceso de ejecución de estructuras de hormigón
+										</div>
+									</div>
+
+
+									<div class="intro-description__descript">
+										Eliminamos el caos operativo mediante una metodología de gestión centralizada.
+										En Artecon, cada especialista actúa en el momento exacto, bajo un protocolo de
+										comunicación técnica que garantiza la fluidez total de la obra y la protección
+										de cada fase ejecutada.
+									</div>
+								</div>
+							</div>
+
+							<div class="security-regulations__list">
+								<div class="security-regulations__item">
+									<div class="security-regulations__icon">
+										01
+									</div>
+
+									<div class="security-regulations__info">
+										<div class="title">
+											Preparación de obra
+										</div>
+
+										<p>
+											Revisión del proyecto, planos, preparación del área,gestión de medios
+											materiales y medidas de seguridad.
+										</p>
+									</div>
+								</div>
+
+								<div class="security-regulations__item">
+									<div class="security-regulations__icon">
+										02
+									</div>
+
+									<div class="security-regulations__info">
+										<div class="title">
+											Montaje de encofrado
+										</div>
+
+										<p>
+											Instalación de sistemas de encofrado conforme a las especificaciones
+											técnicas del proyecto.
+										</p>
+									</div>
+								</div>
+
+								<div class="security-regulations__item">
+									<div class="security-regulations__icon">
+										03
+									</div>
+
+									<div class="security-regulations__info">
+										<div class="title">
+											Vertido de hormigón
+										</div>
+
+										<p>
+											Vertido monolítico continuo mediante camiones hormigonera y bombas de
+											hormigón propias.
+										</p>
+									</div>
+								</div>
+
+								<div class="security-regulations__item">
+									<div class="security-regulations__icon">
+										04
+									</div>
+
+									<div class="security-regulations__info">
+										<div class="title">
+											Curado y control de calidad
+										</div>
+
+										<p>
+											Curado del hormigón, desencofrado, inspección final y control de calidad de
+											la estructura.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Our works -->
+
+				<section class="our-works our-works-version-2" style="background-color:#f2f2f7">
+					<div class="our-works__container">
+						<div class="our-works__blocks">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>00/05</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( GALERÍA DE PROYECTOS )</span>
+
+										<div class="title">
+											Obras Ejecutadas: La Base de la Arquitectura de Lujo
+										</div>
+									</div>
+
+
+									<div class="intro-description__descript">
+										Explore nuestra selección de estructuras de hormigón armado en la Costa del Sol.
+										Desde cimentaciones complejas en terrenos escarpados hasta forjados de precisión
+										milimétrica, demostramos nuestra capacidad técnica en cada fase del esqueleto
+										constructivo.
+									</div>
+								</div>
+							</div>
+
+							<div class="photos-grid">
+
+								<div class="photos-grid__item item1">
+									<img src="img/estructuras/consultation-f-down.webp" loading="lazy" alt="">
+								</div>
+
+								<div class="photos-grid__item item2">
+									<img src="img/estructuras/about/about-03.webp" loading="lazy" alt="">
+								</div>
+
+								<div class="photos-grid__item item3">
+									<img src="img/estructuras/our-works-03.webp" loading="lazy" alt="">
+								</div>
+
+								<div class="photos-grid__item item4">
+									<img src="img/estructuras/our-works-04.webp" loading="lazy" alt="">
+								</div>
+
+								<div class="photos-grid__item item5">
+									<img src="img/estructuras/about/about-01.webp" loading="lazy" alt="">
+								</div>
+
+								<div class="photos-grid__item item6">
+									<img src="img/estructuras/about/about-02.webp" loading="lazy" alt="">
+								</div>
+
+							</div>
+
+							<!-- photos slider -->
+
+							<div class="photos__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="photos-item swiper-slide">
+										<img src="img/estructuras/consultation-f-down.webp" loading="lazy" alt="">
+									</div>
+
+									<div class="photos-item swiper-slide">
+										<img src="img/estructuras/about/about-03.webp" loading="lazy" alt="">
+									</div>
+
+									<div class="photos-item swiper-slide">
+										<img src="img/estructuras/our-works-03.webp" loading="lazy" alt="">
+									</div>
+
+									<div class="photos-item swiper-slide">
+										<img src="img/estructuras/our-works-04.webp" loading="lazy" alt="">
+									</div>
+
+									<div class="photos-item swiper-slide">
+										<img src="img/estructuras/about/about-01.webp" loading="lazy" alt="">
+									</div>
+
+									<div class="photos-item swiper-slide">
+										<img src="img/estructuras/about/about-02.webp" loading="lazy" alt="">
+									</div>
+								</div>
+
+								<div class="photos__navigation">
+									<button class="navigation-btn navigation-btn__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<div class="pagination2"></div>
+
+									<button class="navigation-btn navigation-btn__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+
+				<!-- Services -->
+
+				<section class="services" style="background-color:#f2f2f7">
+					<div class="services__container">
+						<div class="services__blocks">
+							<div class="intro-description">
+								<div class="numbering">
+									<div class="numbering__icon">
+										<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+									</div>
+
+									<span>00/05</span>
+								</div>
+
+								<div class="intro-description__content">
+									<div class="intro-description__general">
+										<span>( SOLUCIONES COMPLEMENTARIAS Y VISIÓN 360° )</span>
+
+										<div class="title">
+											¿Busca una Gestión Integral para su Obra?
+										</div>
+									</div>
+
+
+									<div class="intro-description__descript">
+										Más allá de la rehabilitación, ofrecemos una cobertura integral para asegurar
+										que su propiedad no solo sea estética, sino técnica и financieramente eficiente
+										en el mercado de la Costa del Sol.
+									</div>
+								</div>
+							</div>
+
+							<div class="services__slider swiper">
+								<div class="swiper-wrapper">
+									<a href="#!" class="services-slide swiper-slide">
+										<div class="bg">
+											<img src="img/main/service-hover.webp" loading="lazy" alt="">
+										</div>
+
+										<div class="services-slide__arrow">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#arrow-short-line"></use>
+											</svg>
+										</div>
+
+										<div class="services-slide__content">
+											<div class="title">
+												Construcción
+												Llave en Mano
+											</div>
+
+											<p>
+												¿Busca un cambio radical? A veces construir desde cero es más eficiente
+												que
+												reformar. Asumimos la obra completa con garantía total y diseño de
+												vanguardia.
+											</p>
+										</div>
+									</a>
+
+									<a href="#!" class="services-slide swiper-slide">
+										<div class="bg">
+											<img src="img/main/service-hover.webp" loading="lazy" alt="">
+										</div>
+
+										<div class="services-slide__arrow">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#arrow-short-line"></use>
+											</svg>
+										</div>
+
+										<div class="services-slide__content">
+											<div class="title">
+												Gestión de
+												Proyectos
+											</div>
+
+											<p>
+												Asegure el éxito de su inversión con nuestra dirección de obra experta.
+												Controlamos plazos y presupuestos para que usted disfrute del proceso
+												sin
+												estrés.
+											</p>
+										</div>
+									</a>
+
+									<a href="./reforma-apartamentos.html" class="services-slide swiper-slide">
+										<div class="bg">
+											<img src="img/reformas-apartamento/main-bg.webp" loading="lazy" alt="">
+										</div>
+
+										<div class="services-slide__arrow">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#arrow-short-line"></use>
+											</svg>
+										</div>
+
+										<div class="services-slide__content">
+											<div class="title">
+												Reforma de apartamentos
+											</div>
+
+											<p>
+												Renovación de espacios interiores con un enfoque en diseño y eficiencia.
+												Actualizamos instalaciones y acabados para crear un hogar inteligente y
+												confortable.
+											</p>
+										</div>
+									</a>
+
+									<a href="#!" class="services-slide swiper-slide">
+										<div class="bg">
+											<img src="img/main/service-hover.webp" loading="lazy" alt="">
+										</div>
+
+										<div class="services-slide__arrow">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#arrow-short-line"></use>
+											</svg>
+										</div>
+
+										<div class="services-slide__content">
+											<div class="title">
+												Impermeabilización
+											</div>
+
+											<p>
+												Garantice la longevidad estructural de su vivienda evitando
+												filtraciones. Un
+												tratamiento técnico imprescindible para proteger su inversión y evitar
+												costes futuros.
+											</p>
+										</div>
+									</a>
+
+									<a href="reforma-villas.html" class="services-slide swiper-slide">
+										<div class="bg">
+											<img src="img/reformas/reformas-bg.webp" loading="lazy" alt="">
+										</div>
+
+										<div class="services-slide__arrow">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#arrow-short-line"></use>
+											</svg>
+										</div>
+
+										<div class="services-slide__content">
+											<div class="title">
+												Reforma
+												de villas
+											</div>
+
+											<p>
+												Transformamos su villa clásica en una residencia moderna y funcional.
+												Optimizamos cada metro cuadrado para elevar el valor y la exclusividad
+												de su
+												propiedad.
+											</p>
+										</div>
+									</a>
+								</div>
+
+
+								<div class="services__navigation">
+									<button class="navigation-btn navigation-btn__prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+
+									<div class="pagination2"></div>
+
+									<button class="navigation-btn navigation-btn__next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Відгуки -->
+
+				<section class="response">
+					<div class="response__container">
+						<div class="response__blocks">
+							<div class="response__info">
+								<div class="intro-description">
+									<div class="numbering">
+										<div class="numbering__icon">
+											<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<span>02/06</span>
+									</div>
+
+									<div class="intro-description__content">
+										<div class="intro-description__general">
+											<span>( Testimonios de excelencia y reputación en el sector )</span>
+
+											<div class="title">
+												La voz de nuestros clientes: Confianza <strong>y resultados en
+													Marbella</strong>
+											</div>
+										</div>
+
+
+										<div class="intro-description__descript">
+											Como referentes entre las empresas constructoras de Marbella, priorizamos la
+											transparencia y el rigor técnico. Recopilamos las opiniones de propietarios
+											de
+											villas de lujo e inversores que avalan nuestra gestión eficiente en toda la
+											Costa del Sol.
+										</div>
+									</div>
+								</div>
+
+								<div class="response-slider swiper show-mob">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide review-card">
+
+											<div class="user-info">
+												<div class="avatar">
+													<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+												</div>
+
+												<div class="user-info__name">
+													<p>Robert Harrison</p>
+
+													<div class="stars">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+													</div>
+												</div>
+											</div>
+
+											<p>
+												Buscábamos una constructora que entendiera el concepto de lujo moderno.
+												El
+												equipo de Artecon no solo cumplió con el diseño, sino que aportó
+												soluciones
+												técnicas que mejoraron la eficiencia energética de la villa. Muy
+												recomendables.
+											</p>
+
+										</div>
+
+										<div class="swiper-slide review-card">
+
+											<div class="user-info">
+												<div class="avatar">
+													<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+												</div>
+
+												<div class="user-info__name">
+													<p>Robert Harrison</p>
+
+													<div class="stars">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+													</div>
+												</div>
+											</div>
+
+											<p>
+												Buscábamos una constructora que entendiera el concepto de lujo moderno.
+												El
+												equipo de Artecon no solo cumplió con el diseño, sino que aportó
+												soluciones
+												técnicas que mejoraron la eficiencia energética de la villa. Muy
+												recomendables.
+											</p>
+
+										</div>
+
+										<div class="swiper-slide review-card">
+
+											<div class="user-info">
+												<div class="avatar">
+													<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+												</div>
+
+												<div class="user-info__name">
+													<p>Robert Harrison</p>
+
+													<div class="stars">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+													</div>
+												</div>
+											</div>
+
+											<p>
+												Buscábamos una constructora que entendiera el concepto de lujo moderno.
+												El
+												equipo de Artecon no solo cumplió con el diseño, sino que aportó
+												soluciones
+												técnicas que mejoraron la eficiencia energética de la villa. Muy
+												recomendables.
+											</p>
+
+										</div>
+
+										<div class="swiper-slide review-card">
+
+											<div class="user-info">
+												<div class="avatar">
+													<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+												</div>
+
+												<div class="user-info__name">
+													<p>Robert Harrison</p>
+
+													<div class="stars">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+														<img src="img/svg/star.svg" draggable="false" alt="Star">
+													</div>
+												</div>
+											</div>
+
+											<p>
+												Buscábamos una constructora que entendiera el concepto de lujo moderno.
+												El
+												equipo de Artecon no solo cumplió con el diseño, sino que aportó
+												soluciones
+												técnicas que mejoraron la eficiencia energética de la villa. Muy
+												recomendables.
+											</p>
+
+										</div>
+									</div>
+
+									<div class="response__navigation">
+										<button class="navigation-btn navigation-btn__prev">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+
+										<div class="pagination2"></div>
+
+										<button class="navigation-btn navigation-btn__next">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+
+								<!-- <div class="google-rating">
+                                    <img src="img/main/photos.webp" draggable="false" alt="">
+
+                                    <div class="google-rating__block">
+                                        <img src="img/svg/google.svg" draggable="false" alt="">
+                                        <span>5.0 Valoración en Google</span>
+                                    </div>
+
+                                    <p>
+                                        Valoraciones positivas de gestores de activos y propietarios sobre el ROI y la
+                                        eficiencia técnica.
+                                    </p>
+                                </div> -->
+
+								<div class="google-rating">
+									<img src="img/main/photos.webp" draggable="false" alt="">
+
+									<div class="google-rating__block">
+										<img src="img/svg/google.svg" draggable="false" alt="">
+
+										<span class="google-rating__text">
+											<span class="google-rating__text-inner">
+												<span class="google-rating__front">
+													5.0 Valoración en Google
+												</span>
+
+												<a href="https://www.google.com/maps/place/ARTECON/@36.5236896,-4.6026549,9z/data=!4m8!3m7!1s0xaa64630f2379b647:0x49a2acf548813a01!8m2!3d36.5236896!4d-4.6026549!9m1!1b1!16s%2Fg%2F11kpf1kcks?entry=ttu&g_ep=EgoyMDI2MDcwNy4wIKXMDSoASAFQAw%3D%3D" class="google-rating__back">
+													Leer más →
+												</a>
+											</span>
+										</span>
+									</div>
+
+									<p>
+										Valoraciones positivas de gestores de activos y propietarios sobre el ROI y la
+										eficiencia técnica.
+									</p>
+								</div>
+							</div>
+
+							<div class="response__reviews hide-mob">
+
+								<div class="response__column response__column--up">
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Construir una casa en Marbella desde el extranjero es estresante, pero con
+											ellos
+											fue diferente. Transparencia total en los costes y reportes semanales. Hubo
+											un
+											pequeño retraso con la licencia municipal, pero supieron gestionarlo sin que
+											afectara al presupuesto final.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Buscábamos una constructora que entendiera el concepto de lujo moderno. El
+											equipo de Artecon no solo cumplió con el diseño, sino que aportó soluciones
+											técnicas que mejoraron la eficiencia energética de la villa. Muy
+											recomendables.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Después de una mala experiencia con otra empresa, ellos retomaron la obra de
+											mi
+											casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro
+											es
+											que siempre cumplen con su palabra.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Después de una mala experiencia con otra empresa, ellos retomaron la obra de
+											mi
+											casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro
+											es
+											que siempre cumplen con su palabra.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Después de una mala experiencia con otra empresa, ellos retomaron la obra de
+											mi
+											casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro
+											es
+											que siempre cumplen con su palabra.
+										</p>
+									</div>
+								</div>
+
+								<div class="response__column response__column--down">
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Después de una mala experiencia con otra empresa, ellos retomaron la obra de
+											mi
+											casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro
+											es
+											que siempre cumplen con su palabra.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Buscábamos una constructora que entendiera el concepto de lujo moderno. El
+											equipo de Artecon no solo cumplió con el diseño, sino que aportó soluciones
+											técnicas que mejoraron la eficiencia energética de la villa. Muy
+											recomendables.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Construcción sólida y equipo muy cualificado. Se nota que conocen la
+											normativa
+											técnica de la Costa del Sol a la perfección. No dejan nada al azar.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Después de una mala experiencia con otra empresa, ellos retomaron la obra de
+											mi
+											casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro
+											es
+											que siempre cumplen con su palabra.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Después de una mala experiencia con otra empresa, ellos retomaron la obra de
+											mi
+											casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro
+											es
+											que siempre cumplen con su palabra.
+										</p>
+									</div>
+
+									<div class="review-card">
+										<div class="user-info">
+											<div class="avatar">
+												<img src="img/main/avatar.webp" loading="lazy" draggable="false" alt="">
+											</div>
+
+											<div class="user-info__name">
+												<p>Robert Harrison</p>
+
+												<div class="stars">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+													<img src="img/svg/star.svg" draggable="false" alt="Star">
+												</div>
+											</div>
+										</div>
+
+										<p>
+											Después de una mala experiencia con otra empresa, ellos retomaron la obra de
+											mi
+											casa en Estepona. Su gestión del proyecto fue impecable. Lo que más valoro
+											es
+											que siempre cumplen con su palabra.
+										</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- FAQ -->
+
+				<section class="faq" style="background-color:#f2f2f7">
+					<div class="faq__container">
+						<div class="faq__blocks">
+							<div class="faq__info">
+								<div class="intro-description">
+									<div class="numbering">
+										<div class="numbering__icon">
+											<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<span>02/06</span>
+									</div>
+
+									<div class="intro-description__content">
+										<div class="intro-description__general">
+											<span>( RESPUESTAS TÉCNICAS EXPERTAS )</span>
+
+											<div class="title">
+												Preguntas Frecuentes sobre Estructuras de Hormigón
+											</div>
+										</div>
+
+
+										<div class="intro-description__descript">
+											Resolvemos las dudas más comunes de arquitectos, promotores y clientes
+											privados sobre la fase crítica de cimentación y estructura en la Costa del
+											Sol.
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields show-mob">
+									<div class="faq-fields__item active">
+										<div class="faq-fields__top">
+											<div class="faq-fields__top-left">
+												<div class="number">
+													<span>/ 01</span>
+												</div>
+
+												<div class="title">¿Qué es una estructura de hormigón?
+												</div>
+											</div>
+
+											<div class="control-panel-btn">
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+										</div>
+
+										<div class="faq-fields__content" style="height: auto;">
+											<div class="faq-fields__inner">
+												<p>
+													Una estructura de hormigón es el sistema que da forma, estabilidad y
+													soporte a una obra. Puede incluir cimentaciones, muros, pilares o
+													losas, y se diseña para soportar cargas y transmitirlas al terreno.
+													Su función principal es garantizar que el edificio sea seguro,
+													resistente y capaz de mantener su geometría durante toda su vida
+													útil.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="faq-fields__item">
+										<div class="faq-fields__top">
+											<div class="faq-fields__top-left">
+												<div class="number">
+													<span>/ 02</span>
+												</div>
+
+												<div class="title">¿Cómo se hace una estructura de hormigón?
+												</div>
+											</div>
+
+											<div class="control-panel-btn">
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+										</div>
+
+										<div class="faq-fields__content">
+											<div class="faq-fields__inner">
+												<p>
+													La mayoría de reformas necesitan permisos o al menos una
+													comunicación
+													previa. Las más populares son Licencia de obra menor y Licencia de
+													obra
+													mayor, que regulan los tipos de obras relacionadas con la
+													reconstrucción
+													o
+													la remodelación estructural. Sin embargo, hay obras pequeñas que no
+													requieren permisos.
+													Para una aclaración final, es mejor consultar con su autoridad local
+													antes
+													de comenzar cualquier proyecto de remodelación.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="faq-fields__item">
+										<div class="faq-fields__top">
+											<div class="faq-fields__top-left">
+												<div class="number">
+													<span>/ 03</span>
+												</div>
+
+												<div class="title">¿Qué factores influyen en el coste de una estructura
+													de hormigón?
+												</div>
+											</div>
+
+											<div class="control-panel-btn">
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+										</div>
+
+										<div class="faq-fields__content">
+											<div class="faq-fields__inner">
+												<p>
+													La mayoría de reformas necesitan permisos o al menos una
+													comunicación
+													previa. Las más populares son Licencia de obra menor y Licencia de
+													obra
+													mayor, que regulan los tipos de obras relacionadas con la
+													reconstrucción
+													o
+													la remodelación estructural. Sin embargo, hay obras pequeñas que no
+													requieren permisos.
+													Para una aclaración final, es mejor consultar con su autoridad local
+													antes
+													de comenzar cualquier proyecto de remodelación.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="faq-fields__item">
+										<div class="faq-fields__top">
+											<div class="faq-fields__top-left">
+												<div class="number">
+													<span>/ 04</span>
+												</div>
+
+												<div class="title">¿Cuánto tiempo lleva construir una estructura de
+													hormigón?
+												</div>
+											</div>
+
+											<div class="control-panel-btn">
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+										</div>
+
+										<div class="faq-fields__content">
+											<div class="faq-fields__inner">
+												<p>
+													La mayoría de reformas necesitan permisos o al menos una
+													comunicación
+													previa. Las más populares son Licencia de obra menor y Licencia de
+													obra
+													mayor, que regulan los tipos de obras relacionadas con la
+													reconstrucción
+													o
+													la remodelación estructural. Sin embargo, hay obras pequeñas que no
+													requieren permisos.
+													Para una aclaración final, es mejor consultar con su autoridad local
+													antes
+													de comenzar cualquier proyecto de remodelación.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="faq-fields__item">
+										<div class="faq-fields__top">
+											<div class="faq-fields__top-left">
+												<div class="number">
+													<span>/ 05</span>
+												</div>
+
+												<div class="title">¿Se puede cambiar algo durante la obra?
+												</div>
+											</div>
+
+											<div class="control-panel-btn">
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+										</div>
+
+										<div class="faq-fields__content">
+											<div class="faq-fields__inner">
+												<p>
+													La mayoría de reformas necesitan permisos o al menos una
+													comunicación
+													previa. Las más populares son Licencia de obra menor y Licencia de
+													obra
+													mayor, que regulan los tipos de obras relacionadas con la
+													reconstrucción
+													o
+													la remodelación estructural. Sin embargo, hay obras pequeñas que no
+													requieren permisos.
+													Para una aclaración final, es mejor consultar con su autoridad local
+													antes
+													de comenzar cualquier proyecto de remodelación.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="faq-fields__item">
+										<div class="faq-fields__top">
+											<div class="faq-fields__top-left">
+												<div class="number">
+													<span>/ 06</span>
+												</div>
+
+												<div class="title">¿Cómo sé que la estructura está bien hecha?
+												</div>
+											</div>
+
+											<div class="control-panel-btn">
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+										</div>
+
+										<div class="faq-fields__content">
+											<div class="faq-fields__inner">
+												<p>
+													La mayoría de reformas necesitan permisos o al menos una
+													comunicación
+													previa. Las más populares son Licencia de obra menor y Licencia de
+													obra
+													mayor, que regulan los tipos de obras relacionadas con la
+													reconstrucción
+													o
+													la remodelación estructural. Sin embargo, hay obras pequeñas que no
+													requieren permisos.
+													Para una aclaración final, es mejor consultar con su autoridad local
+													antes
+													de comenzar cualquier proyecto de remodelación.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="faq-fields__item">
+										<div class="faq-fields__top">
+											<div class="faq-fields__top-left">
+												<div class="number">
+													<span>/ 07</span>
+												</div>
+
+												<div class="title">¿Cuándo puedo seguir construyendo encima?
+												</div>
+											</div>
+
+											<div class="control-panel-btn">
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+										</div>
+
+										<div class="faq-fields__content">
+											<div class="faq-fields__inner">
+												<p>
+													La mayoría de reformas necesitan permisos o al menos una
+													comunicación
+													previa. Las más populares son Licencia de obra menor y Licencia de
+													obra
+													mayor, que regulan los tipos de obras relacionadas con la
+													reconstrucción
+													o
+													la remodelación estructural. Sin embargo, hay obras pequeñas que no
+													requieren permisos.
+													Para una aclaración final, es mejor consultar con su autoridad local
+													antes
+													de comenzar cualquier proyecto de remodelación.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="faq-fields__item">
+										<div class="faq-fields__top">
+											<div class="faq-fields__top-left">
+												<div class="number">
+													<span>/ 08</span>
+												</div>
+
+												<div class="title">¿Cuánto tarda el fraguado del hormigón en una obra?
+												</div>
+											</div>
+
+											<div class="control-panel-btn">
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+										</div>
+
+										<div class="faq-fields__content">
+											<div class="faq-fields__inner">
+												<p>
+													La mayoría de reformas necesitan permisos o al menos una
+													comunicación
+													previa. Las más populares son Licencia de obra menor y Licencia de
+													obra
+													mayor, que regulan los tipos de obras relacionadas con la
+													reconstrucción
+													o
+													la remodelación estructural. Sin embargo, hay obras pequeñas que no
+													requieren permisos.
+													Para una aclaración final, es mejor consultar con su autoridad local
+													antes
+													de comenzar cualquier proyecto de remodelación.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="support-message">
+									<p>
+										¿No encontró su pregunta? Contáctenos vía WhatsApp o mediante el formulario.
+									</p>
+
+									<div class="btns">
+										<a href="#!" class="btn btn-red" aria-label="Hacer una pregunta">Hacer una
+											pregunta</a>
+
+										<a href="#!" class="btn btn-white" aria-label="WhatsApp">WhatsApp</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="faq-fields hide-mob">
+								<div class="faq-fields__item active">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 01</span>
+											</div>
+
+											<div class="title">¿Qué es una estructura de hormigón?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content" style="height: auto;">
+										<div class="faq-fields__inner">
+											<p>
+												Una estructura de hormigón es el sistema que da forma, estabilidad y
+												soporte a una obra. Puede incluir cimentaciones, muros, pilares o losas,
+												y se diseña para soportar cargas y transmitirlas al terreno. Su función
+												principal es garantizar que el edificio sea seguro, resistente y capaz
+												de mantener su geometría durante toda su vida útil.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 02</span>
+											</div>
+
+											<div class="title">¿Cómo se hace una estructura de hormigón?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												La mayoría de reformas necesitan permisos o al menos una comunicación
+												previa. Las más populares son Licencia de obra menor y Licencia de obra
+												mayor, que regulan los tipos de obras relacionadas con la reconstrucción
+												o
+												la remodelación estructural. Sin embargo, hay obras pequeñas que no
+												requieren permisos.
+												Para una aclaración final, es mejor consultar con su autoridad local
+												antes
+												de comenzar cualquier proyecto de remodelación.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 03</span>
+											</div>
+
+											<div class="title">¿Qué factores influyen en el coste de una estructura de
+												hormigón?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												La mayoría de reformas necesitan permisos o al menos una comunicación
+												previa. Las más populares son Licencia de obra menor y Licencia de obra
+												mayor, que regulan los tipos de obras relacionadas con la reconstrucción
+												o
+												la remodelación estructural. Sin embargo, hay obras pequeñas que no
+												requieren permisos.
+												Para una aclaración final, es mejor consultar con su autoridad local
+												antes
+												de comenzar cualquier proyecto de remodelación.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 04</span>
+											</div>
+
+											<div class="title">¿Cuánto tiempo lleva construir una estructura de
+												hormigón?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												La mayoría de reformas necesitan permisos o al menos una comunicación
+												previa. Las más populares son Licencia de obra menor y Licencia de obra
+												mayor, que regulan los tipos de obras relacionadas con la reconstrucción
+												o
+												la remodelación estructural. Sin embargo, hay obras pequeñas que no
+												requieren permisos.
+												Para una aclaración final, es mejor consultar con su autoridad local
+												antes
+												de comenzar cualquier proyecto de remodelación.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 05</span>
+											</div>
+
+											<div class="title">¿Se puede cambiar algo durante la obra?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												La mayoría de reformas necesitan permisos o al menos una comunicación
+												previa. Las más populares son Licencia de obra menor y Licencia de obra
+												mayor, que regulan los tipos de obras relacionadas con la reconstrucción
+												o
+												la remodelación estructural. Sin embargo, hay obras pequeñas que no
+												requieren permisos.
+												Para una aclaración final, es mejor consultar con su autoridad local
+												antes
+												de comenzar cualquier proyecto de remodelación.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 06</span>
+											</div>
+
+											<div class="title">¿Cómo sé que la estructura está bien hecha?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												La mayoría de reformas necesitan permisos o al menos una comunicación
+												previa. Las más populares son Licencia de obra menor y Licencia de obra
+												mayor, que regulan los tipos de obras relacionadas con la reconstrucción
+												o
+												la remodelación estructural. Sin embargo, hay obras pequeñas que no
+												requieren permisos.
+												Para una aclaración final, es mejor consultar con su autoridad local
+												antes
+												de comenzar cualquier proyecto de remodelación.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 07</span>
+											</div>
+
+											<div class="title">¿Cuándo puedo seguir construyendo encima?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												La mayoría de reformas necesitan permisos o al menos una comunicación
+												previa. Las más populares son Licencia de obra menor y Licencia de obra
+												mayor, que regulan los tipos de obras relacionadas con la reconstrucción
+												o
+												la remodelación estructural. Sin embargo, hay obras pequeñas que no
+												requieren permisos.
+												Para una aclaración final, es mejor consultar con su autoridad local
+												antes
+												de comenzar cualquier proyecto de remodelación.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="faq-fields__item">
+									<div class="faq-fields__top">
+										<div class="faq-fields__top-left">
+											<div class="number">
+												<span>/ 08</span>
+											</div>
+
+											<div class="title">¿Cuánto tarda el fraguado del hormigón en una obra?
+											</div>
+										</div>
+
+										<div class="control-panel-btn">
+											<svg class="icon icon-plus">
+												<use xlink:href="img/icons/icons.svg#plus"></use>
+											</svg>
+
+											<svg class="icon icon-minus">
+												<use xlink:href="img/icons/icons.svg#minus"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="faq-fields__content">
+										<div class="faq-fields__inner">
+											<p>
+												La mayoría de reformas necesitan permisos o al menos una comunicación
+												previa. Las más populares son Licencia de obra menor y Licencia de obra
+												mayor, que regulan los tipos de obras relacionadas con la reconstrucción
+												o
+												la remodelación estructural. Sin embargo, hay obras pequeñas que no
+												requieren permisos.
+												Para una aclaración final, es mejor consultar con su autoridad local
+												antes
+												de comenzar cualquier proyecto de remodelación.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Форма -->
+
+				<section class="consultation2" id="form">
+
+					<div class="bg">
+						<img src="img/estructuras/consultation-f-down.webp" draggable="false" loading="Lazy" alt="">
+					</div>
+
+					<div class="consultation2__container">
+						<div class="consultation2__blocks">
+							<div class="consultation2__info">
+								<div class="intro-description">
+									<div class="numbering">
+										<div class="numbering__icon">
+											<img src="img/svg/plus.svg" loading="lazy" draggable="false" alt="">
+										</div>
+
+										<span>02/09</span>
+									</div>
+
+									<div class="intro-description__content">
+										<div class="intro-description__general">
+											<span>( PRESUPUESTO DE ESTRUCTURAS )</span>
+
+											<div class="title">
+												¿Tiene ya su Proyecto de Ejecución? Optimicemos su estructura.
+											</div>
+										</div>
+
+
+										<div class="intro-description__descript">
+											Suba sus planos arquitectónicos. Nuestro ingeniero jefe realizará una
+											auditoría técnica gratuita y le proporcionará un presupuesto cerrado (llave
+											en mano) para la ejecución de la estructura en un plazo de 5 días
+											laborables.
+										</div>
+									</div>
+								</div>
+
+								<div class="social">
+									<div class="social-item">
+										<div class="social-item__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#phone"></use>
+											</svg>
+
+										</div>
+
+										<a href="#!">+34 611 272 420</a>
+									</div>
+
+									<div class="social-item">
+										<div class="social-item__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#email"></use>
+											</svg>
+
+										</div>
+
+										<a href="mailto:info@artecon.es">info@artecon.es</a>
+									</div>
+								</div>
+							</div>
+
+							<form class="consultation2-form">
+
+								<input type="hidden" id="interest">
+								<input type="hidden" id="contactMethod">
+
+								<div class="consultation2-form__blocks">
+									<div class="consultation2-form__fields">
+										<div class="consultation2-form__block">
+											<div class="consultation2-form__group">
+												<label for="full-name">Nombre Completo*</label>
+												<input type="text" id="full-name" name="full_name" placeholder="Introduce tu nombre completo" required>
+											</div>
+
+											<div class="consultation2-form__group">
+												<label for="email">Correo Electrónico*</label>
+												<input type="email" id="email" name="email" placeholder="nombre@empresa.com" required>
+											</div>
+										</div>
+
+										<div class="consultation2-form__block">
+											<div class="consultation2-form__group">
+												<label for="industry">Industria / Sector Empresarial</label>
+												<input type="text" id="industry" name="industry" placeholder="Introduce tu industria o sector">
+											</div>
+
+											<div class="consultation2-form__group">
+												<label for="phone">Número de teléfono*</label>
+												<input type="tel" id="phone" name="phone" placeholder="+34 (000) 000-000" required>
+											</div>
+										</div>
+									</div>
+
+									<!--  -->
+
+									<div class="dropdown-interest__groups">
+										<div class="dropdown-interest__group">
+											<label>Estoy interesado en</label>
+
+											<div class="dropdown-interest">
+												<div class="dropdown-interest__top">
+													<span>Seleccionar categoría</span>
+
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#arrow"></use>
+													</svg>
+												</div>
+
+												<div class="consultation2-form__interest">
+													<button type="button" class="interest" data-value="Gestión de Proyectos">Gestión
+														de Proyectos</button>
+													<button type="button" class="interest" data-value="Construcción">Construcción</button>
+													<button type="button" class="interest" data-value="Servicios y Oficios">Servicios y Oficios</button>
+													<button type="button" class="interest" data-value="Reformas y Rehabilitaciones">Reformas y
+														Rehabilitaciones</button>
+													<button type="button" class="interest" data-value="Otro">Otro</button>
+												</div>
+											</div>
+										</div>
+
+										<div class="dropdown-interest__group hide-mobile">
+											<label>Método de Contacto Preferido:</label>
+
+											<div class="dropdown-interest">
+												<div class="dropdown-interest__top">
+													<span>Seleccionar categoría</span>
+
+													<svg class="icon">
+														<use xlink:href="img/icons/icons.svg#arrow"></use>
+													</svg>
+												</div>
+
+												<div class="consultation2-form__interest">
+													<button type="button" class="method-btn" data-value="Llamar">Llamar</button>
+													<button type="button" class="method-btn" data-value="WhatsApp">WhatsApp</button>
+													<button type="button" class="method-btn" data-value="Correo Electrónico">Correo Electrónico</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="consultation2-form__methods-wrap">
+										<label>Estoy interesado en</label>
+										<div class="consultation2-form__interest">
+											<button type="button" class="interest" data-value="Gestión de Proyectos">Gestión
+												de Proyectos</button>
+											<button type="button" class="interest" data-value="Construcción">Construcción</button>
+											<button type="button" class="interest" data-value="Servicios y Oficios">Servicios y
+												Oficios</button>
+											<button type="button" class="interest" data-value="Reformas y Rehabilitaciones">Reformas y
+												Rehabilitaciones</button>
+											<button type="button" class="interest" data-value="Otro">Otro</button>
+										</div>
+									</div>
+
+									<div class="consultation2-form__group full">
+										<label for="name">Mensaje</label>
+										<textarea placeholder="Cuéntanos sobre tu proyecto o requisitos específicos..."></textarea>
+									</div>
+
+									<div class="dropdown-interest__group show-mobile">
+										<label>Método de Contacto Preferido:</label>
+
+										<div class="dropdown-interest">
+											<div class="dropdown-interest__top">
+												<span>Seleccionar categoría</span>
+
+												<svg class="icon">
+													<use xlink:href="img/icons/icons.svg#arrow"></use>
+												</svg>
+											</div>
+
+											<div class="consultation2-form__interest">
+												<button type="button" class="method-btn" data-value="Llamar">Llamar</button>
+												<button type="button" class="method-btn" data-value="WhatsApp">WhatsApp</button>
+												<button type="button" class="method-btn" data-value="Correo Electrónico">Correo
+													Electrónico</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="consultation2-form__methods-wrap">
+										<label>Método de Contacto Preferido:</label>
+										<div class="consultation2-form__methods">
+											<button type="button" class="method-btn" data-value="Llamar">Llamar</button>
+											<button type="button" class="method-btn" data-value="WhatsApp">WhatsApp</button>
+											<button type="button" class="method-btn" data-value="Correo Electrónico">Correo
+												Electrónico</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="consultation2-form__btns">
+									<button type="button" class="consultation-form-btn btn btn-white">
+										Subir archivo
+
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#archive"></use>
+										</svg>
+									</button>
+
+									<button type="submit" class="consultation-form-btn btn btn-red">
+										Enviar Consulta
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+
+				<!-- Final -->
+
+				<section class="final-cta">
+					<div class="final-cta__container">
+						<div class="final-cta__blocks">
+							<h2 class="title">
+								Empresa Especializada en Estructuras de Hormigón en Marbella y la Costa del Sol
+							</h2>
+
+							<p>
+								Como empresa de estructuras de hormigón en Marbella referente en el sector, en ARTECON
+								entendemos que el esqueleto de cualquier edificación dicta su longevidad, estabilidad y
+								éxito arquitectónico. Nos especializamos en la construcción de estructuras de hormigón
+								armado con tolerancias milimétricas, aplicando un rigor técnico absoluto y cumpliendo
+								estrictamente con el Código Técnico de la Edificación (CTE). Desde la ejecución de
+								complejos forjados reticulares hasta el desarrollo de cimentaciones y estructuras en
+								Marbella para terrenos rocosos con gran desnivel, nuestro equipo de ingenieros garantiza
+								una base inquebrantable para su proyecto.
+							</p>
+
+							<a href="#!" aria-label="Leer más">
+								Leer más
+
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#short-line-arrow"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		</div>
+		<footer class="footer">
+
+			<div class="bg">
+				<img src="img/main/consultation-f.webp" draggable="false" loading="Lazy" alt="">
+			</div>
+
+			<div class="footer__container">
+				<div class="footer__blocks">
+					<div class="footer__left">
+						<div class="footer__left-top">
+							<a href="#!" class="logo" aria-label="Logo">
+								<img src="img/svg/logo.svg" draggable="false" loading="lazy" alt="Logo">
+							</a>
+
+							<p class="description">
+								Su empresa constructora en Marbella de confianza: expertos en servicios de construcción de
+								casas,
+								villas de lujo и reformas integrales en la Costa del Sol.
+							</p>
+
+							<div class="gr">
+								<img src="img/main/qr.webp" draggable="false" loading="lazy" alt="">
+							</div>
+						</div>
+
+						<div class="footer-menu-wrap show-mob">
+							<p class="title">Navigation</p>
+
+							<!-- Планше + телефон -->
+
+							<nav class="footer-menu-mob">
+								<ul>
+
+									<li class="open-dropwdown">
+										<a href="index.html" aria-label="Homepage">
+											Homepage
+										</a>
+									</li>
+
+									<li class="open-dropwdown">
+										<a href="#!" aria-label="About Artecon">
+											About Artecon
+										</a>
+									</li>
+
+									<li class="open-dropwdown">
+										<a href="#!" aria-label="Partners & Investors">
+											Partners & Investors
+										</a>
+									</li>
+
+									<li class="open-dropwdown">
+										<div class="open-dropwdown__top">
+											<a href="construction.html" aria-label="Construcción">
+												Construcción
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+												</svg>
+											</a>
+
+											<div class="arrow-open">
+												<img src="img/svg/arrow.svg" draggable="false" alt="">
+											</div>
+										</div>
+
+										<ul class="dropwdown">
+											<li><a href="#!">Construcción de Villas</a></li>
+											<li><a href="#!">Construcción de Industriales</a></li>
+											<li><a href="#!">Construcción de Residenciales</a></li>
+										</ul>
+
+									</li>
+
+									<li class="open-dropwdown">
+										<a href="project-management.html" aria-label="Gestión de Proyectos">
+											Gestión de Proyectos
+										</a>
+									</li>
+
+									<li class="open-dropwdown">
+										<div class="open-dropwdown__top">
+											<a href="#!" aria-label="Servicios y Oficios">
+												Servicios y Oficios
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+												</svg>
+											</a>
+
+											<div class="arrow-open">
+												<img src="img/svg/arrow.svg" draggable="false" alt="">
+											</div>
+										</div>
+
+										<ul class="dropwdown">
+											<li>
+												<a href="#!">Demolición</a>
+											</li>
+
+											<li>
+												<a href="#!">Estructuras</a>
+											</li>
+
+											<li>
+												<a href="#!">Albañilería</a>
+											</li>
+
+											<li>
+												<a href="#!">Cubiertas</a>
+											</li>
+
+											<li>
+												<a href="#!">Yeso y Revoque</a>
+											</li>
+
+											<li>
+												<a href="#!">Pintura</a>
+											</li>
+
+											<li>
+												<a href="#!">Electricidad</a>
+											</li>
+
+											<li>
+												<a href="#!">Fontanería</a>
+											</li>
+
+											<li>
+												<a href="#!">Climatización</a>
+											</li>
+
+											<li>
+												<a href="#!">Impermeabilización</a>
+											</li>
+
+											<li>
+												<a href="#!">Domótica</a>
+											</li>
+										</ul>
+
+									</li>
+
+									<li class="open-dropwdown">
+										<div class="open-dropwdown__top">
+											<a href="reformas.html" aria-label="Reformas">
+												Reformas
+												<svg class="icon" aria-hidden="true">
+													<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+												</svg>
+											</a>
+
+											<div class="arrow-open">
+												<img src="img/svg/arrow.svg" draggable="false" alt="">
+											</div>
+										</div>
+
+										<ul class="dropwdown">
+											<li><a href="reforma-villas.html">Reforma de Villas</a></li>
+											<li><a href="reforma-apartamentos.html">Reforma de Apartamentos</a></li>
+											<li><a href="reforma-locales.html">Reforma de Locales</a></li>
+										</ul>
+
+									</li>
+
+									<li class="open-dropwdown">
+										<a href="#!" aria-label="Contacts">
+											Contacts
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="footer-contacts show-mob">
+							<div class="contacts-info">
+								<p class="title">Contacts</p>
+
+								<div class="social">
+									<div class="social-item">
+										<div class="social-item__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#local"></use>
+											</svg>
+
+										</div>
+
+										<p>Richlands, Brisbane, Queensland Australia</p>
+									</div>
+
+
+									<div class="social-item">
+										<div class="social-item__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#phone"></use>
+											</svg>
+
+										</div>
+
+										<a href="#!">+34 611 272 420</a>
+									</div>
+
+									<div class="social-item">
+										<div class="social-item__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#email"></use>
+											</svg>
+
+										</div>
+
+										<a href="mailto:info@artecon.es">info@artecon.es</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="contacts-social">
+								<p class="title">Social media</p>
+
+								<div class="social">
+									<a href="#!" aria-label="X">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#x"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Facebook">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="Youtube">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#youtube"></use>
+										</svg>
+									</a>
+
+									<a href="#!" aria-label="In">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#in"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer-menu-wrap hide-mob">
+						<p class="title">Navigation</p>
+
+						<nav class="footer-menu">
+							<ul>
+								<li class="">
+									<a href="index.html" aria-label="Home">Home</a>
+								</li>
+
+								<li>
+									<a href="#!" aria-label="About us">
+										About us
+										<svg class="icon" aria-hidden="true">
+											<use xlink:href="img/icons/icons.svg#arrow"></use>
+										</svg>
+									</a>
+								</li>
+
+								<li>
+									<a href="#!" aria-label="Investors">
+										Investors
+										<svg class="icon" aria-hidden="true">
+											<use xlink:href="img/icons/icons.svg#arrow"></use>
+										</svg>
+									</a>
+								</li>
+
+
+								<li>
+									<a href="#!" aria-label="Blog">Blog</a>
+								</li>
+
+								<li>
+									<a href="#!" aria-label="FAQ">FAQ</a>
+								</li>
+
+								<li>
+									<a href="#!" aria-label="Contacts">Contacts</a>
+								</li>
+							</ul>
+						</nav>
+
+						<!-- Планше + телефон -->
+
+						<nav class="footer-menu-mob">
+							<ul>
+
+								<li class="open-dropwdown">
+									<a href="index.html" aria-label="Homepage">
+										Homepage
+									</a>
+								</li>
+
+								<li class="open-dropwdown">
+									<a href="#!" aria-label="About Artecon">
+										About Artecon
+									</a>
+								</li>
+
+								<li class="open-dropwdown">
+									<a href="#!" aria-label="Partners & Investors">
+										Partners & Investors
+									</a>
+								</li>
+
+								<li class="open-dropwdown">
+									<div class="open-dropwdown__top">
+										<a href="construction.html" aria-label="Construcción">
+											Construcción
+											<svg class="icon" aria-hidden="true">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</a>
+
+										<div class="arrow-open">
+											<img src="img/svg/arrow.svg" draggable="false" alt="">
+										</div>
+									</div>
+
+									<ul class="dropwdown">
+										<li><a href="construction-villas.html">Construcción de Villas</a></li>
+										<li><a href="construction-industrial.html">Construcción de Industriales</a></li>
+										<li><a href="residential-buildings.html">Construcción de Residenciales</a></li>
+									</ul>
+
+								</li>
+
+								<li class="open-dropwdown">
+									<a href="project-management.html" aria-label="Gestión de Proyectos">
+										Gestión de Proyectos
+									</a>
+								</li>
+
+								<li class="open-dropwdown">
+									<div class="open-dropwdown__top">
+										<a href="#!" aria-label="Servicios y Oficios">
+											Servicios y Oficios
+											<svg class="icon" aria-hidden="true">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</a>
+
+										<div class="arrow-open">
+											<img src="img/svg/arrow.svg" draggable="false" alt="">
+										</div>
+									</div>
+
+									<ul class="dropwdown">
+										<li>
+											<a href="#!">Demolición</a>
+										</li>
+
+										<li>
+											<a href="#!">Estructuras</a>
+										</li>
+
+										<li>
+											<a href="#!">Albañilería</a>
+										</li>
+
+										<li>
+											<a href="#!">Cubiertas</a>
+										</li>
+
+										<li>
+											<a href="#!">Yeso y Revoque</a>
+										</li>
+
+										<li>
+											<a href="#!">Pintura</a>
+										</li>
+
+										<li>
+											<a href="#!">Electricidad</a>
+										</li>
+
+										<li>
+											<a href="#!">Fontanería</a>
+										</li>
+
+										<li>
+											<a href="#!">Climatización</a>
+										</li>
+
+										<li>
+											<a href="#!">Impermeabilización</a>
+										</li>
+
+										<li>
+											<a href="#!">Domótica</a>
+										</li>
+									</ul>
+
+								</li>
+
+								<li class="open-dropwdown">
+									<div class="open-dropwdown__top">
+										<a href="reformas.html" aria-label="Reformas">
+											Reformas
+											<svg class="icon" aria-hidden="true">
+												<use xlink:href="img/icons/icons.svg#line-arrow"></use>
+											</svg>
+										</a>
+
+										<div class="arrow-open">
+											<img src="img/svg/arrow.svg" draggable="false" alt="">
+										</div>
+									</div>
+
+									<ul class="dropwdown">
+										<li><a href="reforma-villas.html">Reforma de Villas</a></li>
+										<li><a href="reforma-apartamentos.html">Reforma de Apartamentos</a></li>
+										<li><a href="reforma-locales.html">Reforma de Locales</a></li>
+									</ul>
+
+								</li>
+
+								<li class="open-dropwdown">
+									<a href="#!" aria-label="Contacts">
+										Contacts
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="footer-contacts hide-mob">
+						<div class="contacts-info">
+							<p class="title">Contacts</p>
+
+							<div class="social">
+								<div class="social-item">
+									<div class="social-item__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#local"></use>
+										</svg>
+
+									</div>
+
+									<p>Richlands, Brisbane, Queensland Australia</p>
+								</div>
+
+
+								<div class="social-item">
+									<div class="social-item__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+
+									</div>
+
+									<a href="#!">+34 611 272 420</a>
+								</div>
+
+								<div class="social-item">
+									<div class="social-item__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#email"></use>
+										</svg>
+
+									</div>
+
+									<a href="mailto:info@artecon.es">info@artecon.es</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="contacts-social">
+							<p class="title">Social media</p>
+
+							<div class="social">
+								<a href="#!" aria-label="X">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#x"></use>
+									</svg>
+								</a>
+
+								<a href="#!" aria-label="Facebook">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#facebook"></use>
+									</svg>
+								</a>
+
+								<a href="#!" aria-label="Youtube">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#youtube"></use>
+									</svg>
+								</a>
+
+								<a href="#!" aria-label="In">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#in"></use>
+									</svg>
+								</a>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--  -->
+
+				<div class="footer-below">
+					<div class="footer-below__links">
+						<a href="#!" aria-label="Privacy Policy">Privacy Policy</a>
+						<a href="#!" aria-label="Cookie Policy">Cookie Policy</a>
+						<a href="#!" aria-label="Disclaimer">Disclaimer</a>
+					</div>
+
+					<p class="description">
+						Su empresa constructora en Marbella de confianza: expertos en servicios de construcción de
+						casas,
+						villas de lujo и reformas integrales en la Costa del Sol.
+					</p>
+
+					<span>Artecon 2026 ©</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260723021202"></script>
+	<script defer src="js/app.min.js?_v=20260723021202"></script>
+</body>
+
+</html>

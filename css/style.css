@@ -2705,12 +2705,15 @@ html::selection {
 .faq .intro-description__content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   width: 100%
 }
 .faq .intro-description__descript,
 .faq .intro-description__general {
   max-width: 100%
+}
+.faq .intro-description__general {
+  gap: 16px
 }
 .faq .show-mob {
   display: none
@@ -3362,7 +3365,7 @@ html::selection {
   letter-spacing: 0;
   color: var(--grey-color)
 }
-.request-form .tag__icon {
+.request-form__column-top .tag__icon {
   min-width: 16px;
   width: 16px;
   height: 16px;
@@ -3370,7 +3373,7 @@ html::selection {
   display: flex;
   margin: 0 auto
 }
-.request-form .tag__icon::after {
+.request-form__column-top .tag__icon::after {
   content: "";
   position: absolute;
   inset: -3px;
@@ -4353,6 +4356,11 @@ html::selection {
 .metadology .advantages__grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  gap: 12px
+}
+.metadology .advantages__slide {
+  display: flex;
+  flex-direction: column;
   gap: 12px
 }
 .request-form {
@@ -5372,16 +5380,6 @@ html::selection {
 .reformas-pages2 .our-works .intro-description__general {
   gap: 16px
 }
-.reformas-pages2 .metadology-2 .advantages__grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 12px
-}
-.reformas-pages2 .metadology-2 .advantages__slide {
-  display: flex;
-  flex-direction: column;
-  gap: 12px
-}
 .reformas-pages2 .about__pictures {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -5544,6 +5542,76 @@ html::selection {
   line-height: 24px;
   color: var(--grey-color);
   display: flex
+}
+.metadology-version-2 .advantages__grid,
+.metadology-version-3 .advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px
+}
+.metadology-version-2 .advantages__slide,
+.metadology-version-3 .advantages__slide {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.metadology-version-2 .advantages__item,
+.metadology-version-3 .advantages__item {
+  max-width: 100%;
+  justify-content: start;
+  height: 100%
+}
+.metadology-version-2 .process-card-image,
+.metadology-version-3 .process-card-image {
+  min-height: 240px;
+  height: 240px;
+  position: relative;
+  overflow: hidden
+}
+.metadology-version-2 .process-card-image img,
+.metadology-version-3 .process-card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.metadology-version-2 .intro-description,
+.metadology-version-3 .intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.metadology-version-2 .intro-description__content,
+.metadology-version-3 .intro-description__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px
+}
+.metadology-version-2 .intro-description__general,
+.metadology-version-3 .intro-description__general {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 100%;
+  width: 100%
+}
+.metadology-version-2 .intro-description__descript,
+.metadology-version-3 .intro-description__descript {
+  max-width: 100%;
+  width: 100%
+}
+.metadology-version-3 .advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px
+}
+.metadology-version-3 .advantages__slide:nth-child(even) {
+  flex-direction: column-reverse
 }
 .banos .advantages__item {
   min-height: 232px
@@ -6417,7 +6485,9 @@ html::selection {
 }
 .technical-capability .advantages__item {
   border-radius: 10px;
-  height: 100%
+  gap: 32px;
+  height: 100%;
+  justify-content: start
 }
 .technical-capability .advantages__top {
   display: flex;
@@ -6454,27 +6524,22 @@ html::selection {
   -webkit-transform: scale(1.1);
   transform: scale(1.1)
 }
-.technical-capability-industrial .advantages__grid,
-.technical-capability-villas .advantages__grid {
+.technical-capability-version-2 .advantages__grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 12px;
   align-items: start
 }
-.technical-capability-industrial .process-card-image-mob,
-.technical-capability-villas .process-card-image-mob {
+.technical-capability-version-2 .process-card-image-mob {
   display: none
 }
-.technical-capability-industrial .process-card-image.hide-mob,
-.technical-capability-villas .process-card-image.hide-mob {
+.technical-capability-version-2 .process-card-image.hide-mob {
   display: block!important
 }
-.technical-capability-industrial .process-card-image.show-mob,
-.technical-capability-villas .process-card-image.show-mob {
+.technical-capability-version-2 .process-card-image.show-mob {
   display: none
 }
-.technical-capability-industrial .show-mob,
-.technical-capability-villas .show-mob {
+.technical-capability-version-2 .show-mob {
   display: none
 }
 .structures .main .btns .btn {
@@ -7340,105 +7405,6 @@ html::selection {
   grid-template-columns: repeat(4,1fr);
   gap: 12px
 }
-.project-management-pages .employee {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
-  align-items: stretch
-}
-.project-management-pages .employee__block {
-  grid-column: 1/2;
-  display: flex;
-  flex-direction: column;
-  gap: 44px;
-  background-color: #fdfdfd;
-  padding: 24px;
-  border-radius: 10px
-}
-.project-management-pages .employee__top {
-  display: flex;
-  align-items: center;
-  gap: 16px
-}
-.project-management-pages .employee__avatar {
-  min-width: 48px;
-  width: 48px;
-  height: 48px;
-  border: 1px solid #fdfdfd;
-  border-radius: 50px;
-  position: relative;
-  overflow: hidden
-}
-.project-management-pages .employee__avatar img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
-}
-.project-management-pages .employee__info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px
-}
-.project-management-pages .employee__info .name {
-  font-family: Mont;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #242424
-}
-.project-management-pages .employee__info .position {
-  font-family: Mont;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 20px;
-  color: #9898b1
-}
-.project-management-pages .employee p {
-  font-family: Mont;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 24px;
-  color: #9898b1
-}
-.project-management-pages .employee__pic {
-  grid-column: 2/4;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px
-}
-.project-management-pages .employee__pic img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
-}
-.project-management-pages .employee__pic img:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1)
-}
-.project-management-pages .technical-capability .advantages__item {
-  justify-content: start
-}
-.project-management-pages .technical-capability .intro-description__content {
-  align-items: end
-}
-.project-management-pages .technical-capability .advantages__item {
-  gap: 12px
-}
-.project-management-pages .technical-capability .advantages__picture.show-mob {
-  display: none
-}
 .project-management-pages .faq .faq-fields__top .control-panel-btn {
   border: 1px solid #9898b1!important;
   background-color: rgba(0,0,0,0)!important
@@ -7705,6 +7671,102 @@ html::selection {
 .service-process__navigation .navigation-btn {
   background-color: #fdfdfd
 }
+.employee {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: stretch
+}
+.employee__block {
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  background-color: #fdfdfd;
+  padding: 24px;
+  border-radius: 10px
+}
+.employee__top {
+  display: flex;
+  align-items: center;
+  gap: 16px
+}
+.employee__avatar {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #fdfdfd;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden
+}
+.employee__avatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.employee__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px
+}
+.employee__info .name {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242424
+}
+.employee__info .position {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #9898b1
+}
+.employee p {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: #9898b1
+}
+.employee__pic {
+  grid-column: 2/4;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px
+}
+.employee__pic img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.employee__pic img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
+}
+.technical-capability .advantages__item {
+  justify-content: start
+}
+.technical-capability .intro-description__content {
+  align-items: end
+}
+.technical-capability .advantages__picture.show-mob {
+  display: none
+}
 .service-pages .main__blocks {
   display: flex;
   flex-direction: column;
@@ -7900,6 +7962,113 @@ html::selection {
   background-color: #f2f3f7;
   padding: 8px
 }
+.service-pages .main .btns .btn {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 24px
+}
+.service-pages .main .btns .btn svg {
+  width: 12px;
+  height: 12px
+}
+.service-pages .about__blocks {
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.service-pages .about__up {
+  display: flex;
+  gap: 56px;
+  justify-content: space-between
+}
+.service-pages .about__top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 572px;
+  width: 100%
+}
+.service-pages .about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%
+}
+.service-pages .about__pics {
+  display: flex;
+  justify-content: end;
+  max-width: 258px;
+  width: 100%;
+  gap: 12px;
+  height: 200px
+}
+.service-pages .about__pics div {
+  width: 78px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  height: 100%
+}
+.service-pages .about__pics div:nth-child(1) img {
+  -o-object-position: left;
+  object-position: left
+}
+.service-pages .about__pics div:nth-child(2) img {
+  -o-object-position: 37% center;
+  object-position: 37% center
+}
+.service-pages .about__pics div:nth-child(3) img {
+  -o-object-position: 80% center;
+  object-position: 80% center
+}
+.service-pages .about__pics div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.service-pages .about__stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 45px;
+  width: 100%
+}
+.service-pages .about__stats .stat__number {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-family: Unbounded;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 40px;
+  color: var(--red-color)
+}
+.service-pages .about__below,
+.service-pages .about__middle {
+  display: flex;
+  justify-content: space-between;
+  gap: 56px
+}
+.service-pages .about .text-block a {
+  display: flex;
+  align-items: center;
+  justify-content: start
+}
+.service-pages .about .text-block.show-mob {
+  display: none
+}
 .services-trades .main .btns .btn {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -8038,16 +8207,74 @@ html::selection {
 .services-trades .about .text-block.show-mob {
   display: none
 }
-.services-trades .service-process__top {
+.services-trades .service-process.service-process-version-2 .service-process__top {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: start;
   padding: 16px 24px;
   height: 100%;
   justify-content: start
 }
-.services-trades .service-process__columns {
+.services-trades .service-process.service-process-version-2 .service-process__top-name {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%
+}
+.services-trades .service-process.service-process-version-2 .service-process__top p {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #9898b1
+}
+.services-trades .service-process.service-process-version-2 .service-process__columns {
   padding: 16px 24px;
   gap: 32px;
   height: auto;
   justify-content: start
+}
+.services-trades .service-process.service-process-version-2 .service-process__column p {
+  font-family: Mont;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424
+}
+.services-trades .service-process.service-process-version-2 .service-process__list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 32px;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+  column-gap: 12px
+}
+.services-trades .service-process.service-process-version-2 .service-process__slider {
+  display: none
+}
+.services-trades .service-process.service-process-version-2 .swiper-wrapper {
+  display: flex;
+  width: 100%
+}
+.services-trades .service-process.service-process-version-2 .swiper-slide {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 0
+}
+.services-trades .service-process.service-process-version-2 .swiper {
+  margin-left: 0;
+  margin-right: 0
+}
+.services-trades .service-process.service-process-version-2 .service-process__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 32px
+}
+.services-trades .service-process.service-process-version-2 .service-process__navigation .navigation-btn {
+  background-color: #fdfdfd
 }
 .services-trades .completed-projects {
   display: none
@@ -8118,6 +8345,41 @@ html::selection {
 }
 .services-trades .technical-capability .advantages__picture.show-mob {
   display: none
+}
+.services-trades .technical-capability .advantages__picture.show-mob {
+  display: none
+}
+.services-trades .consultation .bg {
+  display: none
+}
+.services-trades .consultation-form__top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center
+}
+.services-trades .consultation-form__top .numbering {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center
+}
+.services-trades .consultation-form__top .numbering span {
+  color: #f2f2f7
+}
+.services-trades .consultation-form__top .title {
+  font-family: Unbounded;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #fdfdfd
+}
+.services-trades .consultation-form__top p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f2f2f7
 }
 .safety-rules .security-regulations__icon {
   font-family: RobotoMono;
@@ -8390,6 +8652,22 @@ html::selection {
   color: #242424;
   max-width: 200px;
   width: 100%
+}
+.security-regulations-version-3 .intro-description__general {
+  display: flex!important;
+  flex-direction: column!important;
+  max-width: 460px!important;
+  width: 100%!important
+}
+.security-regulations-version-3 .security-regulations__list {
+  grid-template-columns: repeat(3,1fr)
+}
+.security-regulations-version-3 .security-regulations__top {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px
 }
 .operational-strength__blocks {
   display: flex;
@@ -9016,6 +9294,57 @@ html::selection {
   max-width: 886px;
   width: 100%
 }
+.our-works-version-2 .intro-description__descript strong {
+  color: #d62322
+}
+.before-after__blocks {
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px
+}
+.before-after__slide {
+  display: flex;
+  gap: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 593px
+}
+.before-after__slide .pic {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%
+}
+.before-after__slide .pic img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.before-after__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px
+}
+.before-after__navigation .navigation-btn {
+  background-color: #fdfdfd
+}
+.before-after__navigation .dot {
+  background: #fdfdfd
+}
+.before-after .swiper {
+  margin-left: 0;
+  margin-right: 0
+}
+.before-after .pagination2 {
+  display: flex
+}
 @media (max-width:1550px) {
   .main__wrapper {
     padding-top: 180px
@@ -9170,23 +9499,23 @@ html::selection {
   .construction-stages .process-card-image {
     grid-column: span 7
   }
-  .project-management-pages .employee__block {
+  .employee__block {
     gap: 32px
   }
-  .project-management-pages .employee__avatar {
+  .employee__avatar {
     min-width: 44px;
     width: 44px;
     height: 44px
   }
-  .project-management-pages .employee__info .name {
+  .employee__info .name {
     line-height: 20px;
     font-size: 14px
   }
-  .project-management-pages .employee__info .position {
+  .employee__info .position {
     line-height: 20px;
     font-size: 13px
   }
-  .project-management-pages .employee p {
+  .employee p {
     line-height: 20px;
     font-size: 14px
   }
@@ -9250,6 +9579,13 @@ html::selection {
   .service-pages .main-form .btn {
     max-width: 183px;
     width: 100%
+  }
+  .service-pages .about__stats {
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 12px;
+    -webkit-column-gap: 56px;
+    -moz-column-gap: 56px;
+    column-gap: 56px
   }
   .services-trades .about__stats {
     grid-template-columns: repeat(2,1fr);
@@ -10104,6 +10440,14 @@ html::selection {
     padding: 0!important;
     border: none!important
   }
+  .service-pages .about .video__preview {
+    border-radius: 15px;
+    height: 212px
+  }
+  .service-pages .about iframe {
+    border-radius: 15px;
+    height: 212px
+  }
   .services-trades .about .video__preview {
     border-radius: 15px;
     height: 212px
@@ -10156,6 +10500,21 @@ html::selection {
     display: flex;
     flex-direction: column;
     gap: 12px
+  }
+  .services-trades .consultation-form {
+    min-height: auto
+  }
+  .services-trades .consultation-form__top .numbering span {
+    font-size: 15px;
+    line-height: 20px
+  }
+  .services-trades .consultation-form__top .title {
+    font-size: 20px;
+    line-height: 28px
+  }
+  .services-trades .consultation-form__top p {
+    font-size: 14px;
+    line-height: 20px
   }
   .safety-rules .intro-description {
     display: flex!important;
@@ -10440,7 +10799,7 @@ html::selection {
     font-size: 13px
   }
   .reformas .consultation .consultation-pc .form .btn {
-    margin-top: px
+    margin-top: 8px
   }
   .reformas .consultation .consultation-pc__container {
     display: none
@@ -10539,7 +10898,7 @@ html::selection {
     line-height: 20px
   }
   .metadology .advantages__grid {
-    grid-template-columns: repeat(3,1fr)
+    grid-template-columns: repeat(2,1fr)
   }
   .quiz__wrap {
     margin: 0 0;
@@ -10710,25 +11069,6 @@ html::selection {
     -o-object-fit: cover;
     object-fit: cover
   }
-  .reformas-pages2 .metadology-2 .advantages__grid {
-    grid-template-columns: repeat(1,1fr)
-  }
-  .reformas-pages2 .metadology-2 .advantages__slide {
-    flex-direction: row;
-    min-height: 240px
-  }
-  .reformas-pages2 .metadology-2 .advantages__slide:nth-child(even) {
-    flex-direction: row-reverse
-  }
-  .reformas-pages2 .metadology-2 .advantages__item {
-    width: 50%;
-    justify-content: space-between
-  }
-  .reformas-pages2 .metadology-2 .process-card-image {
-    display: block;
-    height: auto;
-    width: 50%
-  }
   .reformas-pages2 .about__pictures {
     max-width: 100%!important;
     width: 100%
@@ -10760,6 +11100,37 @@ html::selection {
     max-width: 340px!important;
     width: 100%!important;
     height: 252px
+  }
+  .metadology-version-2 .advantages__grid,
+  .metadology-version-3 .advantages__grid {
+    grid-template-columns: repeat(1,1fr)!important
+  }
+  .metadology-version-2 .advantages__slide,
+  .metadology-version-3 .advantages__slide {
+    flex-direction: row;
+    min-height: 240px
+  }
+  .metadology-version-2 .advantages__slide:nth-child(even),
+  .metadology-version-3 .advantages__slide:nth-child(even) {
+    flex-direction: row-reverse
+  }
+  .metadology-version-2 .advantages__item,
+  .metadology-version-3 .advantages__item {
+    width: 50%;
+    justify-content: space-between
+  }
+  .metadology-version-2 .process-card-image,
+  .metadology-version-3 .process-card-image {
+    display: block;
+    min-height: auto;
+    height: auto;
+    width: 50%
+  }
+  .metadology-version-3 .advantages__grid {
+    grid-template-columns: repeat(1,1fr)!important
+  }
+  .metadology-version-3 .advantages__slide:nth-child(even) {
+    flex-direction: row-reverse
   }
   .banos .tariffs__blocks {
     align-items: start;
@@ -11001,54 +11372,43 @@ html::selection {
     flex-direction: column-reverse;
     gap: 32px
   }
-  .technical-capability-industrial .advantages__grid,
-  .technical-capability-villas .advantages__grid {
+  .technical-capability-version-2 .advantages__grid {
     grid-template-columns: repeat(2,1fr)
   }
-  .technical-capability-industrial .process-card-image.hide-mob,
-  .technical-capability-villas .process-card-image.hide-mob {
+  .technical-capability-version-2 .process-card-image.hide-mob {
     display: none!important
   }
-  .technical-capability-industrial .process-card-image.show-mob,
-  .technical-capability-villas .process-card-image.show-mob {
+  .technical-capability-version-2 .process-card-image.show-mob {
     display: block!important
   }
-  .technical-capability-industrial .advantages__top,
-  .technical-capability-villas .advantages__top {
+  .technical-capability-version-2 .advantages__top {
     align-items: start;
     flex-direction: row;
     gap: 15px
   }
-  .technical-capability-industrial .advantages__item,
-  .technical-capability-villas .advantages__item {
+  .technical-capability-version-2 .advantages__item {
     gap: 24px
   }
-  .technical-capability-industrial .hide-mob,
-  .technical-capability-villas .hide-mob {
+  .technical-capability-version-2 .hide-mob {
     display: none!important
   }
-  .technical-capability-industrial .show-mob,
-  .technical-capability-villas .show-mob {
+  .technical-capability-version-2 .show-mob {
     display: block
   }
-  .technical-capability-industrial .intro-description,
-  .technical-capability-villas .intro-description {
+  .technical-capability-version-2 .intro-description {
     display: flex;
     flex-direction: column;
     gap: 24px
   }
-  .technical-capability-industrial .intro-description__content,
-  .technical-capability-industrial .intro-description__general,
-  .technical-capability-villas .intro-description__content,
-  .technical-capability-villas .intro-description__general {
+  .technical-capability-version-2 .intro-description__content,
+  .technical-capability-version-2 .intro-description__general {
     flex-direction: column;
     align-items: start;
     gap: 16px;
     max-width: 100%;
     width: 100%
   }
-  .technical-capability-industrial .intro-description__descript,
-  .technical-capability-villas .intro-description__descript {
+  .technical-capability-version-2 .intro-description__descript {
     max-width: 100%;
     width: 100%
   }
@@ -11235,32 +11595,21 @@ html::selection {
   .project-management-pages .metadology .advantages__blocks {
     gap: 40px
   }
-  .project-management-pages .employee {
+  .employee {
     display: flex;
     gap: 8px;
     margin-bottom: 40px
   }
-  .project-management-pages .employee__block {
+  .employee__block {
     padding: 20px;
     grid-column: none
   }
-  .project-management-pages .employee p {
+  .employee p {
     font-size: 13px
   }
-  .project-management-pages .employee__pic {
+  .employee__pic {
     grid-column: none;
     min-width: 230px
-  }
-  .project-management-pages .technical-capability .advantages__top {
-    align-items: start;
-    flex-direction: row;
-    gap: 20px
-  }
-  .project-management-pages .technical-capability .advantages__item {
-    gap: 32px
-  }
-  .project-management-pages .technical-capability .advantages__grid {
-    gap: 8px
   }
   .service-pages .main .benefits {
     grid-template-columns: repeat(2,1fr);
@@ -11296,11 +11645,76 @@ html::selection {
   .services-trades .technical-capability .process-card-image {
     display: block
   }
+  .services-trades .consultation {
+    padding: 0;
+    margin: 0
+  }
+  .services-trades .consultation .consultation-track {
+    display: none
+  }
+  .services-trades .consultation .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block!important
+  }
+  .services-trades .consultation .bg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+  }
+  .services-trades .consultation-form {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    max-width: 100%;
+    width: 100%;
+    padding: 44px 20px;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none
+  }
+  .services-trades .consultation-form__blocks {
+    gap: 24px;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto
+  }
+  .services-trades .consultation-form__top {
+    gap: 12px
+  }
+  .services-trades .consultation-form__top .numbering {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px
+  }
+  .services-trades .consultation-form__top .numbering span {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize
+  }
+  .services-trades .consultation-form .form .btn {
+    margin-top: 8px;
+    line-height: 20px;
+    font-size: 15px
+  }
   .concrete-services__columns {
     grid-template-columns: repeat(2,1fr)
   }
   .concrete-services__column {
     height: 260px
+  }
+  .before-after__blocks {
+    gap: 40px;
+    padding: 44px 0 56px 0
   }
 }
 @media (max-width:992px)and (max-width:720px) {
@@ -11700,6 +12114,13 @@ html::selection {
   .reformas-pages2 .intro-description__general {
     gap: 12px!important
   }
+  .metadology-version-2 .advantages__grid,
+  .metadology-version-3 .advantages__grid {
+    grid-template-columns: repeat(1,1fr)!important
+  }
+  .metadology-version-3 .advantages__grid {
+    grid-template-columns: repeat(1,1fr)!important
+  }
   .banos .tariffs__blocks {
     padding: 44px 0
   }
@@ -11816,8 +12237,7 @@ html::selection {
     gap: 44px;
     padding: 44px 0
   }
-  .technical-capability-industrial .advantages__blocks,
-  .technical-capability-villas .advantages__blocks {
+  .technical-capability-version-2 .advantages__blocks {
     gap: 32px
   }
   .construction-pages .about__blocks {
@@ -11996,9 +12416,6 @@ html::selection {
     font-size: 13px;
     line-height: 24px
   }
-  .project-management-pages .technical-capability .intro-description__content {
-    align-items: end
-  }
   .featured-project__blocks {
     gap: 40px;
     padding: 44px 0
@@ -12023,6 +12440,9 @@ html::selection {
   .service-process__list {
     grid-template-columns: repeat(2,1fr);
     row-gap: 20px
+  }
+  .technical-capability .intro-description__content {
+    align-items: end
   }
   .service-pages .main .main__content {
     padding-bottom: 0
@@ -12057,6 +12477,33 @@ html::selection {
   .service-pages .metadology .advantages__grid {
     grid-template-columns: repeat(2,1fr)
   }
+  .service-pages .about__blocks {
+    padding: 56px 0;
+    gap: 40px
+  }
+  .service-pages .about__up {
+    gap: 32px
+  }
+  .service-pages .about__top {
+    max-width: 420px;
+    width: 100%;
+    gap: 24px
+  }
+  .service-pages .about__pics {
+    max-width: 229px;
+    height: 165px;
+    width: 100%
+  }
+  .service-pages .about__stats .stat__number {
+    font-size: 28px
+  }
+  .service-pages .about__below,
+  .service-pages .about__middle {
+    gap: 56px
+  }
+  .service-pages .about .text-block {
+    gap: 40px
+  }
   .services-trades .about__blocks {
     padding: 56px 0;
     gap: 40px
@@ -12083,6 +12530,27 @@ html::selection {
   }
   .services-trades .about .text-block {
     gap: 40px
+  }
+  .services-trades .service-process.service-process-version-2 .intro-description__content {
+    align-items: end
+  }
+  .services-trades .service-process.service-process-version-2 .service-process__top {
+    gap: 24px
+  }
+  .services-trades .service-process.service-process-version-2 .service-process__top-name {
+    gap: 15px
+  }
+  .services-trades .service-process.service-process-version-2 .service-process__top p {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .services-trades .service-process.service-process-version-2 .service-process__column p {
+    line-height: 20px;
+    font-size: 13px
+  }
+  .services-trades .service-process.service-process-version-2 .service-process__list {
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px
   }
   .services-trades .completed-projects {
     display: flex;
@@ -12203,6 +12671,34 @@ html::selection {
     max-width: 100%;
     font-size: 16px
   }
+  .security-regulations-version-3 .intro-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px!important
+  }
+  .security-regulations-version-3 .intro-description__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start
+  }
+  .security-regulations-version-3 .intro-description__descript,
+  .security-regulations-version-3 .intro-description__general {
+    width: 100%!important;
+    max-width: 100%!important;
+    gap: 12px
+  }
+  .security-regulations-version-3 .security-regulations__list {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .security-regulations-version-3 .security-regulations__item {
+    flex-direction: column;
+    gap: 32px
+  }
+  .security-regulations-version-3 .security-regulations__top {
+    flex-direction: column;
+    gap: 32px
+  }
   .operational-strength__blocks {
     gap: 32px;
     padding: 44px 0
@@ -12294,6 +12790,28 @@ html::selection {
   .concrete-services .btn {
     line-height: 20px;
     font-size: 15px
+  }
+  .before-after .intro-description {
+    gap: 24px
+  }
+  .before-after .intro-description__general {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 50%;
+    width: 50%
+  }
+  .before-after .intro-description__descript {
+    max-width: 50%;
+    width: 50%
+  }
+  .before-after .intro-description__content {
+    align-items: end
+  }
+  .before-after__slide {
+    border-radius: 10px;
+    gap: 6px;
+    height: 348px
   }
 }
 @media (max-width:756px) {
@@ -12571,6 +13089,59 @@ html::selection {
   }
   .project-management-pages .about .text-block {
     gap: 36px;
+    width: 100%
+  }
+  .service-pages .about__up {
+    gap: 32px;
+    flex-direction: column
+  }
+  .service-pages .about__top {
+    max-width: 100%;
+    width: 100%;
+    gap: 32px
+  }
+  .service-pages .about__content {
+    gap: 12px
+  }
+  .service-pages .about__pics {
+    height: 200px;
+    max-width: 290px;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto
+  }
+  .service-pages .about__pics div:nth-child(2) img {
+    -o-object-position: 38% center;
+    object-position: 38% center
+  }
+  .service-pages .about__pics div {
+    width: 85px
+  }
+  .service-pages .about__stats {
+    grid-template-columns: repeat(1,1fr);
+    gap: 12px
+  }
+  .service-pages .about__stats .stat {
+    gap: 4px
+  }
+  .service-pages .about .text-block {
+    width: 100%
+  }
+  .service-pages .about .text-block.show-mob {
+    display: flex
+  }
+  .service-pages .about .text-block.hide-mob {
+    display: none
+  }
+  .service-pages .about .video__preview {
+    border-radius: 8px;
+    height: 180px
+  }
+  .service-pages .about iframe {
+    border-radius: 8px;
+    height: 180px
+  }
+  .service-pages .about .video__item {
     width: 100%
   }
   .services-trades .about__up {
@@ -13603,30 +14174,6 @@ html::selection {
   .reformas-pages2 .consultation .consultation-pc .form__group input {
     font-size: 13px
   }
-  .reformas-pages2 .metadology-2 .advantages__grid {
-    display: grid!important;
-    grid-template-columns: repeat(1,1fr)
-  }
-  .reformas-pages2 .metadology-2 .advantages__blocks {
-    padding: 44px 0;
-    gap: 32px
-  }
-  .reformas-pages2 .metadology-2 .advantages__slide {
-    flex-direction: column
-  }
-  .reformas-pages2 .metadology-2 .advantages__slide:nth-child(even) {
-    flex-direction: column
-  }
-  .reformas-pages2 .metadology-2 .advantages__item {
-    width: 100%
-  }
-  .reformas-pages2 .metadology-2 .process-card-image {
-    width: 100%;
-    height: 184px
-  }
-  .reformas-pages2 .metadology-2 .advantages__counter {
-    margin-bottom: 32px
-  }
   .reformas-pages2 .about__top {
     gap: 32px
   }
@@ -13698,6 +14245,53 @@ html::selection {
   .cocinas .about__stats .stat p {
     font-size: 14px;
     line-height: 20px
+  }
+  .metadology-version-2 .advantages__grid,
+  .metadology-version-3 .advantages__grid {
+    display: grid!important;
+    grid-template-columns: repeat(1,1fr)!important
+  }
+  .metadology-version-2 .advantages__blocks,
+  .metadology-version-3 .advantages__blocks {
+    padding: 44px 0;
+    gap: 32px
+  }
+  .metadology-version-2 .advantages__slide,
+  .metadology-version-3 .advantages__slide {
+    flex-direction: column
+  }
+  .metadology-version-2 .advantages__slide:nth-child(even),
+  .metadology-version-3 .advantages__slide:nth-child(even) {
+    flex-direction: column
+  }
+  .metadology-version-2 .advantages__item,
+  .metadology-version-3 .advantages__item {
+    width: 100%
+  }
+  .metadology-version-2 .process-card-image,
+  .metadology-version-3 .process-card-image {
+    width: 100%;
+    min-height: 184px;
+    height: 184px
+  }
+  .metadology-version-2 .advantages__counter,
+  .metadology-version-3 .advantages__counter {
+    margin-bottom: 32px
+  }
+  .metadology-version-2 .advantages__counter span,
+  .metadology-version-3 .advantages__counter span {
+    font-size: 24px
+  }
+  .metadology-version-2 .advantages__counter p,
+  .metadology-version-3 .advantages__counter p {
+    font-size: 18px
+  }
+  .metadology-version-3 .advantages__grid {
+    display: grid!important;
+    grid-template-columns: repeat(1,1fr)!important
+  }
+  .metadology-version-3 .advantages__slide:nth-child(even) {
+    flex-direction: column
   }
   .banos .tariffs__blocks {
     gap: 32px
@@ -13911,17 +14505,20 @@ html::selection {
   .technical-capability .advantages__item {
     gap: 0
   }
-  .technical-capability-industrial .advantages__grid,
-  .technical-capability-villas .advantages__grid {
+  .technical-capability-version-2 .advantages__grid {
     display: none
   }
-  .technical-capability-industrial .process-card-image-mob,
-  .technical-capability-villas .process-card-image-mob {
+  .technical-capability-version-2 .process-card-image-mob {
     display: flex
   }
-  .technical-capability-industrial .advantages__item,
-  .technical-capability-villas .advantages__item {
+  .technical-capability-version-2 .advantages__item {
     gap: 0
+  }
+  .technical-capability-version-2 .advantages__info {
+    gap: 12px
+  }
+  .technical-capability-version-2 .advantages__icon {
+    margin-bottom: 32px!important
   }
   .structures .main .btns .btn {
     max-width: 100%;
@@ -14201,37 +14798,6 @@ html::selection {
     width: 12px!important;
     height: 12px!important
   }
-  .project-management-pages .employee {
-    margin-bottom: 0
-  }
-  .project-management-pages .employee__top {
-    gap: 12px
-  }
-  .project-management-pages .employee__pic {
-    display: none
-  }
-  .project-management-pages .technical-capability .intro-description__content {
-    align-items: start
-  }
-  .project-management-pages .technical-capability .advantages__blocks {
-    gap: 32px;
-    padding: 44px 0
-  }
-  .project-management-pages .technical-capability .advantages__item {
-    gap: 0!important
-  }
-  .project-management-pages .technical-capability .advantages__picture.show-mob {
-    display: block;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 200px
-  }
-  .project-management-pages .technical-capability .advantages__picture.show-mob img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover
-  }
   .featured-project__blocks {
     gap: 32px
   }
@@ -14279,6 +14845,41 @@ html::selection {
   .service-process__slider {
     display: block
   }
+  .employee {
+    margin-bottom: 0
+  }
+  .employee__top {
+    gap: 12px
+  }
+  .employee__pic {
+    display: none
+  }
+  .technical-capability .intro-description__content {
+    align-items: start
+  }
+  .technical-capability .advantages__picture.show-mob {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 200px
+  }
+  .technical-capability .advantages__picture.show-mob img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+  }
+  .service-pages .main .btns {
+    flex-direction: column
+  }
+  .service-pages .main .btns .btn {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 15px
+  }
   .service-pages .metadology .intro-description {
     display: flex;
     flex-direction: column;
@@ -14307,6 +14908,10 @@ html::selection {
   .service-pages .metadology .advantages__item .advantages__counter {
     margin-bottom: 32px
   }
+  .service-pages .about__blocks {
+    padding: 44px 0;
+    gap: 32px
+  }
   .services-trades .main .btns {
     flex-direction: column
   }
@@ -14321,6 +14926,18 @@ html::selection {
   .services-trades .about__blocks {
     padding: 44px 0;
     gap: 32px
+  }
+  .services-trades .service-process.service-process-version-2 .intro-description__content {
+    align-items: start
+  }
+  .services-trades .service-process.service-process-version-2 .service-process__blocks {
+    gap: 32px
+  }
+  .services-trades .service-process.service-process-version-2 .service-process__wrapper {
+    display: none
+  }
+  .services-trades .service-process.service-process-version-2 .service-process__slider {
+    display: block
   }
   .services-trades .card-slider img {
     height: 290px
@@ -14346,6 +14963,24 @@ html::selection {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover
+  }
+  .services-trades .technical-capability .advantages__picture.show-mob {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 200px
+  }
+  .services-trades .technical-capability .advantages__picture.show-mob img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+  }
+  .services-trades .consultation-form__top p {
+    font-size: 14px
+  }
+  .services-trades .consultation-form .form .btn {
+    font-size: 14px
   }
   .safety-rules .security-regulations__icon {
     min-width: auto;
@@ -14394,6 +15029,13 @@ html::selection {
   }
   .security-regulations-version-2 .security-regulations__list {
     grid-template-columns: repeat(1,1fr)
+  }
+  .security-regulations-version-3 .security-regulations__list {
+    grid-template-columns: repeat(1,1fr)
+  }
+  .security-regulations-version-3 .security-regulations__item {
+    flex-direction: column;
+    gap: 24px
   }
   .operational-strength__list {
     grid-template-columns: repeat(1,1fr)
@@ -14546,6 +15188,36 @@ html::selection {
     width: 95%;
     justify-content: center
   }
+  .before-after__blocks {
+    gap: 32px;
+    padding: 44px 0 24px 0
+  }
+  .before-after .intro-description {
+    gap: 24px
+  }
+  .before-after .intro-description__general {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+    width: 100%
+  }
+  .before-after .intro-description__descript {
+    max-width: 100%;
+    width: 100%
+  }
+  .before-after .intro-description__content {
+    gap: 12px;
+    align-items: start
+  }
+  .before-after__slide {
+    flex-direction: column;
+    gap: 4px;
+    height: auto
+  }
+  .before-after__slide .pic {
+    height: 329px
+  }
 }
 @media (max-width:576px)and (max-width:576px) {
   .construction .consultation-form {
@@ -14626,9 +15298,17 @@ html::selection {
   .request-form__blocks {
     gap: 32px
   }
+  .request-form .tags {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center
+  }
   .request-form .tags .tag {
     padding: 12px 16px;
-    width: 100%
+    width: auto
+  }
+  .request-form .tags .tag__icon {
+    margin: 0
   }
   .request-form .description {
     font-size: 13px;
